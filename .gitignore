@@ -1,0 +1,10 @@
+@Exile/addons/gnt_c185.txt
+*.txt
+*.pbo
+*.rpt
+Config/log/server_1188.log
+*.log
+*.dll
+*.ebo
+*.bisign
+*.exe
