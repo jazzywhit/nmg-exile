@@ -1,10 +1,74 @@
-@Exile/addons/gnt_c185.txt
-*.txt
-*.pbo
+*.*
+./**
+.idea/
+!.gitignore
+!keys/**
+!templates/**
+keys/a3.bikey
+!@Exile/**
+!@ExileServer/**
+steamcmd/**
+steamapps/**
+!battleye/**
+battleye/beserver.dll
+!mpmissions/**
+!Config/**
+Config/log/**
+!@Exile/**
+!@ExileServer/**
+A3Wasteland_config/Users
+A3Wasteland_config/BattlEye
+!steamcmd/steamcmd.exe
+!a3_steamcmd.cmd
 *.rpt
-Config/log/server_1188.log
+*.acf
 *.log
-*.dll
-*.ebo
-*.bisign
-*.exe
+*.bak
+*.pbo
+.DS_Store
+
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+*.acf
