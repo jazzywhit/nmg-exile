@@ -14,8 +14,10 @@ battleye/beserver.dll
 !mpmissions/**
 !Config/**
 Config/log/**
+Config/log/Users/Exile/**
 !@Exile/**
 !@ExileServer/**
+!@infiStar_A3/**
 !MySQL/**
 A3Wasteland_config/Users
 A3Wasteland_config/BattlEye
