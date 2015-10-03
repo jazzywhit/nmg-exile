@@ -1,9 +1,8 @@
-#include "infiSTAR_AdminMenu.hpp"
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
 forceRotorLibSimulation = 2;
 
 // https://community.bistudio.com/wiki/Description.ext#disableChannels
-disableChannels[] = {0, 1, 2};
+disableChannels[] = {0, 2};
 
 author = "Exile Mod Team";
 loadScreen = "exile_client\texture\mod\logo.paa"; 
@@ -21,7 +20,9 @@ class Header
 };
 
 // DO NOT CHANGE THIS! +
-showHUD = 0;
+// showHUD radar never works ... not released yet
+showHUD = 1;
+
 
 respawn = "BASE";
 respawnDelay = 120;
