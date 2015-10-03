@@ -20,6 +20,7 @@ A3Wasteland_config/Users
 A3Wasteland_config/BattlEye
 !steamcmd/steamcmd.exe
 !a3_steamcmd.cmd
+!loottables/**
 *.rpt
 *.acf
 *.log
