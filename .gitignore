@@ -22,6 +22,8 @@ A3Wasteland_config/BattlEye
 !steamcmd/steamcmd.exe
 !a3_steamcmd.cmd
 !loottables/**
+!tbb.dll
+!tbbmalloc.dll
 *.rpt
 *.acf
 *.log
