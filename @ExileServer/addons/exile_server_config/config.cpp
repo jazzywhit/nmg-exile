@@ -662,106 +662,106 @@ class CfgLootTables
 	/**
 	  Result of 100 rounds:
 
-	  B_OutdoorPack_tan
-	  Exile_Item_CookingPot
-	  B_AssaultPack_blk
-	  Exile_Item_DuctTape
-	  Exile_Item_Surstromming
-	  U_IG_Guerilla2_1
-	  30Rnd_556x45_Stanag
-	  Exile_Item_Catfood
-	  Chemlight_blue
-	  B_Bergen_rgr
-	  B_OutdoorPack_blk
-	  optic_NVS
-	  Exile_Item_Matches
-	  6Rnd_RedSignal_F
-	  Exile_Item_GloriousKnakworst
-	  Exile_Item_GloriousKnakworst
-	  acc_flashlight
-	  Exile_Item_BBQSandwich
-	  ItemGPS
-	  16Rnd_9x21_Mag
-	  B_AssaultPack_blk
-	  Exile_Item_Catfood
-	  hgun_P07_F
-	  optic_Arco
-	  Exile_Item_LightBulb
-	  hgun_ACPC2_F
-	  30Rnd_45ACP_Mag_SMG_01
-	  30Rnd_556x45_Stanag_Tracer_Yellow
-	  hgun_Pistol_heavy_02_F
-	  acc_flashlight
-	  Exile_Item_SausageGravy_Cooked
-	  B_OutdoorPack_blk
-	  B_AssaultPack_mcamo
-	  B_AssaultPack_khk
-	  B_AssaultPack_dgtl
-	  H_Bandanna_gry
-	  B_AssaultPack_rgr
-	  H_Booniehat_dgtl
-	  Exile_Item_GloriousKnakworst
-	  optic_Aco_smg
-	  optic_Aco_smg
-	  hgun_P07_F
-	  Exile_Item_Matches
-	  B_AssaultPack_mcamo
-	  Exile_Item_Surstromming
-	  Exile_Item_Matches
-	  H_Booniehat_grn
-	  B_Kitbag_sgg
-	  9Rnd_45ACP_Mag
-	  Exile_Item_DuctTape
-	  B_Bergen_rgr
-	  B_OutdoorPack_blk
-	  Exile_Item_BBQSandwich
-	  H_Bandanna_camo
-	  B_HuntingBackpack
-	  B_OutdoorPack_blk
-	  Exile_Item_GloriousKnakworst
-	  hgun_Pistol_heavy_02_F
-	  H_Hat_camo
-	  U_IG_Guerilla3_1
-	  H_Watchcap_blk
-	  Exile_Item_Matches
-	  hgun_Rook40_F
-	  30Rnd_556x45_Stanag_Tracer_Green
-	  arifle_TRG20_F
-	  Exile_Item_Catfood
-	  B_Kitbag_mcamo
-	  B_FieldPack_ocamo
-	  FlareRed_F
-	  16Rnd_9x21_Mag
-	  U_C_Poor_2
-	  optic_MRD
-	  V_BandollierB_khk
-	  FlareGreen_F
-	  U_C_Poor_1
-	  Chemlight_yellow
-	  V_Chestrig_rgr
-	  Exile_Item_Energydrink
-	  U_IG_Guerilla1_1
-	  arifle_TRG20_F
-	  6Rnd_45ACP_Cylinder
-	  30Rnd_9x21_Mag
-	  Exile_Item_BBQSandwich
-	  Exile_Item_InstaDoc
 	  Exile_Item_SausageGravy
-	  B_FieldPack_blk
-	  30Rnd_9x21_Mag
-	  optic_Aco_smg
+	  hgun_Pistol_heavy_01_F
+	  H_Booniehat_tan
+	  6Rnd_45ACP_Cylinder
+	  B_AssaultPack_cbr
 	  Exile_Item_Catfood
-	  Exile_Item_ChristmasTinner
-	  Exile_Item_LightBulb
-	  H_Booniehat_grn
-	  H_Bandanna_gry
-	  30Rnd_556x45_Stanag_Tracer_Yellow
-	  B_Bergen_mcamo
-	  B_Kitbag_mcamo
-	  V_HarnessO_gry
-	  muzzle_snds_L
+	  H_Booniehat_indp
+	  6Rnd_45ACP_Cylinder
+	  H_Watchcap_camo
+	  Chemlight_red
+	  U_C_Poloshirt_burgundy
+	  FlareYellow_F
+	  V_HarnessOGL_brn
+	  Exile_Item_SausageGravy
+	  30Rnd_9x21_Mag
+	  B_AssaultPack_mcamo
+	  30Rnd_9x21_Mag
+	  11Rnd_45ACP_Mag
+	  V_HarnessO_brn
+	  Exile_Item_Catfood
+	  optic_MRD
+	  B_Kitbag_cbr
+	  B_AssaultPack_blk
 	  30Rnd_45ACP_Mag_SMG_01_Tracer_Green
+	  16Rnd_9x21_Mag
+	  30Rnd_9x21_Mag
+	  hgun_ACPC2_F
+	  Exile_Item_ChristmasTinner
+	  B_FieldPack_blk
 	  Exile_Item_PlasticBottleEmpty
+	  Chemlight_green
+	  30Rnd_556x45_Stanag_Tracer_Green
+	  U_C_Poloshirt_stripped
+	  Chemlight_red
+	  H_Beret_grn_SF
+	  H_Booniehat_indp
+	  B_AssaultPack_dgtl
+	  U_C_HunterBody_grn
+	  Exile_Item_Surstromming
+	  Chemlight_yellow
+	  H_Beret_red
+	  11Rnd_45ACP_Mag
+	  Exile_Item_ChristmasTinner_Cooked
+	  Exile_Item_Catfood
+	  B_AssaultPack_cbr
+	  V_Chestrig_khk
+	  FlareYellow_F
+	  muzzle_snds_acp
+	  11Rnd_45ACP_Mag
+	  U_C_HunterBody_grn
+	  Exile_Item_PlasticBottleEmpty
+	  Chemlight_green
+	  optic_ACO_grn_smg
+	  arifle_Katiba_GL_F
+	  hgun_P07_F
+	  B_Bergen_sgg
+	  Exile_Item_Matches
+	  Exile_Item_Matches
+	  Chemlight_green
+	  Chemlight_blue
+	  U_C_Poloshirt_tricolour
+	  Exile_Item_Beer
+	  Exile_Item_BBQSandwich_Cooked
+	  Exile_Item_ChristmasTinner_Cooked
+	  H_Beret_grn_SF
+	  hgun_ACPC2_F
+	  B_FieldPack_blk
+	  30Rnd_45ACP_Mag_SMG_01_Tracer_Green
+	  Exile_Item_GloriousKnakworst
+	  B_OutdoorPack_tan
+	  Exile_Item_CamoTentKit
+	  U_C_Poloshirt_blue
+	  Exile_Item_SausageGravy
+	  U_IG_Guerilla2_1
+	  Exile_Item_Matches
+	  U_C_Poor_shorts_1
+	  B_Bergen_mcamo
+	  B_AssaultPack_dgtl
+	  FlareGreen_F
+	  9Rnd_45ACP_Mag
+	  H_Watchcap_sgg
+	  U_C_Poor_1
+	  Exile_Item_ChristmasTinner_Cooked
+	  Exile_Item_Catfood
+	  H_Shemag_khk
+	  H_ShemagOpen_khk
+	  U_IG_Guerilla1_1
+	  Exile_Item_Catfood
+	  H_Bandanna_khk_hs
+	  FlareRed_F
+	  optic_Arco
+	  Exile_Item_CookingPot
+	  hgun_Rook40_F
+	  H_Booniehat_indp
+	  B_Kitbag_cbr
+	  Chemlight_green
+	  FlareYellow_F
+	  V_I_G_resistanceLeader_F
+	  Exile_Item_Matches
+	  Exile_Item_SausageGravy
 	*/
 	class CivillianLowerClass
 	{
@@ -956,106 +956,106 @@ class CfgLootTables
 	/**
 	  Result of 100 rounds:
 
-	  U_C_Poloshirt_tricolour
-	  16Rnd_9x21_Mag
-	  hgun_P07_F
-	  Exile_Item_PlasticBottleEmpty
+	  Exile_Item_Surstromming
+	  acc_pointer_IR
 	  H_StrawHat_dark
-	  U_C_Poloshirt_tricolour
-	  arifle_Mk20C_F
+	  muzzle_snds_L
 	  30Rnd_556x45_Stanag
-	  B_OutdoorPack_blu
 	  Exile_Item_GloriousKnakworst
-	  30Rnd_556x45_Stanag
-	  30Rnd_556x45_Stanag_Tracer_Green
-	  V_TacVest_blk_POLICE
+	  H_Cap_blk_Raven
+	  U_Rangemaster
+	  U_C_Poloshirt_blue
+	  Exile_Item_Surstromming
 	  V_Rangemaster_belt
-	  6Rnd_45ACP_Cylinder
-	  30Rnd_65x39_caseless_mag
-	  U_C_Poloshirt_stripped
-	  Exile_Item_Catfood
-	  arifle_MXC_F
-	  U_C_Journalist
-	  B_HuntingBackpack
 	  arifle_Mk20C_F
-	  U_C_Poloshirt_tricolour
-	  Exile_Item_PlasticBottleFreshWater
-	  H_Cap_blk
-	  H_Hat_brown
-	  acc_flashlight
-	  H_Cap_grn
-	  30Rnd_556x45_Stanag_Tracer_Green
-	  optic_Hamr
-	  U_C_Poloshirt_tricolour
-	  hgun_P07_F
-	  9Rnd_45ACP_Mag
-	  arifle_Katiba_F
-	  acc_flashlight
-	  9Rnd_45ACP_Mag
-	  30Rnd_556x45_Stanag
-	  H_Cap_red
-	  30Rnd_9x21_Mag
-	  muzzle_snds_acp
-	  muzzle_snds_acp
-	  H_Cap_blk_Raven
-	  16Rnd_9x21_Mag
-	  U_C_Journalist
-	  30Rnd_556x45_Stanag_Tracer_Yellow
-	  U_C_Poloshirt_burgundy
-	  U_C_Journalist
-	  Exile_Item_GloriousKnakworst
-	  Exile_Item_PlasticBottleFreshWater
-	  H_Beret_blk_POLICE
-	  U_C_Poloshirt_tricolour
-	  arifle_TRG20_F
-	  V_Press_F
-	  H_Cap_red
-	  arifle_TRG20_F
-	  H_Hat_tan
-	  Exile_Item_SausageGravy
-	  H_StrawHat
-	  30Rnd_556x45_Stanag
-	  muzzle_snds_acp
-	  H_StrawHat_dark
-	  30Rnd_65x39_caseless_green_mag_Tracer
-	  hgun_Rook40_F
-	  30Rnd_556x45_Stanag
-	  optic_Holosight
-	  Exile_Item_Energydrink
-	  hgun_P07_F
-	  30Rnd_9x21_Mag
-	  U_C_Poloshirt_burgundy
-	  Exile_Item_SausageGravy
-	  hgun_Pistol_Signal_F
-	  H_Cap_blu
-	  H_Cap_blk_Raven
-	  H_Hat_blue
-	  6Rnd_GreenSignal_F
-	  hgun_Pistol_heavy_02_F
-	  Exile_Item_SausageGravy
-	  30Rnd_9x21_Mag
-	  Exile_Item_Catfood
-	  9Rnd_45ACP_Mag
-	  Exile_Item_PlasticBottleFreshWater
-	  B_OutdoorPack_blu
-	  H_Cap_oli
+	  arifle_TRG21_F
 	  Exile_Item_BBQSandwich
-	  H_Cap_blk
-	  H_StrawHat_dark
-	  H_Cap_blu
-	  arifle_SDAR_F
-	  muzzle_snds_M
-	  H_Hat_checker
+	  hgun_P07_F
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_ChristmasTinner
+	  11Rnd_45ACP_Mag
+	  optic_Holosight
+	  Exile_Item_ChristmasTinner
+	  H_Beret_blk_POLICE
+	  Exile_Item_Surstromming
+	  Exile_Item_Catfood
+	  hgun_Rook40_F
+	  hgun_P07_F
+	  30Rnd_556x45_Stanag_Tracer_Red
+	  6Rnd_45ACP_Cylinder
+	  30Rnd_556x45_Stanag
+	  Exile_Item_BBQSandwich
+	  B_OutdoorPack_blu
+	  11Rnd_45ACP_Mag
+	  B_OutdoorPack_blk
+	  B_OutdoorPack_blu
+	  optic_DMS
+	  Exile_Item_Catfood
+	  arifle_MX_F
+	  B_OutdoorPack_blk
+	  U_C_Poloshirt_tricolour
+	  9Rnd_45ACP_Mag
+	  20Rnd_556x45_UW_mag
+	  U_Rangemaster
+	  Exile_Item_SausageGravy_Cooked
+	  Exile_Item_Surstromming
+	  arifle_TRG21_F
+	  hgun_Pistol_Signal_F
 	  U_C_Poloshirt_burgundy
-	  hgun_Pistol_heavy_01_F
-	  Exile_Item_GloriousKnakworst
-	  30Rnd_65x39_caseless_green
-	  U_C_Poloshirt_salmon
+	  16Rnd_9x21_Mag
+	  H_Hat_brown
+	  H_Cap_grn
+	  11Rnd_45ACP_Mag
+	  Exile_Item_BBQSandwich
 	  Exile_Item_PlasticBottleEmpty
 	  Exile_Item_SausageGravy
-	  Exile_Item_Catfood_Cooked
+	  Exile_Item_PlasticBottleEmpty
+	  30Rnd_556x45_Stanag
+	  30Rnd_9x21_Mag
+	  H_Cap_oli
+	  acc_pointer_IR
+	  Exile_Item_Beer
+	  11Rnd_45ACP_Mag
+	  Exile_Item_SausageGravy
+	  acc_flashlight
+	  Exile_Item_PlasticBottleEmpty
+	  H_Hat_blue
+	  arifle_Mk20_F
+	  U_C_Poloshirt_blue
+	  Exile_Item_Surstromming
+	  hgun_Rook40_F
+	  arifle_TRG21_F
+	  9Rnd_45ACP_Mag
+	  arifle_SDAR_F
+	  30Rnd_556x45_Stanag_Tracer_Yellow
+	  30Rnd_65x39_caseless_green_mag_Tracer
+	  B_OutdoorPack_tan
+	  U_C_Poloshirt_blue
+	  H_Bandanna_surfer
+	  Exile_Item_SausageGravy_Cooked
+	  optic_DMS
+	  H_Cap_red
+	  Exile_Item_BBQSandwich
+	  arifle_Katiba_F
+	  H_Hat_brown
+	  arifle_SDAR_F
+	  hgun_Pistol_heavy_01_F
+	  Exile_Item_SausageGravy
+	  U_C_Poloshirt_burgundy
+	  Exile_Item_BBQSandwich
+	  U_C_Poloshirt_burgundy
+	  U_C_Poloshirt_salmon
+	  H_Cap_blk_Raven
+	  Exile_Item_Catfood
+	  30Rnd_556x45_Stanag_Tracer_Green
+	  B_OutdoorPack_tan
+	  Exile_Item_Surstromming
+	  arifle_Mk20C_F
+	  30Rnd_556x45_Stanag
+	  Exile_Item_Beer
+	  11Rnd_45ACP_Mag
 	  hgun_Pistol_Signal_F
-	  6Rnd_GreenSignal_F
 	*/
 	class CivillianUpperClass
 	{
@@ -1173,106 +1173,106 @@ class CfgLootTables
 	/**
 	  Result of 100 rounds:
 
-	  Exile_Item_SausageGravy
-	  Exile_Item_BBQSandwich
+	  Exile_Item_Matches
+	  hgun_Rook40_F
+	  6Rnd_RedSignal_F
+	  Exile_Item_Surstromming_Cooked
+	  Exile_Item_GloriousKnakworst
+	  Exile_Item_Surstromming
+	  hgun_Pistol_heavy_01_F
+	  Exile_Item_Beer
+	  Exile_Item_Surstromming
+	  Exile_Item_Matches
+	  SmokeShellGreen
+	  hgun_P07_F
+	  Exile_Item_GloriousKnakworst
+	  Exile_Item_PlasticBottleEmpty
 	  hgun_Rook40_F
 	  Exile_Item_Matches
-	  6Rnd_RedSignal_F
-	  Exile_Item_SausageGravy
-	  hgun_P07_F
-	  Exile_Item_GloriousKnakworst
+	  Exile_Item_Matches
+	  Exile_Item_Matches
 	  Exile_Item_ChristmasTinner
-	  Exile_Item_Surstromming
-	  Exile_Item_GloriousKnakworst
-	  Exile_Item_PlasticBottleFreshWater
-	  SmokeShellBlue
-	  SmokeShellGreen
-	  9Rnd_45ACP_Mag
-	  Exile_Item_BBQSandwich
-	  Exile_Item_SausageGravy
-	  Exile_Item_Catfood
-	  6Rnd_GreenSignal_F
-	  Exile_Item_InstaDoc
-	  hgun_ACPC2_F
-	  hgun_P07_F
-	  Exile_Item_SausageGravy
-	  Exile_Item_InstaDoc
-	  hgun_Pistol_heavy_01_F
-	  SmokeShellRed
-	  hgun_P07_F
-	  16Rnd_9x21_Mag
-	  SmokeShellOrange
-	  Exile_Item_Energydrink
-	  Exile_Item_SausageGravy
-	  hgun_Rook40_F
-	  Exile_Item_GloriousKnakworst
-	  hgun_ACPC2_F
-	  hgun_P07_F
-	  Exile_Item_GloriousKnakworst
-	  Exile_Item_GloriousKnakworst
-	  11Rnd_45ACP_Mag
-	  Exile_Item_BBQSandwich
-	  Exile_Item_Catfood_Cooked
-	  Exile_Item_Catfood_Cooked
-	  hgun_Pistol_heavy_01_F
-	  Exile_Item_BBQSandwich
-	  hgun_Pistol_Signal_F
-	  Exile_Item_InstaDoc
-	  Exile_Item_SausageGravy
-	  hgun_Pistol_Signal_F
-	  Exile_Item_Surstromming
-	  Exile_Item_InstaDoc
-	  6Rnd_45ACP_Cylinder
-	  Exile_Item_SausageGravy
-	  9Rnd_45ACP_Mag
-	  SmokeShellGreen
-	  11Rnd_45ACP_Mag
-	  hgun_P07_F
-	  6Rnd_RedSignal_F
-	  Exile_Item_PlasticBottleEmpty
-	  30Rnd_9x21_Mag
-	  Exile_Item_GloriousKnakworst
-	  Exile_Item_Catfood_Cooked
-	  6Rnd_RedSignal_F
-	  Exile_Item_DuctTape
-	  30Rnd_9x21_Mag
-	  Exile_Item_GloriousKnakworst
 	  ItemGPS
-	  Exile_Item_BBQSandwich_Cooked
-	  hgun_Rook40_F
-	  Exile_Item_BBQSandwich
-	  Exile_Item_SausageGravy
-	  Exile_Item_PlasticBottleEmpty
-	  muzzle_snds_acp
-	  hgun_Pistol_heavy_01_F
-	  hgun_Pistol_heavy_01_F
-	  SmokeShell
-	  Exile_Item_DuctTape
-	  SmokeShellYellow
-	  Exile_Item_PlasticBottleEmpty
-	  Exile_Item_BBQSandwich
-	  Exile_Item_Catfood
-	  Exile_Item_GloriousKnakworst
-	  Exile_Item_InstaDoc
-	  Exile_Item_ChristmasTinner
-	  Exile_Item_CookingPot
-	  Exile_Item_PlasticBottleEmpty
+	  Exile_Item_Matches
 	  6Rnd_45ACP_Cylinder
-	  6Rnd_GreenSignal_F
-	  hgun_Pistol_heavy_01_F
-	  SmokeShellPurple
-	  Exile_Item_Catfood_Cooked
-	  SmokeShellRed
-	  Exile_Item_SausageGravy
-	  SmokeShellBlue
-	  Exile_Item_Surstromming
+	  Exile_Item_Matches
+	  Exile_Item_Catfood
+	  30Rnd_9x21_Mag
+	  hgun_Rook40_F
+	  SmokeShellOrange
+	  9Rnd_45ACP_Mag
 	  Exile_Item_GloriousKnakworst
-	  Exile_Item_Surstromming
+	  Exile_Item_PlasticBottleEmpty
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_LightBulb
+	  Exile_Item_Catfood
+	  6Rnd_GreenSignal_F
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_SausageGravy
+	  Exile_Item_GloriousKnakworst
+	  Exile_Item_LightBulb
+	  Exile_Item_Beer
+	  optic_MRD
+	  Exile_Item_Matches
+	  Exile_Item_GloriousKnakworst
+	  muzzle_snds_acp
+	  Exile_Item_SausageGravy
+	  Exile_Item_BBQSandwich
+	  SmokeShellRed
+	  16Rnd_9x21_Mag
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_PlasticBottleEmpty
 	  Exile_Item_Catfood
 	  Exile_Item_PlasticBottleEmpty
-	  Exile_Item_SausageGravy_Cooked
-	  muzzle_snds_acp
+	  Exile_Item_Catfood
+	  Exile_Item_GloriousKnakworst
+	  Exile_Item_BBQSandwich
+	  Exile_Item_CookingPot
+	  hgun_Rook40_F
+	  muzzle_snds_L
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_PlasticBottleEmpty
+	  hgun_P07_F
+	  Exile_Item_Catfood
+	  SmokeShell
+	  hgun_ACPC2_F
+	  Exile_Item_Surstromming
+	  Exile_Item_Matches
+	  30Rnd_9x21_Mag
+	  Exile_Item_GloriousKnakworst
+	  Exile_Item_GloriousKnakworst
+	  SmokeShellPurple
+	  Exile_Item_InstaDoc
 	  Exile_Item_DuctTape
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_Surstromming
+	  6Rnd_45ACP_Cylinder
+	  optic_MRD
+	  Exile_Item_LightBulb
+	  11Rnd_45ACP_Mag
+	  Exile_Item_PlasticBottleEmpty
+	  hgun_P07_F
+	  SmokeShell
+	  SmokeShellPurple
+	  SmokeShellBlue
+	  Exile_Item_PlasticBottleEmpty
+	  Exile_Item_SausageGravy
+	  Exile_Item_PlasticBottleEmpty
+	  Exile_Item_SausageGravy
+	  Exile_Item_Surstromming
+	  hgun_Pistol_heavy_01_F
+	  Exile_Item_Catfood
+	  SmokeShellOrange
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_Matches
+	  hgun_P07_F
+	  Exile_Item_GloriousKnakworst
+	  muzzle_snds_acp
+	  Exile_Item_ChristmasTinner
+	  Exile_Item_BBQSandwich_Cooked
 	*/
 	class Shop
 	{
@@ -1338,106 +1338,106 @@ class CfgLootTables
 	/**
 	  Result of 100 rounds:
 
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
 	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterFull
 	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_Matches
+	  Exile_Item_PortableGeneratorKit
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_LightBulb
-	  Exile_Item_LightBulb
-	  Exile_Item_LightBulb
-	  Exile_Item_Matches
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Melee_Axe
-	  Exile_Item_JunkMetal
-	  Exile_Item_Rope
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_Matches
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_Rope
 	  Exile_Item_ExtensionCord
-	  Exile_Item_JunkMetal
-	  Exile_Item_Matches
-	  Exile_Item_Matches
-	  Exile_Item_LightBulb
 	  Exile_Item_MetalBoard
 	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_Matches
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_Matches
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Item_ExtensionCord
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_Rope
-	  Exile_Item_Rope
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_Rope
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_Rope
-	  Exile_Item_ExtensionCord
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_Matches
+	  Exile_Melee_Axe
 	  Exile_Item_JunkMetal
 	  Exile_Item_Matches
-	  Exile_Item_Matches
-	  Exile_Item_JunkMetal
+	  Exile_Item_FuelCanisterFull
+	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterFull
+	  Exile_Melee_Axe
+	  Exile_Melee_Axe
+	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_DuctTape
+	  Exile_Melee_Axe
+	  Exile_Item_ExtensionCord
+	  Exile_Melee_Axe
 	  Exile_Melee_Axe
 	  Exile_Item_Matches
 	  Exile_Item_FuelCanisterFull
-	  Exile_Item_PortableGeneratorKit
+	  Exile_Item_Rope
+	  Exile_Item_Matches
+	  Exile_Item_FuelCanisterFull
+	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_ExtensionCord
+	  Exile_Melee_Axe
 	  Exile_Item_JunkMetal
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_ExtensionCord
 	  Exile_Item_MetalBoard
+	  Exile_Item_FloodLightKit
+	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_DuctTape
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_JunkMetal
+	  Exile_Item_Matches
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Melee_Axe
+	  Exile_Melee_Axe
+	  Exile_Melee_Axe
+	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_JunkMetal
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_DuctTape
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Melee_Axe
+	  Exile_Item_Matches
+	  Exile_Melee_Axe
+	  Exile_Item_JunkMetal
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Melee_Axe
+	  Exile_Item_Matches
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_LightBulb
+	  Exile_Item_Rope
+	  Exile_Item_MetalBoard
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_ExtensionCord
+	  Exile_Item_FloodLightKit
+	  Exile_Item_ExtensionCord
+	  Exile_Item_Matches
+	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_JunkMetal
+	  Exile_Item_LightBulb
+	  Exile_Item_LightBulb
+	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Melee_Axe
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_ExtensionCord
+	  Exile_Melee_Axe
+	  Exile_Item_LightBulb
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Melee_Axe
 	  Exile_Item_Matches
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_DuctTape
+	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Melee_Axe
-	  Exile_Item_DuctTape
-	  Exile_Item_ExtensionCord
-	  Exile_Item_ExtensionCord
-	  Exile_Item_JunkMetal
-	  Exile_Item_MetalBoard
-	  Exile_Item_LightBulb
-	  Exile_Melee_Axe
-	  Exile_Item_FuelCanisterFull
-	  Exile_Melee_Axe
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_Rope
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_JunkMetal
-	  Exile_Melee_Axe
-	  Exile_Item_ExtensionCord
-	  Exile_Item_JunkMetal
-	  Exile_Item_ExtensionCord
-	  Exile_Item_LightBulb
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Melee_Axe
-	  Exile_Melee_Axe
-	  Exile_Item_PortableGeneratorKit
-	  Exile_Item_DuctTape
-	  Exile_Item_MetalBoard
 	*/
 	class Industrial
 	{
@@ -1470,104 +1470,104 @@ class CfgLootTables
 
 	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_DuctTape
 	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_LightBulb
-	  Exile_Item_LightBulb
-	  Exile_Item_LightBulb
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_JunkMetal
 	  Exile_Item_MetalBoard
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_LightBulb
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_MetalBoard
-	  Exile_Item_JunkMetal
-	  Exile_Item_LightBulb
 	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_DuctTape
+	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_JunkMetal
-	  Exile_Item_LightBulb
-	  Exile_Item_MetalBoard
+	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_FuelCanisterFull
+	  Exile_Item_LightBulb
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_JunkMetal
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_JunkMetal
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_JunkMetal
+	  Exile_Item_MetalBoard
+	  Exile_Item_DuctTape
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_DuctTape
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_LightBulb
+	  Exile_Item_JunkMetal
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_JunkMetal
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_DuctTape
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_LightBulb
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_FuelCanisterFull
+	  Exile_Item_LightBulb
+	  Exile_Item_MetalBoard
+	  Exile_Item_MetalBoard
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_JunkMetal
 	  Exile_Item_DuctTape
 	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_MetalBoard
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_MetalBoard
 	  Exile_Item_JunkMetal
 	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_FuelCanisterFull
 	  Exile_Item_LightBulb
-	  Exile_Item_JunkMetal
-	  Exile_Item_FuelCanisterFull
+	  Exile_Item_LightBulb
 	  Exile_Item_LightBulb
 	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_DuctTape
-	  Exile_Item_JunkMetal
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_DuctTape
-	  Exile_Item_DuctTape
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterFull
 	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_DuctTape
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_LightBulb
-	  Exile_Item_MetalBoard
-	  Exile_Item_LightBulb
 	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_MetalBoard
-	  Exile_Item_FuelCanisterFull
-	  Exile_Item_JunkMetal
 	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_JunkMetal
-	  Exile_Item_LightBulb
-	  Exile_Item_DuctTape
-	  Exile_Item_LightBulb
 	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_LightBulb
 	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterEmpty
 	  Exile_Item_FuelCanisterFull
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
-	  Exile_Item_FuelCanisterEmpty
+	  Exile_Item_FuelCanisterFull
 	  Exile_Item_DuctTape
+	  Exile_Item_FuelCanisterFull
 	  Exile_Item_DuctTape
-	  Exile_Item_MetalBoard
 	*/
 	class VehicleService
 	{
@@ -1592,106 +1592,106 @@ class CfgLootTables
 	/**
 	  Result of 100 rounds:
 
-	  H_HelmetB_snakeskin
-	  H_HelmetIA
-	  H_MilCap_blue
-	  V_PlateCarrier1_rgr
+	  B_OutdoorPack_blu
+	  arifle_MXC_F
 	  SmokeShellOrange
-	  V_PlateCarrier1_blk
-	  arifle_MX_SW_Black_F
-	  H_HelmetB_plain_blk
-	  H_MilCap_oucamo
-	  H_HelmetB_light_grass
+	  U_B_GhillieSuit
 	  H_HelmetSpecB
-	  H_PilotHelmetFighter_B
-	  130Rnd_338_Mag
-	  U_O_PilotCoveralls
-	  optic_MRCO
-	  100Rnd_65x39_caseless_mag
-	  V_PlateCarrier1_blk
-	  150Rnd_93x64_Mag
-	  SmokeShellYellow
-	  H_PilotHelmetHeli_I
-	  100Rnd_65x39_caseless_mag_Tracer
-	  arifle_MX_SW_Black_F
-	  H_HelmetB_snakeskin
-	  U_B_SpecopsUniform_sgg
-	  H_HelmetCrew_O
-	  optic_SOS
-	  U_B_CombatUniform_mcam
-	  V_TacVest_camo
-	  H_CrewHelmetHeli_B
-	  H_HelmetB_camo
-	  V_PlateCarrier1_blk
-	  H_MilCap_blue
-	  H_HelmetB_paint
-	  B_HuntingBackpack
-	  U_B_CombatUniform_mcam
-	  H_HelmetB_light
-	  H_HelmetB_plain_blk
-	  arifle_MX_SW_F
-	  U_B_CTRG_3
-	  3Rnd_Smoke_Grenade_shell
-	  U_I_GhillieSuit
-	  10Rnd_762x51_Mag
-	  H_HelmetSpecB_blk
-	  H_PilotHelmetHeli_I
-	  V_RebreatherIA
-	  H_HelmetIA_camo
-	  U_B_Wetsuit
 	  H_MilCap_mcamo
-	  U_B_SpecopsUniform_sgg
-	  30Rnd_556x45_Stanag_Tracer_Green
-	  V_PlateCarrier1_blk
-	  V_TacVest_khk
-	  U_I_CombatUniform
-	  ItemRadio
-	  V_TacVest_khk
-	  1Rnd_Smoke_Grenade_shell
-	  H_HelmetB_light_black
-	  B_AssaultPack_rgr
-	  H_HelmetSpecB
-	  3Rnd_Smoke_Grenade_shell
-	  SmokeShellOrange
-	  H_BandMask_reaper
-	  optic_Hamr
-	  H_HelmetSpecB
-	  srifle_GM6_F
-	  U_O_SpecopsUniform_blk
-	  H_MilCap_blue
-	  U_B_CTRG_3
-	  H_HelmetIA_net
-	  H_HelmetB_light_black
-	  srifle_LRR_F
-	  30Rnd_65x39_caseless_green_mag_Tracer
 	  20Rnd_762x51_Mag
-	  UGL_FlareRed_F
-	  H_BandMask_khk
-	  optic_DMS
-	  acc_flashlight
-	  U_B_CTRG_3
-	  150Rnd_93x64_Mag
+	  muzzle_snds_M
+	  H_HelmetB_black
+	  B_OutdoorPack_tan
+	  U_B_PilotCoveralls
+	  arifle_MX_SW_Black_F
 	  H_HelmetB_paint
-	  arifle_Mk20_GL_F
+	  H_HelmetB_light_snakeskin
+	  H_MilCap_blue
+	  arifle_Katiba_GL_F
+	  U_B_CombatUniform_mcam_tshirt
+	  arifle_Katiba_GL_F
 	  V_PlateCarrierIA1_dgtl
-	  ItemGPS
-	  arifle_TRG20_F
-	  H_HelmetCrew_B
-	  20Rnd_556x45_UW_mag
-	  30Rnd_65x39_caseless_green_mag_Tracer
-	  U_I_HeliPilotCoveralls
-	  3Rnd_UGL_FlareYellow_F
-	  arifle_MX_GL_F
-	  U_B_CombatUniform_mcam_vest
-	  arifle_TRG21_GL_F
-	  V_PlateCarrierIA2_dgtl
-	  H_HelmetSpecB
-	  V_PlateCarrier2_rgr
+	  B_FieldPack_blk
+	  B_OutdoorPack_blk
+	  30Rnd_556x45_Stanag_Tracer_Green
+	  V_Rangemaster_belt
+	  U_B_CombatUniform_mcam_worn
+	  optic_Hamr
+	  H_MilCap_blue
+	  H_CrewHelmetHeli_I
+	  V_TacVest_blk
+	  H_HelmetB_plain_blk
+	  H_HelmetB_light_snakeskin
+	  H_MilCap_oucamo
+	  V_PlateCarrier3_rgr
+	  V_PlateCarrierSpec_rgr
+	  V_PlateCarrierIA1_dgtl
+	  V_TacVestIR_blk
+	  150Rnd_93x64_Mag
+	  30Rnd_65x39_caseless_mag_Tracer
+	  H_HelmetIA_net
+	  H_HelmetB_snakeskin
+	  H_HelmetB_paint
+	  optic_Arco
+	  muzzle_snds_M
+	  H_HelmetO_ocamo
+	  B_OutdoorPack_blu
+	  H_HelmetB_paint
+	  arifle_MX_Black_F
+	  H_HelmetIA_camo
+	  H_HelmetSpecB_paint2
+	  optic_SOS
+	  V_TacVest_camo
+	  V_PlateCarrier3_rgr
+	  H_HelmetB_light_snakeskin
 	  Binocular
-	  H_HelmetB_light_black
-	  3Rnd_HE_Grenade_shell
-	  srifle_LRR_F
-	  H_BandMask_khk
+	  acc_flashlight
+	  Binocular
+	  H_HelmetB_plain_blk
+	  H_HelmetIA
+	  30Rnd_556x45_Stanag_Tracer_Yellow
+	  H_MilCap_dgtl
+	  B_FieldPack_cbr
+	  V_PlateCarrierIA1_dgtl
+	  acc_flashlight
+	  U_B_CombatUniform_mcam
+	  arifle_Katiba_F
+	  UGL_FlareRed_F
+	  arifle_Mk20C_F
+	  V_PlateCarrierIA2_dgtl
+	  H_HelmetB_light_sand
+	  optic_Hamr
+	  H_HelmetB
+	  H_HelmetB_light
+	  SmokeShellRed
+	  V_RebreatherIR
+	  H_BandMask_reaper
+	  V_PlateCarrierIAGL_dgtl
+	  V_PlateCarrierIA2_dgtl
+	  B_Kitbag_sgg
+	  H_HelmetLeaderO_ocamo
+	  V_TacVestIR_blk
+	  ItemRadio
+	  arifle_TRG20_F
+	  arifle_SDAR_F
+	  optic_SOS
+	  SmokeShellRed
+	  SmokeShellPurple
+	  U_B_CTRG_1
+	  U_B_CombatUniform_mcam_vest
+	  H_HelmetB_light_desert
+	  H_HelmetIA_camo
+	  H_HelmetB_desert
+	  H_HelmetCrew_I
+	  150Rnd_93x64_Mag
+	  H_CrewHelmetHeli_B
+	  arifle_TRG21_F
+	  B_OutdoorPack_blu
+	  arifle_MX_SW_Black_F
+	  H_HelmetB_plain_blk
+	  arifle_MXC_Black_F
+	  V_PlateCarrier3_rgr
+	  U_O_SpecopsUniform_blk
 	*/
 	class Military
 	{
@@ -2047,106 +2047,106 @@ class CfgLootTables
 	/**
 	  Result of 100 rounds:
 
-	  optic_LRPS
-	  muzzle_snds_B
-	  acc_flashlight
-	  srifle_DMR_01_F
-	  7Rnd_408_Mag
-	  optic_LRPS
-	  optic_DMS
-	  muzzle_snds_B
-	  srifle_GM6_F
-	  Rangefinder
-	  muzzle_snds_B
-	  Laserdesignator
 	  ItemRadio
-	  NVGoggles
-	  optic_DMS
-	  srifle_GM6_F
-	  optic_LRPS
-	  srifle_EBR_F
-	  7Rnd_408_Mag
-	  5Rnd_127x108_APDS_Mag
-	  acc_pointer_IR
-	  optic_DMS
-	  optic_LRPS
-	  5Rnd_127x108_APDS_Mag
-	  5Rnd_127x108_Mag
-	  Exile_Item_InstaDoc
-	  optic_DMS
-	  optic_SOS
-	  Laserdesignator
-	  ItemGPS
-	  optic_LRPS
-	  acc_flashlight
-	  acc_flashlight
-	  acc_pointer_IR
-	  optic_DMS
-	  acc_flashlight
-	  muzzle_snds_B
-	  20Rnd_762x51_Mag
-	  srifle_GM6_F
-	  B_Carryall_oucamo
-	  B_Carryall_oucamo
-	  10Rnd_762x51_Mag
-	  muzzle_snds_B
-	  5Rnd_127x108_APDS_Mag
-	  Laserdesignator
-	  srifle_LRR_F
-	  5Rnd_127x108_APDS_Mag
+	  B_Carryall_khk
 	  Rangefinder
-	  5Rnd_127x108_APDS_Mag
-	  5Rnd_127x108_Mag
-	  optic_LRPS
-	  optic_DMS
-	  NVGoggles
-	  20Rnd_762x51_Mag
-	  optic_DMS
-	  Exile_Item_InstaDoc
-	  Binocular
-	  optic_SOS
-	  muzzle_snds_B
-	  B_Carryall_oucamo
-	  7Rnd_408_Mag
-	  ItemGPS
-	  optic_DMS
-	  muzzle_snds_B
-	  MiniGrenade
-	  HandGrenade
-	  acc_flashlight
-	  muzzle_snds_B
-	  srifle_LRR_F
-	  Binocular
-	  HandGrenade
-	  10Rnd_762x51_Mag
-	  10Rnd_762x51_Mag
-	  Exile_Item_InstaDoc
-	  ItemGPS
-	  NVGoggles
-	  Binocular
-	  muzzle_snds_B
-	  srifle_EBR_F
-	  acc_flashlight
-	  5Rnd_127x108_APDS_Mag
-	  srifle_GM6_F
-	  7Rnd_408_Mag
-	  Rangefinder
-	  5Rnd_127x108_Mag
-	  7Rnd_408_Mag
-	  10Rnd_762x51_Mag
-	  ItemRadio
-	  B_Carryall_ocamo
-	  Exile_Item_InstaDoc
-	  srifle_LRR_F
-	  ItemRadio
-	  Rangefinder
-	  muzzle_snds_B
 	  optic_LRPS
 	  srifle_DMR_01_F
+	  srifle_EBR_F
+	  Rangefinder
+	  ItemRadio
+	  acc_flashlight
+	  10Rnd_762x51_Mag
 	  Binocular
 	  B_Carryall_mcamo
+	  srifle_DMR_01_F
+	  srifle_EBR_F
+	  NVGoggles
+	  Laserdesignator
+	  B_Carryall_cbr
+	  Rangefinder
+	  ItemRadio
+	  5Rnd_127x108_APDS_Mag
+	  Binocular
+	  20Rnd_762x51_Mag
 	  HandGrenade
+	  optic_DMS
+	  srifle_DMR_01_F
+	  optic_SOS
+	  B_Carryall_oli
+	  10Rnd_762x51_Mag
+	  Laserdesignator
+	  B_Carryall_khk
+	  srifle_EBR_F
+	  5Rnd_127x108_Mag
 	  ItemGPS
+	  NVGoggles
+	  srifle_LRR_F
+	  MiniGrenade
+	  20Rnd_762x51_Mag
+	  Rangefinder
+	  muzzle_snds_B
+	  srifle_LRR_F
+	  HandGrenade
+	  acc_flashlight
+	  optic_SOS
+	  acc_pointer_IR
+	  optic_LRPS
+	  optic_SOS
+	  srifle_DMR_01_F
+	  NVGoggles
+	  7Rnd_408_Mag
+	  srifle_DMR_01_F
+	  ItemRadio
+	  ItemGPS
+	  acc_pointer_IR
+	  NVGoggles
+	  Rangefinder
+	  optic_LRPS
+	  srifle_EBR_F
+	  10Rnd_762x51_Mag
+	  Rangefinder
+	  optic_DMS
+	  srifle_DMR_01_F
+	  optic_DMS
+	  B_Carryall_khk
+	  acc_flashlight
+	  20Rnd_762x51_Mag
+	  acc_flashlight
+	  srifle_EBR_F
+	  srifle_LRR_F
+	  NVGoggles
+	  Laserdesignator
+	  optic_LRPS
+	  ItemRadio
+	  Laserdesignator
+	  optic_SOS
+	  HandGrenade
+	  7Rnd_408_Mag
+	  srifle_EBR_F
+	  acc_pointer_IR
+	  srifle_LRR_F
+	  optic_DMS
+	  optic_DMS
+	  Rangefinder
+	  HandGrenade
+	  Exile_Item_InstaDoc
+	  Rangefinder
+	  Binocular
+	  Rangefinder
+	  Binocular
+	  20Rnd_762x51_Mag
+	  srifle_EBR_F
+	  5Rnd_127x108_APDS_Mag
+	  MiniGrenade
+	  B_Carryall_cbr
+	  Laserdesignator
+	  Rangefinder
+	  acc_flashlight
+	  acc_flashlight
+	  Rangefinder
+	  Laserdesignator
+	  NVGoggles
 	*/
 	class Tourist
 	{
@@ -2703,6 +2703,6 @@ class CfgSettings
 
 			Only use full minutes here. Value like 5.5 have not been tested.
 		*/
-		restartWarrningTime[] = {15, 10, 5, 3}; 
+		restartWarningTime[] = {15, 10, 5, 3}; 
 	};
 };
