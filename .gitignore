@@ -16,6 +16,7 @@ battleye/beserver.dll
 Config/log/**
 !@Exile/**
 !@ExileServer/**
+!MySQL/**
 A3Wasteland_config/Users
 A3Wasteland_config/BattlEye
 !steamcmd/steamcmd.exe
