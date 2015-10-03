@@ -11,7 +11,7 @@ SETLOCAL ENABLEDELAYEDEXPANSION
                 :: Note, the missing qotation marks, these need to be wrapped around the entire "+app_data......"
                 :: There is no DEV branch data yet for Arma 3 Dedicated Server package !!!
 
-    SET A3serverPath=C:\a3exile\
+    SET A3serverPath=C:\nmg-exile\
         SET STEAMPATH=C:\steamcmd\
 
 
