@@ -94,7 +94,7 @@ _announce_adminstate_changed = false;	/* true or false */
 _passwordAdmin = 'ReallyLongPassword12!@';
 _adminLevel1_UIDs =
 [
-	'76561197982511285','0','0'
+	'76561197982511285','76561197961855808','0'
 ];
 _adminLevel1 =
 [
