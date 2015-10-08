@@ -4,6 +4,40 @@ singleVoice=0;
 gamma=1;
 brightness=1;
 maxSamplesPlayed=96;
+class Difficulties
+{
+	class Mercenary
+	{
+		class Flags
+		{
+			3rdPersonView=0;
+			armor=0;
+			autoAim=0;
+			autoGuideAT=0;
+			autoSpot=0;
+			clockIndicator=0;
+			deathMessages=0;
+			enemyTag=0;
+			friendlyTag=0;
+			hud=0;
+			hudGroupInfo=0;
+			hudPerm=0;
+			hudWp=0;
+			hudWpPerm=0;
+			map=0;
+			netStats=0;
+			tracers=0;
+			ultraAI=0;
+			unlimitedSaves=0;
+			vonID=0;
+			weaponCursor=0;
+		};
+		skillFriendly=1;
+		precisionFriendly=1;
+		skillEnemy=1;
+		precisionEnemy=1;
+	};
+};
 sceneComplexity=1000000;
 shadowZDistance=100;
 viewDistance=3800;
@@ -14,39 +48,3 @@ volumeFX=10;
 volumeSpeech=10;
 volumeVoN=10;
 vonRecThreshold=0.029999999;
-
-
-class Difficulties
-{
-	class Mercenary
-	{
-		class Flags
-		{
-			3rdPersonView = 0;// Cannot be changed
-			armor = 0;// Cannot be changed
-			autoAim = 0;// Cannot be changed
-			autoGuideAT = 0;// Cannot be changed
-			autoSpot = 0;// Cannot be changed
-			clockIndicator = 0;// Cannot be changed
-			deathMessages = 0;
-			enemyTag = 0;// Cannot be changed
-			friendlyTag = 0;// Cannot be changed
-			hud = 0;// Cannot be changed
-			hudGroupInfo = 0;// Cannot be changed
-			hudPerm = 0;// Cannot be changed
-			hudWp = 0;// Cannot be changed
-			hudWpPerm = 0;// Cannot be changed
-			map = 0;// Cannot be changed
-			netStats = 0;
-			tracers = 0;// Cannot be changed
-			ultraAI = 0;
-			unlimitedSaves = 0;// Cannot be changed
-			vonID = 0;
-			weaponCursor = 0;// Cannot be changed
-		};
-		skillFriendly = 1;
-		precisionFriendly = 1;
-		skillEnemy = 1;
-		precisionEnemy = 1;
-	};
-};
