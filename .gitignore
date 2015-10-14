@@ -7,6 +7,7 @@
 keys/a3.bikey
 !@Exile/**
 !@ExileServer/**
+!@CBA_A3/**
 steamcmd/**
 steamapps/**
 !battleye/**
