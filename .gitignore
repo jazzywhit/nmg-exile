@@ -7,7 +7,6 @@
 keys/a3.bikey
 !@Exile/**
 !@ExileServer/**
-!@CBA_A3/**
 steamcmd/**
 steamapps/**
 !battleye/**
@@ -33,6 +32,7 @@ A3Wasteland_config/BattlEye
 *.bak
 *.pbo
 .DS_Store
+!@CBA_A3/**
 
 
 # Windows image file caches
