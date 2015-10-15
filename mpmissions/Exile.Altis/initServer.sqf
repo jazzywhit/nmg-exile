@@ -1,4 +1,4 @@
-_objects = 
+_objects =
 [
     ["Land_CarService_F",[14618.7,16877.4,0.900759],131.363,0,0,false],
     ["Land_cargo_addon02_V2_F",[14563.7,16776.6,1.55995],133.636,0,0,false],
@@ -363,3 +363,6 @@ _objects =
     _object enableSimulationGlobal false; // :)
 }
 forEach _objects;
+
+// Call Exile specific custom functions
+call compile preprocessFileLineNumbers "custom\code\init.sqf";
