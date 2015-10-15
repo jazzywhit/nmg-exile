@@ -13,6 +13,7 @@ steamapps/**
 battleye/beserver.dll
 !mpmissions/**
 !Config/**
+!userconfig/**
 Config/log/**
 Config/log/Users/Exile/**
 !@Exile/**
@@ -36,6 +37,7 @@ A3Wasteland_config/BattlEye
 # Folders we need, pbo and all
 !@CBA_A3/**
 !@ace/**
+!@aceServer/**
 
 
 # Windows image file caches
