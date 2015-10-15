@@ -32,7 +32,10 @@ A3Wasteland_config/BattlEye
 *.bak
 *.pbo
 .DS_Store
+
+# Folders we need, pbo and all
 !@CBA_A3/**
+!@ace/**
 
 
 # Windows image file caches
