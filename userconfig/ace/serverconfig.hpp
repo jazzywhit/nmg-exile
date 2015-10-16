@@ -1,10 +1,11 @@
+
 class ace_common_forceAllSettings {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
 class ace_common_checkPBOsAction {
-    value = 0;
+    value = 2;
     typeName = "SCALAR";
     force = 1;
 };
@@ -39,7 +40,7 @@ class ace_common_displayTextFontColor {
     force = 1;
 };
 class ace_finger_enabled {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -64,7 +65,7 @@ class ace_frag_Enabled {
     force = 1;
 };
 class ace_frag_SpallEnabled {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -154,7 +155,7 @@ class ace_interact_menu_menuBackground {
     force = 1;
 };
 class ace_interact_menu_addBuildingActions {
-    value = 1;
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
@@ -164,7 +165,7 @@ class ace_interaction_EnableTeamManagement {
     force = 1;
 };
 class ace_inventory_inventoryDisplaySize {
-    value = 0;
+    value = 1;
     typeName = "SCALAR";
     force = 1;
 };
@@ -234,7 +235,7 @@ class ace_maptools_EveryoneCanDrawOnBriefing {
     force = 1;
 };
 class ace_medical_level {
-    value = 1;
+    value = 0;
     typeName = "SCALAR";
     force = 1;
 };
@@ -344,7 +345,7 @@ class ace_medical_litterSimulationDetail {
     force = 1;
 };
 class ace_medical_litterCleanUpDelay {
-    value = 0;
+    value = 1800;
     typeName = "SCALAR";
     force = 1;
 };
@@ -419,7 +420,7 @@ class ace_medical_moveUnitsFromGroupOnUnconscious {
     force = 1;
 };
 class ace_medical_menuTypeStyle {
-    value = 0;
+    value = 1;
     typeName = "SCALAR";
     force = 1;
 };
@@ -434,7 +435,7 @@ class ace_medical_menu_useMenu {
     force = 1;
 };
 class ace_medical_menu_openAfterTreatment {
-    value = 1;
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
@@ -464,7 +465,7 @@ class ace_mk6mortar_allowCompass {
     force = 1;
 };
 class ace_movement_useImperial {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -474,7 +475,7 @@ class ace_nametags_defaultNametagColor {
     force = 1;
 };
 class ace_nametags_showPlayerNames {
-    value = 1;
+    value = 2;
     typeName = "SCALAR";
     force = 1;
 };
@@ -544,12 +545,12 @@ class ace_repair_DisplayTextOnRepair {
     force = 1;
 };
 class ace_repair_engineerSetting_Repair {
-    value = 1;
+    value = 2;
     typeName = "SCALAR";
     force = 1;
 };
 class ace_repair_engineerSetting_Wheel {
-    value = 0;
+    value = 2;
     typeName = "SCALAR";
     force = 1;
 };
@@ -569,7 +570,7 @@ class ace_repair_consumeItem_ToolKit {
     force = 1;
 };
 class ace_repair_fullRepairLocation {
-    value = 2;
+    value = 4;
     typeName = "SCALAR";
     force = 1;
 };
@@ -594,7 +595,7 @@ class ace_respawn_SavePreDeathGear {
     force = 1;
 };
 class ace_respawn_RemoveDeadBodiesDisconnected {
-    value = 1;
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
@@ -604,7 +605,7 @@ class ace_respawn_BodyRemoveTimer {
     force = 1;
 };
 class ace_sitting_enable {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -629,7 +630,7 @@ class ace_spectator_restrictVisions {
     force = 1;
 };
 class ace_switchunits_EnableSwitchUnits {
-    value = 0;
+    value = 1;
     typeName = "BOOL";
     force = 1;
 };
@@ -654,7 +655,7 @@ class ace_switchunits_SwitchToCivilian {
     force = 1;
 };
 class ace_switchunits_EnableSafeZone {
-    value = 1;
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
@@ -674,7 +675,7 @@ class ace_vehiclelock_LockVehicleInventory {
     force = 1;
 };
 class ace_vehiclelock_VehicleStartingLockState {
-    value = -1;
+    value = 0;
     typeName = "SCALAR";
     force = 1;
 };
@@ -719,7 +720,7 @@ class ace_weather_enableServerController {
     force = 1;
 };
 class ace_weather_useACEWeather {
-    value = 1;
+    value = 0;
     typeName = "BOOL";
     force = 1;
 };
