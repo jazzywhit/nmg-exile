@@ -363,6 +363,3 @@ _objects =
     _object enableSimulationGlobal false; // :)
 }
 forEach _objects;
-
-// Call Exile specific custom functions
-call compile preprocessFileLineNumbers "custom\code\init.sqf";
