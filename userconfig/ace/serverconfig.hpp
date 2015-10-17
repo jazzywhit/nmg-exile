@@ -315,17 +315,17 @@ class ace_medical_preventInstaDeath {
     force = 1;
 };
 class ace_medical_enableRevive {
-    value = 0;
+    value = 1;
     typeName = "SCALAR";
     force = 1;
 };
 class ace_medical_maxReviveTime {
-    value = 120;
+    value = 10;
     typeName = "SCALAR";
     force = 1;
 };
 class ace_medical_amountOfReviveLives {
-    value = -1;
+    value = 2;
     typeName = "SCALAR";
     force = 1;
 };
