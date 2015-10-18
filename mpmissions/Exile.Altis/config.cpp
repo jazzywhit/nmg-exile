@@ -1580,9 +1580,8 @@ class CfgExileCustomCode
 
 		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
 	*/
-  ExileClient_object_player_death_startBleedingOut = "code\ExileClient_object_player_death_startBleedingOut.sqf";
-	ExileClient_object_player_death_forceRespawn = "code\ExileClient_object_player_death_forceRespawn.sqf";
-	ExileClient_object_player_thread_bleedToDeath = "code\ExileClient_object_player_thread_bleedToDeath.sqf";
+  // ExileClient_object_player_death_startBleedingOut = "code\ExileClient_object_player_death_startBleedingOut.sqf";
+	// ExileClient_object_player_thread_bleedToDeath = "code\ExileClient_object_player_thread_bleedToDeath.sqf";
 
 };
 class CfgExileMusic

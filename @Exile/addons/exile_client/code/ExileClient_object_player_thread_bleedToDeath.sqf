@@ -8,8 +8,7 @@
  */
 
 private["_secondsRemaining","_transition"];
-// _secondsRemaining = ExileClientBleedOutCountDownEnd - time;
-// if (_secondsRemaining <= 0) then
+_secondsRemaining = ExileClientBleedOutCountDownEnd - time;
 if !(getvariable ["ace_medical_inRevive", false]) then
 {
 	"bleedToDeath - Killing player..." call ExileClient_util_log;
@@ -17,21 +16,21 @@ if !(getvariable ["ace_medical_inRevive", false]) then
 }
 else
 {
-	// _transition = 1 - (_secondsRemaining / ExileClientBleedOutCountDownDuration);
-	// if (_secondsRemaining < 20) then
-	// {
-		// if (_secondsRemaining < 10) then
-		// {
-			// [_transition * 10] call BIS_fnc_bloodEffect;
-		// };
-		// if (!ExileClientBleedOutHeartbeatPlaying) then
-		// {
-			// ExileClientBleedOutHeartbeatPlaying = true;
-			// missionnamespace setvariable ["RscRespawnCounter_colorID", 2];
-			// playSound ["SndExileHeartbeatStopping", true];
-			// _secondsRemaining fadeSound 0;
-		// };
-	// };
+	_transition = 1 - (_secondsRemaining / ExileClientBleedOutCountDownDuration);
+	if (_secondsRemaining < 20) then
+	{
+		if (_secondsRemaining < 10) then
+		{
+			[_transition * 10] call BIS_fnc_bloodEffect;
+		};
+		if (!ExileClientBleedOutHeartbeatPlaying) then
+		{
+			ExileClientBleedOutHeartbeatPlaying = true;
+			missionnamespace setvariable ["RscRespawnCounter_colorID", 2];
+			playSound ["SndExileHeartbeatStopping", true];
+			_secondsRemaining fadeSound 0;
+		};
+	};
 	if (!ExileClientBleedOutHeartbeatPlaying) then
 	{
 		playSound ["SndExileHeartbeatSlowSingle", true];
