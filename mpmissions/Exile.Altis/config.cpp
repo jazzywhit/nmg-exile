@@ -1580,9 +1580,8 @@ class CfgExileCustomCode
 
 		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
 	*/
-  // ExileClient_object_player_death_startBleedingOut = "code\ExileClient_object_player_death_startBleedingOut.sqf";
-	// ExileClient_object_player_thread_bleedToDeath = "code\ExileClient_object_player_thread_bleedToDeath.sqf";
-
+	ExileClient_gui_postProcessing_initialize = "code\ExileClient_gui_postProcessing_initialize.sqf";
+	ExileClient_util_world_canBuildHere = "code\ExileClient_util_world_canBuildHere.sqf";
 };
 class CfgExileMusic
 {
