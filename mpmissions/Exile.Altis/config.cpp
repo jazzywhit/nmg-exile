@@ -1634,6 +1634,18 @@ class CfgTerritories
 	 */
 	minimumDistanceToSpawnZones = 1000;
 
+	/**
+	 * Defines the minimum distance to a building
+	 * cannot build territories
+	 */
+	_minimumDistanceToBuildings = 200;
+
+	/**
+	 * Defines the minimum distance to a building
+	 * cannot build territories
+	 */
+	_minimumDistanceToCities = 250;
+
 	// Defines the period in days where protection money needs to be payed.
 	// Every time you pay the protection money, the "due date" will be
 	// pro-longed by that period too.
@@ -1642,6 +1654,44 @@ class CfgTerritories
 	// Amount of pop tabs or respect per object to pay
 	popTabAmountPerObject = 10;
 	respectAmountPerObject = 5;
+
+	buildingBlacklist = = [
+		"Land_Dome_Big_F",
+		"Land_Dome_Small_F",
+		"Land_Barracks_ruins_F",
+		"Land_i_Barracks_V1_F",
+		"Land_i_Barracks_V1_dam_F",
+		"Land_i_Barracks_V2_F",
+		"Land_i_Barracks_V2_dam_F",
+		"Land_u_Barracks_V2_F",
+		"Land_Hospital_main_F",
+		"Land_Hospital_side1_F",
+		"Land_Hospital_side2_F",
+		"Land_MilOffices_V1_F",
+		"Land_TentHangar_V1_F",
+		"Land_Hangar_F",
+		"Land_Airport_Tower_F",
+		"Land_Cargo_House_V1_F",
+		"Land_Cargo_House_V3_F",
+		"Land_Cargo_HQ_V1_F",
+		"Land_Cargo_HQ_V2_F",
+		"Land_Cargo_HQ_V3_F",
+		"Land_Cargo_Patrol_V1_F",
+		"Land_Cargo_Patrol_V2_F",
+		"Land_Cargo_Tower_V1_F",
+		"Land_Cargo_Tower_V1_No1_F",
+		"Land_Cargo_Tower_V1_No2_F",
+		"Land_Cargo_Tower_V1_No3_F",
+		"Land_Cargo_Tower_V1_No4_F",
+		"Land_Cargo_Tower_V1_No5_F",
+		"Land_Cargo_Tower_V1_No6_F",
+		"Land_Cargo_Tower_V1_No7_F",
+		"Land_Cargo_Tower_V2_F",
+		"Land_Cargo_Tower_V3_F",
+		"Land_Radar_F"
+	];
+
+	cityBlacklist = ["NameCityCapital", "Airport","NameCity","NameVillage"];
 };
 class CfgTraderCategories
 {

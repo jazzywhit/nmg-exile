@@ -43,6 +43,14 @@ try
 		{
 			throw "You are too close to traders!";
 		};
+		case 6:
+		{
+			throw "You cannot build near any building!";
+		};
+		case 7:
+		{
+		    throw "You cannot build near Cities or Airports"
+		}
 	};
 	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];
 	_object setPosATL _objectPosition;

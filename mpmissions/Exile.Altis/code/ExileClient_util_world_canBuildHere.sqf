@@ -3,99 +3,105 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Starting to introduce some of the logic from
+ * https://github.com/Dwarfer/ExileModTweaks/blob/master/mpmissions/fixes/ExileClient_object_item_construct.sqf
+ * Likely going to abandon most of the code in favor of better options
+ * There is also code here: https://github.com/jazzywhit/DayZ-Epoch/blob/c1bd5c39e1bd3a348a19dcedb2cbab4132171bb2/MPMissions/DayZ_Epoch_11.Chernarus/custom/snap_pro/player_build.sqf#L184
+ * This was what we used on NMG to stop people from building
  */
+ 
+private["_constructionConfigName",
+        "_position",
+        "_playerUID",
+        "_result",
+        "_requiresTerritory",
+        "_canBePlacedOnRoad",
+        "_minimumDistanceToTraderZones",
+        "_minimumDistanceToSpawnZones",
+        "_minimumDistanceToOtherTerritories",
+        "_minimumDistanceToBuildings",
+        "_isInEnemyTerritory",
+        "_radius",
+        "_buildRights"];
 
-private["_itemClassName","_cantBuildNear"];
-_itemClassName = _this select 0;
-if( isClass(configFile >> "CfgMagazines" >> _itemClassName >> "Interactions" >> "Constructing") ) then
+_constructionConfigName = _this select 0;
+_position = _this select 1;
+_playerUID = _this select 2;
+_result = 0;
+_requiresTerritory = getNumber (configFile >> "CfgConstruction" >> _constructionConfigName >> "requiresTerritory") isEqualTo 1;
+_canBePlacedOnRoad = getNumber (configFile >> "CfgConstruction" >> _constructionConfigName >> "canBePlacedOnRoad") isEqualTo 1;
+_minimumDistanceToTraderZones = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToTraderZones");
+_minimumDistanceToSpawnZones = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToSpawnZones");
+_minimumDistanceToOtherTerritories = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToOtherTerritories");
+_minimumDistanceToBuildings = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToBuildings");
+_minimumDistanceToCities = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToCities");
+_buildingBlacklist = getArray(missionConfigFile >> "CfgTerritories" >> "buildingBlacklist");
+_cityBlacklist = getArray(missionConfigFile >> "CfgTerritories" >> "cityBlacklist");
+
+try 
 {
-	if (findDisplay 602 != displayNull) then
+    if ({typeOf _x in _buildingBlacklist} count nearestObjects[player, _buildingBlacklist, _minimumDistanceToBuildings] > 0) then {
+        throw 6;
+    };
+    if (count nearestLocations [_playerPos, _cityBlacklist, 250] > 0) then {
+        throw 7;
+    };
+	if ([_position, _minimumDistanceToTraderZones] call ExileClient_util_world_isTraderZoneInRange) then
 	{
-		(findDisplay 602) closeDisplay 2;
+		throw 4;
 	};
-	try
+	if ([_position, _minimumDistanceToSpawnZones] call ExileClient_util_world_isSpawnZoneInRange) then
 	{
-		if !((vehicle player) isEqualTo player) then { throw "ConstructionVehicleWarning"; };
-		if ((getPosATL player) call ExileClient_util_world_isTraderZoneNearby) then { throw "ConstructionTraderZoneWarning"; };
-		if ((getPosATL player) call ExileClient_util_world_isSpawnZoneNearby) then { throw "ConstructionSpawnZoneWarning"; };
-
-		//Stops Building In Towns
-		_cnt = count nearestLocations [getPosATL player, ["NameVillage","NameCity","NameCityCapital"], 400];
-		if (_cnt > 0 ) then { throw "ConstructionAbortedInformation"; };
-
-		/* PREVENT BUILDING NEAR CERTAIN TYPES OF BUILDING */
-		_cantBuildNear = [
-			"Land_Dome_Big_F",
-			"Land_Dome_Small_F",
-			"Land_Barracks_ruins_F",
-			"Land_i_Barracks_V1_F",
-			"Land_i_Barracks_V1_dam_F",
-			"Land_i_Barracks_V2_F",
-			"Land_i_Barracks_V2_dam_F",
-			"Land_u_Barracks_V2_F",
-			"Land_Hospital_main_F",
-			"Land_Hospital_side1_F",
-			"Land_Hospital_side2_F",
-			"Land_MilOffices_V1_F",
-			"Land_TentHangar_V1_F",
-			"Land_Hangar_F",
-			"Land_Airport_Tower_F",
-			"Land_Cargo_House_V1_F",
-			"Land_Cargo_House_V3_F",
-			"Land_Cargo_HQ_V1_F",
-			"Land_Cargo_HQ_V2_F",
-			"Land_Cargo_HQ_V3_F",
-			"Land_Cargo_Patrol_V1_F",
-			"Land_Cargo_Patrol_V2_F",
-			"Land_Cargo_Tower_V1_F",
-			"Land_Cargo_Tower_V1_No1_F",
-			"Land_Cargo_Tower_V1_No2_F",
-			"Land_Cargo_Tower_V1_No3_F",
-			"Land_Cargo_Tower_V1_No4_F",
-			"Land_Cargo_Tower_V1_No5_F",
-			"Land_Cargo_Tower_V1_No6_F",
-			"Land_Cargo_Tower_V1_No7_F",
-			"Land_Cargo_Tower_V2_F",
-			"Land_Cargo_Tower_V3_F",
-			"Land_Radar_F"
-		];
-		_cantBuildDist = 100;
-		if ({typeOf _x in _cantBuildNear} count nearestObjects[player, _cantBuildNear, _cantBuildDist] > 0) then { throw "ConstructionAbortedInformation"; };
-
-		/* PREVENT BUILDING NEAR KEY MILITARY AND INDUSTRIAL LOCATIONS */
-//		if ((player distance [23802.7, 16133.9, 0]) < 1500) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [3073.84,13177.1,0]) < 250) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [12813.08, 16672.213, 0]) < 500) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [20941.604, 19236.865, 0]) < 150) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [6178.40, 16245.77, 0]) < 250) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [14347.18, 18940.27, 0]) < 200) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [18310.604, 15548.075, 0]) < 150) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [16083.555, 16992.264, 0]) < 200) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [17432.287, 13148.771, 0]) < 150) then { throw "ConstructionAbortedInformation"; };
-		if ((player distance [23581.842, 21099.982, 0]) < 200) then { throw "ConstructionAbortedInformation"; };
-
-		/* PREVENT BUILDING ON ROADS */
-		if (isOnRoad getPosATL player) then { throw "ConstructionAbortedInformation"; };
-
-		if(_itemClassName isEqualTo "Exile_Item_Flag") then { throw "FLAG"; };
-		[_itemClassName] call ExileClient_construction_beginNewObject;
+		throw 5;
+	};
+	if !(_canBePlacedOnRoad) then
+	{
+		if (isOnRoad [_position select 0, _position select 1, 0]) then
+		{
+			throw 3;
+		};
+	};
+	if (_constructionConfigName isEqualTo "Flag") then 
+	{
+		if ([_position, _minimumDistanceToOtherTerritories] call ExileClient_util_world_isTerritoryInRange) then 
+		{
+			throw 2;
+		};
 	}
-	catch
+	else 
 	{
-		if(_exception isEqualTo "FLAG")then
+		_isInEnemyTerritory = false;
 		{
-			call ExileClient_gui_setupTerritoryDialog_show;
+			_radius = _x getVariable ["ExileTerritorySize", -1];
+			if ((_position distance2D _x) < _radius) then
+			{
+				_buildRights = _x getVariable ["ExileTerritoryBuildRights", []];
+				_isInEnemyTerritory = true;
+				if (_playerUID in _buildRights) exitWith
+				{
+					throw 0;
+				};
+			};
 		}
-		else
+		forEach (_position nearObjects ["Exile_Construction_Flag_Static", _minimumDistanceToOtherTerritories]); 
+		if (_requiresTerritory) then
 		{
-			if(_exception isEqualTo "ConstructionAbortedInformation")then{
-				[_exception,"Building Permit Denied"] call ExileClient_gui_notification_event_addNotification;
-			}else{
-				[_exception] call ExileClient_gui_notification_event_addNotification;
+			throw 1;	
+		}
+		else 
+		{
+			if (_isInEnemyTerritory) then
+			{
+				throw 2;
 			};
 		};
 	};
+}
+catch 
+{
+	_result = _exception;
 };
-true
+_result
