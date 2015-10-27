@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Exile Mod
  * www.exilemod.com
  * © 2015 Exile Mod Team
@@ -1582,7 +1582,7 @@ class CfgExileCustomCode
 	*/
 	ExileClient_gui_postProcessing_initialize = "code\ExileClient_gui_postProcessing_initialize.sqf";
 	ExileClient_util_world_canBuildHere = "code\ExileClient_util_world_canBuildHere.sqf";
-	ExileClient_gui_selectSpawnLocation_show = "overwrites\exile_client\code\ExileClient_gui_selectSpawnLocation_show.sqf";
+	ExileClient_gui_selectSpawnLocation_show = "code\ExileClient_gui_selectSpawnLocation_show.sqf";
 };
 class CfgExileMusic
 {
