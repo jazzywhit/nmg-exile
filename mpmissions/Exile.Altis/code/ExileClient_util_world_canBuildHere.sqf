@@ -5,9 +5,31 @@
  *
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ *
+ * Starting to introduce some of the logic from
+ * https://github.com/Dwarfer/ExileModTweaks/blob/master/mpmissions/fixes/ExileClient_object_item_construct.sqf
+ * Likely going to abandon most of the code in favor of better options
+ * There is also code here: https://github.com/jazzywhit/DayZ-Epoch/blob/c1bd5c39e1bd3a348a19dcedb2cbab4132171bb2/MPMissions/DayZ_Epoch_11.Chernarus/custom/snap_pro/player_build.sqf#L184
+ * This was what we used on NMG to stop people from building
  */
  
-private["_constructionConfigName","_position","_playerUID","_result","_requiresTerritory","_canBePlacedOnRoad","_minimumDistanceToTraderZones","_minimumDistanceToSpawnZones","_minimumDistanceToOtherTerritories","_isInEnemyTerritory","_radius","_buildRights"];
+private["_constructionConfigName",
+        "_position",
+        "_playerUID",
+        "_result",
+        "_requiresTerritory",
+        "_canBePlacedOnRoad",
+        "_minimumDistanceToTraderZones",
+        "_minimumDistanceToSpawnZones",
+        "_minimumDistanceToOtherTerritories",
+        "_minimumDistanceToBuildings",
+        "_minimumDistanceToCities",
+        "_buildingBlacklist",
+        "_cityBlacklist",
+        "_isInEnemyTerritory",
+        "_radius",
+        "_buildRights"];
+
 _constructionConfigName = _this select 0;
 _position = _this select 1;
 _playerUID = _this select 2;
@@ -17,8 +39,19 @@ _canBePlacedOnRoad = getNumber (configFile >> "CfgConstruction" >> _construction
 _minimumDistanceToTraderZones = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToTraderZones");
 _minimumDistanceToSpawnZones = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToSpawnZones");
 _minimumDistanceToOtherTerritories = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToOtherTerritories");
+_minimumDistanceToBuildings = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToBuildings");
+_minimumDistanceToCities = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToCities");
+_buildingBlacklist = getArray(missionConfigFile >> "CfgTerritories" >> "buildingBlacklist");
+_cityBlacklist = getArray(missionConfigFile >> "CfgTerritories" >> "cityBlacklist");
+
 try 
 {
+    if ({typeOf _x in _buildingBlacklist} count nearestObjects[player, _buildingBlacklist, _minimumDistanceToBuildings] > 0) then {
+        throw 6;
+    };
+    if (count nearestLocations [_playerPos, _cityBlacklist, 250] > 0) then {
+        throw 7;
+    };
 	if ([_position, _minimumDistanceToTraderZones] call ExileClient_util_world_isTraderZoneInRange) then
 	{
 		throw 4;
