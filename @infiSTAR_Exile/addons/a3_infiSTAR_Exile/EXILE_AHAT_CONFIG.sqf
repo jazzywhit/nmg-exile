@@ -12,7 +12,7 @@
 /*
 	"_passwordAdmin" is passwordAdmin - in your servers config.cfg, needed for servercommands from client
 */
-_passwordAdmin = 'Enter_passwordAdmin_FromYourConfigHere';
+_passwordAdmin = 'ReallyLongPassword12!@';
 
 
 
@@ -48,7 +48,7 @@ _startAsNormal =
 _adminUIDandAccess =
 [
 	[
-		['76561197961855808','UID2','UID3','...'],	// Admins with UIDs in this Array have their Access defined in the array below.
+		['76561197961855808','76561197982511285'],	// Admins with UIDs in this Array have their Access defined in the array below.
 		[
 			'Teleport On Map Click','Teleport - Target To Me','Teleport - Me To Target','Teleport In Facing Direction (10m steps)',
 			'spectating','AdminConsole','Delete Vehicle','FlyUp','ShowGear',

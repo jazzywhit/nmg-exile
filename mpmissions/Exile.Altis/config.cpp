@@ -1655,7 +1655,7 @@ class CfgTerritories
 	popTabAmountPerObject = 10;
 	respectAmountPerObject = 5;
 
-	buildingBlacklist = = [
+	buildingBlacklist[] = {
 		"Land_Dome_Big_F",
 		"Land_Dome_Small_F",
 		"Land_Barracks_ruins_F",
@@ -1689,9 +1689,9 @@ class CfgTerritories
 		"Land_Cargo_Tower_V2_F",
 		"Land_Cargo_Tower_V3_F",
 		"Land_Radar_F"
-	];
+	};
 
-	cityBlacklist = ["NameCityCapital", "Airport","NameCity","NameVillage"];
+	cityBlacklist[] = {"NameCityCapital", "Airport","NameCity","NameVillage"};
 };
 class CfgTraderCategories
 {
