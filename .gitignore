@@ -26,6 +26,8 @@ A3Wasteland_config/BattlEye
 !loottables/**
 !tbb.dll
 !tbbmalloc.dll
+readme.txt
+*.vdf
 *.rpt
 *.acf
 *.log
@@ -83,3 +85,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.acf
+*.vdf
+Config/log/Users/Exile/Exile.vars.Arma3Profile
