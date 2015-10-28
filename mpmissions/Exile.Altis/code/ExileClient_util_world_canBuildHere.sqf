@@ -3,7 +3,7 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  *
  * Starting to introduce some of the logic from
@@ -12,7 +12,7 @@
  * There is also code here: https://github.com/jazzywhit/DayZ-Epoch/blob/c1bd5c39e1bd3a348a19dcedb2cbab4132171bb2/MPMissions/DayZ_Epoch_11.Chernarus/custom/snap_pro/player_build.sqf#L184
  * This was what we used on NMG to stop people from building
  */
- 
+
 private["_constructionConfigName",
         "_position",
         "_playerUID",
@@ -26,6 +26,7 @@ private["_constructionConfigName",
         "_minimumDistanceToCities",
         "_buildingBlacklist",
         "_cityBlacklist",
+        "_buildOk",
         "_isInEnemyTerritory",
         "_radius",
         "_buildRights"];
@@ -44,9 +45,20 @@ _minimumDistanceToCities = getNumber (missionConfigFile >> "CfgTerritories" >> "
 _buildingBlacklist = getArray(missionConfigFile >> "CfgTerritories" >> "buildingBlacklist");
 _cityBlacklist = getArray(missionConfigFile >> "CfgTerritories" >> "cityBlacklist");
 
-try 
+try
 {
-    if ({typeOf _x in _buildingBlacklist} count nearestObjects[player, _buildingBlacklist, _minimumDistanceToBuildings] > 0) then {
+    if ((["Land_",(typeOf _x),false] call fnc_inString) || count nearestObjects[player, _buildingBlacklist, _minimumDistanceToBuildings] > 0) then {
+        throw 6;
+    };
+    _buildOk = ["Land_Misc_deerstand"];
+    {
+        if (!(typeOf _x in _buildOk)) then {
+            if (["Land_",(typeOf _x),false] call fnc_inString) then {
+                throw 6;
+            };
+        };
+    } forEach nearestObjects [player, ["House"], _minimumDistanceToBuildings];
+    if (count nearestObjects[player, _buildingBlacklist, _minimumDistanceToBuildings] > 0) then {
         throw 6;
     };
     if (count nearestLocations [_playerPos, _cityBlacklist, 250] > 0) then {
@@ -67,14 +79,14 @@ try
 			throw 3;
 		};
 	};
-	if (_constructionConfigName isEqualTo "Flag") then 
+	if (_constructionConfigName isEqualTo "Flag") then
 	{
-		if ([_position, _minimumDistanceToOtherTerritories] call ExileClient_util_world_isTerritoryInRange) then 
+		if ([_position, _minimumDistanceToOtherTerritories] call ExileClient_util_world_isTerritoryInRange) then
 		{
 			throw 2;
 		};
 	}
-	else 
+	else
 	{
 		_isInEnemyTerritory = false;
 		{
@@ -89,12 +101,12 @@ try
 				};
 			};
 		}
-		forEach (_position nearObjects ["Exile_Construction_Flag_Static", _minimumDistanceToOtherTerritories]); 
+		forEach (_position nearObjects ["Exile_Construction_Flag_Static", _minimumDistanceToOtherTerritories]);
 		if (_requiresTerritory) then
 		{
-			throw 1;	
+			throw 1;
 		}
-		else 
+		else
 		{
 			if (_isInEnemyTerritory) then
 			{
@@ -103,7 +115,7 @@ try
 		};
 	};
 }
-catch 
+catch
 {
 	_result = _exception;
 };

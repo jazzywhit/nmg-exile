@@ -2,64 +2,34 @@ if(isDedicated) exitWith {};
 
 _sizeTitle             = 0.55; // Font Size of the Title Messages
 _sizeSubText         = 0.45;  // Font Size of the SubTitle Messages
-_colorTitle         = "#57877b"; // HTML Color Code of the Title Messages (must start with '#' )
-_colorSubText         = "#FFF"; // HTML Color Code of the SubTitle Messages (must start with '#' )
-_alignTitle         = "left"; // Alignment of the Title Message (right or left)
+_colorTitle         = "#FFFFFF"; // HTML Color Code of the Title Messages (must start with '#' )
+_colorSubText         = "#F2CB0B"; // HTML Color Code of the SubTitle Messages (must start with '#' )
+_alignTitle         = "right"; // Alignment of the Title Message (right or left)
 _alignSubText         = "right"; // Alignment of the SubTitle Message (right or left)
 _fontTitle             = "PuristaSemibold"; // Font Type Of Title Messages
 _fontSubText        = "PuristaLight"; // Font Type Of SubTitle Messages
-
-
 _Delay                = 10; // Wait in seconds before the credits start after player IS ingame
 _FadeIn             = 3; //how long one role should stay on screen. Use value from 0 to 10 where 0 is almost instant transition to next role
-
-
 _IntroMusic            = false; // Welcome Intro Song During the credits (true or false)
-
-
 _posDefault         = [0.3,0.55,0.5]; // Defualt Positions of all Credits
 
 
-
 // First
-_title             = "Welcome Survivor";
-_shorttext         = "NMG Hardcore Exile";
+_title             = "Narrow Minded Gaming";
+_shorttext         = "narrowmindedgaming.com<br/>twitter.com/narrowmgaming<br/>reddit.com/r/nmg";
 _posText        = [0.8,0.5,0.4];
 
-
-_title2         = "Website";
-_shorttext2     = "narrowmindedgaming.com";
+_title2         = "Bolt Action Hardcore";
+_shorttext2     = "Exile v1.9.5<br/>JSRS Dragonfyre<br/>Blastcore";
 _posText2        = [0.8,0.5,0.25];
 
-/*
-_title3            = "Teamspeak 3";
-_shorttext3     = "ts.my-site.com";
+_title3         = "True Hardcore";
+_shorttext3     = "First Person<br/>No P2W<br/>No Safe Zones<br/>Base/Vault Raiding<br/>Custom Traders<br/>Realistic Loot";
 _posText3        = [0.8,0.5,0.25];
 
-
-_title4         = "Donate";
-_shorttext4     = "Support the server and help it stay online";
-_posText4        = [0.8,0.5,0.28];
-
-
-_title5         = "Custom Scripts";
-_shorttext5     = "Welcome Messages <br />AI Missions<br />Custom Traders<br /> ";
-_posText5        = [0.8,0.5,0.335];
-
-
-_title6         = "Play Fair And Enjoy";
-_shorttext6     = "Admins are Always Active";
-_posText6        = [0.8,0.5,0.4];
-
-*/
-
-/*
-
-_title7        = "MORE TEXT";
-_shorttext7    = "DONT FORGET TO ADD A NUMBER EACH TIME";
-_posText7       = [0.3,0.55,0.5];
-
-*/
+_title4         = "Design / Ops";
+_shorttext4     = "Crabonroids<br/>jesquik<br/>Phobix";
+_posText4        = [0.8,0.5,0.25];
 
 
 /***********************************************************************************************************************************************/
