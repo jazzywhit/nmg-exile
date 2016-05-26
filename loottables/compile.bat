@@ -1,1 +1,1 @@
-LootTableCompiler.exe LootTable.h CfgLootTables.hpp
+LootTableCompiler.exe LootItemGroups.h LootTables.h CfgLootTables.hpp

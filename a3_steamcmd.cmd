@@ -4,15 +4,15 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 
        :: DEFINE the following variables where applicable to your install
 
-    SET STEAMLOGIN=reppgoa@hotmail.com
+    SET STEAMLOGIN=jessecwhitworth
     SET A3serverBRANCH=233780 -beta
         :: For stable use 233780 -beta
         :: For Dev use 233780 -beta development
                 :: Note, the missing qotation marks, these need to be wrapped around the entire "+app_data......"
                 :: There is no DEV branch data yet for Arma 3 Dedicated Server package !!!
 
-    SET A3serverPath=C:\nmg-exile\
-        SET STEAMPATH=C:\steamcmd\
+    SET A3serverPath=D:\nmg-exile\
+        SET STEAMPATH=D:\nmg-exile\steamcmd\
 
 
 :: _________________________________________________________

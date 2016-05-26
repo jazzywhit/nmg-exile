@@ -1,0 +1,31 @@
+3.11.15-4.11.15
+volha
+-trunk passenger viewer fixed
+-damage wheel proxy fixed
+-added anim for pedals
+-added anim for gearbox
+-added sound for gearbox
+-.rtm error spam fixed 95%
+- insideSoundCoef decreased to 0.7
+
+lada
+-.rtm error spam fixed 95%
+-added anim for pedals
+-added anim for gearbox
+
+Ural
+- Ural_base deleted from public
+
+UH1H
+-fixed some model selection errors
+-added TK variants
+-some rpt errors still here
+
+An-2
+-fixed rpt errors with maingun
+-now its correctly starting
+
+Mv22
+-lights fixed
+
+Since 4.11.15 depression mode ON

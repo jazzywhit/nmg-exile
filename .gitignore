@@ -2,6 +2,8 @@
 ./**
 .idea/
 !.gitignore
+!Exile.ico
+!README.md
 !keys/**
 !templates/**
 keys/a3.bikey
@@ -38,7 +40,6 @@ A3Wasteland_config/BattlEye
 !@CBA_A3/**
 !@ace/**
 !@aceServer/**
-
 
 # Windows image file caches
 Thumbs.db

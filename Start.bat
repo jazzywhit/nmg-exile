@@ -1,1 +1,12 @@
-start "arma3" /min /high "arma3server.exe" -port=2302 "-config=Config\cfg\Config.cfg" "-profiles=Config\log" "-cfg=Config\cfg\basic.cfg" -name=Exile "-mod=@Exile;@ExileServer;@CBA_A3;@ace;@aceServer;" -world=empty -nosplash -noSound -noPause -enableHT -malloc=system -autoinit
+@echo off
+color 0a
+title Exile Monitor
+:Serverstart
+echo Launching Server
+echo Exile Server Monitor... Active !
+start "Arma3" /min /wait arma3server.exe -mod=@exile; -servermod=@exileserver; -config=@ExileServer\config.cfg -port=2302 -profiles=SC -cfg=@ExileServer\basic.cfg -name=Config -autoinit
+ping 127.0.0.1 -n 15 >NUL
+echo Exile Server Shutdown ... Restarting!
+ping 127.0.0.1 -n 5 >NUL
+cls
+goto Serverstart
