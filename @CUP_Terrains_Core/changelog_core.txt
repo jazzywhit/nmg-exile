@@ -1,0 +1,18 @@
+Version 1.0.1 (02.01.2015)
+
++   ADDED:      Editor entries for A1 and A2 objects
++   ADDED:      Support for MapBuilder
+
+@   FIXED:      Missing AiA TP compatibility entries
+@   FIXED:      Wrong faction configuration leading to potential CTD when using 3DEN
+@   FIXED:      Bargate rotated by 90° on ArmA2 maps
+                ATTENTION terrain creators: those of who you already compensated the wrong rotation
+                on their ArmA3 terrains, might need to compensate that again
+            
+^   IMPROVED:   Different signature keys for Core and Maps (Full will be signed with Core + Maps)
+
+---------------------------------------------------------------------
+Version 1.0 (24|12|2015)
+
+initial release
+---------------------------------------------------------------------

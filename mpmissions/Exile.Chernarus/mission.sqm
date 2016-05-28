@@ -4,12 +4,12 @@ class Mission
 	addOns[]=
 	{
 		"exile_client",
-		"a3_map_altis"
+		"cup_chernarus_config"
 	};
 	addOnsAuto[]=
 	{
 		"exile_client",
-		"a3_map_altis"
+		"cup_chernarus_config"
 	};
 	randomSeed=8080942;
 	class Intel
@@ -1045,86 +1045,49 @@ class Mission
 	};
 	class Markers
 	{
-		items=9;
+		items=6;
 		class Item0
 		{
-			position[]={3874.3633,18.125629,13280.79};
-			name="SpawnKavala";
-			text="Kavala";
+			position[]={1696.6591,14.285818,2291.1062};
+			name="SpawnKamenka";
+			text="Kamenka";
 			type="ExileSpawnZone";
 		};
 		class Item1
 		{
-			position[]={9926.5293,12.364729,12083.253};
-			name="SpawnZaros";
-			text="Zaros";
+			position[]={6711.7202,6,2589.9814};
+			name="SpawnChernogorsk";
+			text="Chernogorsk";
 			type="ExileSpawnZone";
 		};
 		class Item2
 		{
-			position[]={20978.369,27.78056,7045.6055};
-			name="SpawnSelekano";
-			text="Selekano";
+			position[]={10513.343,6.8559303,2081.8613};
+			name="SpawnElektro";
+			text="Elektro";
 			type="ExileSpawnZone";
 		};
 		class Item3
 		{
-			position[]={17137.752,15.032475,12719.362};
-			name="SpawnPrygos";
-			text="Pyrgos";
+			position[]={13352.05,6.0021176,6301.7461};
+			name="SpawnSolnichniy";
+			text="Solnichniy";
 			type="ExileSpawnZone";
 		};
 		class Item4
 		{
-			position[]={25713.313,20.344301,21329.576};
-			name="SpawnSofia";
-			text="Sofia";
+			position[]={12546.252,9.5938053,9774.4521};
+			name="SpawnBerenzino";
+			text="Berenzino";
 			type="ExileSpawnZone";
 		};
 		class Item5
 		{
-			position[]={8612.5283,180.58038,18272.271};
-			name="SpawnSyrta";
-			text="Syrta";
-			type="ExileSpawnZone";
-		};
-		class Item6
-		{
-			position[]={14599.966,22.349989,16797.193};
-			name="TraderCityMarker";
-			text="Mafia Trader City";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorBlue";
+			position[]={10948.035,164.13365,19911.332};
+			name="TraderZoneAirstrip_1";
+			text="North East Aircraft Trader";
+			type="selector_selectedMission";
 			fillName="SolidBorder";
-			a=175;
-			b=175;
-			drawBorder=1;
-		};
-		class Item7
-		{
-			position[]={23334.605,4.0095582,24188.938};
-			name="TraderZoneSilderas";
-			text="Silderas Trader City";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorBlue";
-			fillName="SolidBorder";
-			a=175;
-			b=175;
-			drawBorder=1;
-		};
-		class Item8
-		{
-			position[]={2998.0603,3.7756021,18175.479};
-			name="TraderZoneFolia";
-			text="Folia Trader City";
-			markerType="ELLIPSE";
-			type="ExileTraderZone";
-			colorName="ColorBlue";
-			fillName="SolidBorder";
-			a=175;
-			b=175;
 			drawBorder=1;
 		};
 	};
@@ -1133,11 +1096,11 @@ class Intro
 {
 	addOns[]=
 	{
-		"a3_map_altis"
+		"cup_chernarus_config"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_altis"
+		"cup_chernarus_config"
 	};
 	randomSeed=3611332;
 	class Intel
@@ -1163,11 +1126,11 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"a3_map_altis"
+		"cup_chernarus_config"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_altis"
+		"cup_chernarus_config"
 	};
 	randomSeed=15572598;
 	class Intel
@@ -1193,11 +1156,11 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"a3_map_altis"
+		"cup_chernarus_config"
 	};
 	addOnsAuto[]=
 	{
-		"a3_map_altis"
+		"cup_chernarus_config"
 	};
 	randomSeed=13194853;
 	class Intel
