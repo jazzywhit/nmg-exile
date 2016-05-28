@@ -1,9 +1,9 @@
 #Narrow Minded Gaming
 ##Bolt Action Hardcore
 
-This is the README for the NMG Arma 3 Exile server. This should provide you with step by step instructions on how to get the server setup.
+This is the README for our Arma 3 Exile Multiplayer Server, Bolt Action Hardcore. This should provide you with step by step instructions on how to get the server setup.
 
-This markdown was generated at [http://markdownlivepreview.com/](http://markdownlivepreview.com/)
+This markdown was generated at [https://stackedit.io/editor](https://stackedit.io/editor)
 
 ##Installation
 
