@@ -9,8 +9,6 @@
 keys/a3.bikey
 !@Exile/**
 !@ExileServer/**
-!@CUP_Terrains_Core/**
-!@CUP_Terrains_Maps/**
 steamcmd/**
 steamapps/**
 !battleye/**
