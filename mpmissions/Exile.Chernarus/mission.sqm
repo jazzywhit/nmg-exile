@@ -1045,7 +1045,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=6;
+		items=9;
 		class Item0
 		{
 			position[]={1696.6591,14.285818,2291.1062};
@@ -1089,6 +1089,33 @@ class Mission
 			type="selector_selectedMission";
 			fillName="SolidBorder";
 			drawBorder=1;
+		};
+		class Item6
+		{
+			position[]={6313.6445,304.99591,7818.0708};
+			name="staryTrader";
+			text="Stary Trader";
+			markerType="mil_circle";
+			type="ExileTraderZone";
+			colorName="ColorBlue";
+		};
+		class Item7
+		{
+			position[]={4060.4097,365.20267,11671.09};
+			name="bashTrader";
+			text="Bash Trader";
+			markerType="mil_circle";
+			type="ExileTraderZone";
+			colorName="ColorBlue";
+		};
+		class Item8
+		{
+			position[]={11483.242,317.29462,11323.025};
+			name="klenTrader";
+			text="Klen Trader";
+			markerType="mil_circle";
+			type="ExileTraderZone";
+			colorName="ColorBlue";
 		};
 	};
 };
