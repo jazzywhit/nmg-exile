@@ -7,6 +7,13 @@ This markdown was generated at [https://stackedit.io/editor](https://stackedit.i
 
 ##Installation
 
+###Atom.io
+The editor of choice for working on the server will be: https://atom.io/
+
+The following addons should be installed with atom:
+
+https://github.com/acemod/language-arma-atom
+
 ###WAMP
 
 [Download WAMP](http://www.wampserver.com/en/#download-wrapper) to help setup your MYSQL server easily and inside a neat virtual space.
@@ -32,10 +39,15 @@ Install both the x86 and x64 versions of the following:
 - [Visual C++ Redistributable for Visual Studio 2015]
 (https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
-###Firewall
+###Unblock DLLs
 Unblock the extdb2.dll file:
 
 - [http://www.exilemod.com/topic/8835-exileserver-mysql-error-unable-to-locate-extdb2-extension/](http://www.exilemod.com/topic/8835-exileserver-mysql-error-unable-to-locate-extdb2-extension/)
+
+Unblock the following DLLs for Infistar
+
+ARMA_LOAD.dll
+ARMA_LOG.dll
 
 ###Issues
 
@@ -43,3 +55,8 @@ Errors encountered while installing:
 
 - [http://www.exilemod.com/topic/757-mysql-error-unable-to-locate-extdb2-extension/](http://www.exilemod.com/topic/757-mysql-error-unable-to-locate-extdb2-extension/)
 - [http://www.exilemod.com/topic/1027-mysql-connection-error/](http://www.exilemod.com/topic/1027-mysql-connection-error/)
+
+### Starting Server
+The following must be packed before starting the server:
+
+@infistar_exile/addons/a3_infistar_exile

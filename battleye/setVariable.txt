@@ -1,2 +1,6 @@
 //new
 7 "" !="exilexm8isonline" !="bis_fnc_selectrespawntemplate_respawned" !="ExileCameraInUse" !="isrunning"
+7 "ExilePurse"
+7 "ExileBank"
+7 "ExileMoney"
+7 "ExileScore"

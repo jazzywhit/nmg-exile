@@ -25,14 +25,14 @@ class Cfg_infiSTAR_settings {
 	It will try to get this password from "@ExileServer\addons\exile_server_config" first. If you did not set a password there (config.cpp),
 	then it will take what you put here.
 */
-serverCommandPassword = "changeme";
+serverCommandPassword = "ReallyLongCommandPassword12!@";
 
 /*
 	"passwordAdmin" is passwordAdmin - in your servers config.cfg, needed for servercommands from client
 	
 	This is used to be able to use the "login" function ingame. Will log you in as Arma "Admin".
 */
-passwordAdmin = "changeme";
+passwordAdmin = "ReallyLongPassword12!@";
 /* serverCommandPassword and passwordAdmin should always be different passwords or it could cause problems! */
 
 
@@ -135,7 +135,7 @@ hiddenSuperAdmin[] =
 adminUIDandAccess[] =
 {
 	{
-		{"76561197961855808","UID2","UID3","..."},	/* Admins with UIDs in this Array have their Access defined in the array below. */
+		{"76561197982511285","76561197961855808"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","AdminConsole","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
