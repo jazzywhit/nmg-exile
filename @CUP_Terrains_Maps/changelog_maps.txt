@@ -1,9 +1,0 @@
-Version 1.0.1 (02.01.2016)
-            
-^   IMPROVED:   Different signature keys for Core and Maps (Full will be signed with Core + Maps)
-
----------------------------------------------------------------------
-Version 1.0 (24|12|2015)
-
-initial release
----------------------------------------------------------------------
