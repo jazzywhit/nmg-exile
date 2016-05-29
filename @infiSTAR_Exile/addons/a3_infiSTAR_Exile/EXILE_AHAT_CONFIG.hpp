@@ -1,16 +1,16 @@
 /*
 	Author: Chris(tian) "infiSTAR" Lorenzen
 	Contact: infiSTAR23@gmail.com // www.infiSTAR.de
-	
+
 	Copyright infiSTAR - 2011 - 2016. All rights reserved.
 	Christian (Chris) L. (infiSTAR23@gmail.com) Developer of infiSTAR
-	
+
 	Description:
 	Arma AntiHack & AdminTools - infiSTAR.de
-	
+
 	UPDATEEMAIL for http://update.infiSTAR.de is:
 	'devin.p.harris85@gmail.com'
-	
+
 	Last download was on:
 	'23-May-2016 13-14-01';
 */
@@ -19,9 +19,9 @@ class Cfg_infiSTAR_settings {
 	"serverCommandPassword" is serverCommandPassword - in your servers config.cfg
 	if your config.cfg does not have serverCommandPassword yet, simply add it in a new line:
 	serverCommandPassword = "changeme";
-	
+
 	This is   VERY IMPORTANT   as it is needed to KICK & BAN people.
-	
+
 	It will try to get this password from "@ExileServer\addons\exile_server_config" first. If you did not set a password there (config.cpp),
 	then it will take what you put here.
 */
@@ -29,7 +29,7 @@ serverCommandPassword = "ReallyLongCommandPassword12!@";
 
 /*
 	"passwordAdmin" is passwordAdmin - in your servers config.cfg, needed for servercommands from client
-	
+
 	This is used to be able to use the "login" function ingame. Will log you in as Arma "Admin".
 */
 passwordAdmin = "ReallyLongPassword12!@";
@@ -57,7 +57,7 @@ LOG_PATH = "infiSTAR_Logs/";
 LogAdminActions = true;
 enableIngameLogs = true;
 
-/* 
+/*
 	if you set "needAdminNameTag" to true, this string needs to be a part of the admins name, or he can't use infiSTAR Admin Menu!
 	example names: "[Admin] infiSTAR" or "infiSTAR [Admin]"
 	note: this is case sensitive as well, meaning "infiSTAR [admin]" would not work as we set it in our example to "[Admin]"
@@ -91,9 +91,9 @@ chatCommandsP[] =
 /*
 	Noficiations shown to all players on the server. Could be used to replace BEC messages.
 	{first occurrence after x min, show again after x min, show message for x seconds, font size (recommended is 0.6), x pos, y pos,text color, text (<br/> is a linebreak)}
-	
+
 	if you want the client to see a message only once when logging in, you put the first and second entry in the array to -1.
-	Example:	
+	Example:
 	{-1, -1, 4, 0.6, 0, 0, "#ff0000", "Welcome to our server"}
 */
 ENABLE_NOTIFICATION_MESSAGES = true;
@@ -135,7 +135,7 @@ hiddenSuperAdmin[] =
 adminUIDandAccess[] =
 {
 	{
-		{"76561197982511285","76561197961855808"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
+		{"76561197982511285","76561197961855808""76561197998111176"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","AdminConsole","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
@@ -302,7 +302,7 @@ ban_for_steam_ban = false;	/* if "check_steam_ban = true;" then steambanned play
 	at_option = 0; means it will try to get the array by the worldNames below
 	at_option = 1; means, YOU have to define positions and radius below in "custom[] = {};"
 */
-UAT = true;	
+UAT = true;
 class allowTP {
 	at_option = 0;
 	custom[] = {
@@ -408,10 +408,10 @@ allowedIDDs[] =
 
 /*
 	shows "MissionEventhandler added! NAME - ID" in the logs.
-	
+
 	if your logs show:
 	26-04-2016 04:17:51 infiSTAR.de | TEMPBANNED | SomeDude(SomeUIDxx) MissionEventhandler added! Loaded - 1
-	That means that you had {"Loaded",0} and it needs to be put to {"Loaded",1} to allow 1 of these handlers 
+	That means that you had {"Loaded",0} and it needs to be put to {"Loaded",1} to allow 1 of these handlers
 */
 checkMissionEventhandler = false;
 missionEventhandlers[] =
@@ -505,7 +505,7 @@ ForbiddenItems[] =
 	custom Box content:
 	just an item like it is in the example with   "ItemMap"   will put the item once in the box.
 	if an array is used like the   {"ItemGPS",5}   example, well I assume you could guess what it will do.
-	
+
 	You can just define as many as you want.
 	{
 		"BOX TYPE",
@@ -515,7 +515,7 @@ ForbiddenItems[] =
 			{"Item1",5},{"Item2",10}	// second entry in each array defiens how many of items of the first entry are wanted.
 		}
 	}
-	
+
 	The last closing bracket in an array can not have a "," afterwards. So make sure to have no syntax errors here.
 */
 allSupportBoxes[] =
