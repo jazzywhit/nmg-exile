@@ -1,5 +1,5 @@
 // https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
-forceRotorLibSimulation = 2;
+forceRotorLibSimulation = 1;
 
 // https://community.bistudio.com/wiki/Description.ext#disableChannels
 disableChannels[] = {0, 2};

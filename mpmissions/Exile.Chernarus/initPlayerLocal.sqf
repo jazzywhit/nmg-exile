@@ -1,7 +1,3 @@
-////
-// Static Objects
-////
-
 if (!hasInterface || isServer) exitWith {};
 
 // Add traders

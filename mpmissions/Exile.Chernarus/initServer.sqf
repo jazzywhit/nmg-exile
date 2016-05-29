@@ -1,3 +1,5 @@
+if (hasInterface || !isServer) exitWith {};
+
 // Chernarus BAH Buildings
 #include "customLocations\3cities.sqf";
 #include "customLocations\northeastairfield.sqf";
