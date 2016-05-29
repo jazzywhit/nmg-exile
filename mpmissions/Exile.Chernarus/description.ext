@@ -81,5 +81,45 @@ enableDebugConsole = 0; // 2 = dangerous in MP
 allowFunctionsRecompile = 0;
 
 #include "config.cpp"
-#include "CfgRemoteExec.hpp"
+
+// Remote Execution
+//#include "CfgRemoteExec.hpp"
+class CfgRemoteExec
+{
+    class Functions
+    {
+        mode = 1;
+        jip = 0;
+        class ExileServer_system_network_dispatchIncomingMessage     { allowedTargets=2; };
+		//Lockpick
+		class w4_lockpick_fnc_lockpicked { allowedTargets = 2; };
+        class w4_lockpick_fnc_lockpick_attempt { allowedTargets = 2; };
+        class w4_lockpick_fnc_lockpick_failed { allowedTargets = 2; };
+        class w4_lockpick_fnc_create_marker_client { allowedTargets = 1; };
+        class AVS_fnc_rearmVehicle { allowedTargets=2; };
+        class AVS_fnc_refuelVehicle { allowedTargets=2; };
+	};
+    class Commands
+    {
+		mode=0;
+		jip=0;
+    };
+};
+
+//////////////////////////////////////////////////////////
+// 						CUSTOM							//
+//////////////////////////////////////////////////////////
+//Custom defines
+#include "defines.hpp"
+
+//Infistar
 #include "infiSTAR_Exile_AdminMenu.hpp"
+
+//Slot Machine
+#include"code\slotmachine\slots.hpp"
+
+//Blackjack
+#include"code\blackjack\blackjack.hpp"
+
+//XM8 Apps
+#include"xm8Apps\Xm8Apps.hpp"

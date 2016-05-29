@@ -19,12 +19,12 @@ class osefStatusBarAdmin {
 			w = 1.35;
 			h = 0.06;
 			shadow = 2;
-			text="";
-			//colorBackground[] = { 0, 0, 0, 0.5 };
-			font = "LucidaConsoleB";
+//			colorBackground[] = { 0, 0, 0, 0.5 };  // uncomment and increase 4th number to have a background
+			font = "PuristaSemibold";
 			size = 0.04;
 			type = 13;
 			style = 2;
+			text="";
 			class Attributes {
 				align="center";
 				color = "#ffffff";//#5fe60c
@@ -52,12 +52,12 @@ class osefStatusBar {
 			w = 1.3;
 			h = 0.07;
 			shadow = 2;
-			text="";
-			//colorBackground[] = { 0, 0, 0, 0.5 };
-			font = "LucidaConsoleB";
+//			colorBackground[] = { 0, 0, 0, 0.5 };  // uncomment and increase 4th number to have a background
+			font = "PuristaSemibold";
 			size = 0.04;
 			type = 13;
 			style = 2;
+			text="";
 			class Attributes {
 				align="left";
 				color = "#ffffff";//#5fe60c

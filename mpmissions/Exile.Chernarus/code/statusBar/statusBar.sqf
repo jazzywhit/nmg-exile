@@ -12,7 +12,7 @@ disableSerialization;
 
 	_rscLayer = "osefStatusBarAdmin" call BIS_fnc_rscLayer;
 	_rscLayer cutRsc["osefStatusBarAdmin","PLAIN"];
-	systemChat format["....Connected ", _rscLayer];
+//	systemChat format["StatusBar Initialized", _rscLayer];
 	[] spawn 
 	{
 
@@ -170,21 +170,30 @@ disableSerialization;
 		//display the information 
 		((uiNamespace getVariable "osefStatusBarAdmin")displayCtrl 55554)ctrlSetStructuredText parseText 
 			format["
-			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.6'  shadowColor='#000000' image='scripts\statusbar\icons\players.paa' color='%10'/> %2</t>
-			<t shadow='1' shadowColor='#000000' color='%11'><img size='1.0'  shadowColor='#000000' image='scripts\statusbar\icons\health.paa' color='%11'/> %3%1</t> 
-			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.0'  shadowColor='#000000' image='scripts\statusbar\icons\poptab_ca.paa' color='%10'/> %4</t> 
-			<t shadow='1' shadowColor='#000000' color='%15'><img size='1.0'  shadowColor='#000000' image='scripts\statusbar\icons\exile.paa' color='%10'/> %5</t> 
-			<t shadow='1' shadowColor='#000000' color='%15'><img size='1.0'  shadowColor='#000000' image='scripts\statusbar\icons\compass.paa' color='%10'/> %9</t> 
-			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.6'  shadowColor='#000000' image='scripts\statusbar\icons\restart.paa' color='%10'/>%10:%11</t>",
+			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.6'  shadowColor='#000000' image='code\statusbar\icons\players.paa' color='%10'/> %2</t>
+			<t shadow='1' shadowColor='#000000' color='%11'><img size='1.0'  shadowColor='#000000' image='code\statusbar\icons\health.paa' color='%11'/> %3%1</t> 
+			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.0'  shadowColor='#000000' image='code\statusbar\icons\poptab_ca.paa' color='%10'/> %4</t>  
+			<t shadow='1' shadowColor='#000000' color='%15'><img size='1.0'  shadowColor='#000000' image='code\statusbar\icons\exile.paa' color='%10'/> %9</t> 
+			<t shadow='1' shadowColor='#000000' color='%10'>FPS: %7</t>
+			<t shadow='1' shadowColor='#000000' color='%15'><img size='1.0'  shadowColor='#000000' image='code\statusbar\icons\compass.paa' color='%10'/> %17</t> 
+			<t shadow='1' shadowColor='#000000' color='%10'><img size='1.6'  shadowColor='#000000' image='code\statusbar\icons\restart.paa' color='%10'/>%18:%19</t>",
 			
 					"%", 
 					count playableUnits,
 					_damage,
 					_wallet, 
+					_hunger, 
+					_thirst, 
+					_serverFPS, 
+					_energyPercent, 
 					_stamina, 
 					_colourDefault,
 					_colourDamage,
+					_colourHunger,
+					_colourThirst,
+					_colourEnergy,
 					_colourStamina,
+					format["%1/%2",_xx,_yy], 
 					_dir,
 					_hours,
 					_minutes					 
