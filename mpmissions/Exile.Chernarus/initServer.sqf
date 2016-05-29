@@ -19,7 +19,7 @@
 #include "customLocations\stary_tents.sqf";
 #include "customLocations\GOC_LM_wlcr.sqf";
 
-#Replace A2 Buildings with A3 Buildings
+//Replace A2 Buildings with A3 Buildings
 #include "code\buildingReplacement.sqf"
 
 _objects =
