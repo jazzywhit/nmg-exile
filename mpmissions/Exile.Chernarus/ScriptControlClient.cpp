@@ -19,8 +19,6 @@ class CfgScriptControlMission
 		KILL_MESSAGE_SCRIPT = 1;
 		//Welcome Credits - GR8
 		WELCOME_CREDITS_SCRIPT = 1;
-		//Watermark Logo
-		LOGO_WATERMARK_SCRIPT = 0;
 		//Weather Effects by john
 		WEATHER_EFFECTS_SCRIPT = 0;
 		//Ground Fog
@@ -33,12 +31,8 @@ class CfgScriptControlMission
 		ELECTRICAL_STORMS_SCRIPT = 0;
 		//Advanced Vehicle System
 		AVS_SCRIPT = 1;
-		//scrap bike
-		SCRAP_BIKE = 1;
 		//pack bike - Into a vehicle, not a person
 		PACK_BIKE = 1;
-		//Indestructible bases on restart
-		INDESTRUTABLE_BASE_SCRIPT = 1;
 		//Need gps for map markers
 		GPS_MAP_MARKERS = 1;
 		//Respect Based loadouts

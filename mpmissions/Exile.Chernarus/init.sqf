@@ -1,10 +1,8 @@
 //init
-_LOGO_WATERMARK_SCRIPT 		= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "LOGO_WATERMARK_SCRIPT");
 _WELCOME_CREDITS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "WELCOME_CREDITS_SCRIPT");
 _KILL_MESSAGE_SCRIPT 		= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "KILL_MESSAGE_SCRIPT");
 _IGILOAD_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "IGILOAD_SCRIPT");
 _WEATHER_EFFECTS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "WEATHER_EFFECTS_SCRIPT");
-_AIR_PATROL_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "AIR_PATROL_SCRIPT");
 _FOG_SCRIPT 				= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "FOG_SCRIPT");
 _LOCK_PICK_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "LOCK_PICK_SCRIPT");
 _BLOWOUT_SCRIPT				= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "BLOWOUT_SCRIPT");
@@ -23,21 +21,6 @@ if  (_AVS_SCRIPT isEqualTo 1) then {
 if (_LOCK_PICK_SCRIPT isEqualTo 1) then {
 	[] execVM "code\w4_lockpick\initLockpick.sqf";
 	diag_log "Lock Pick - Loaded";
-};
-
-//Watermark
-if (_LOGO_WATERMARK_SCRIPT isEqualTo 1) then {
-	_piclogo = "Pictures\logo.paa";
-	[
-		'<img align=''left'' size=''1.0'' shadow=''0'' image='+(str(_piclogo))+' />',
-		safeZoneX+0.027,
-		safeZoneY+safeZoneH-0.1,
-		99999,
-		0,
-		0,
-		3090
-	] spawn bis_fnc_dynamicText;
-	diag_log "Watermark - Loaded";
 };
 
 // Welcome Credits by Gr8
