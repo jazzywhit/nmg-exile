@@ -1,17 +1,15 @@
 //init
-_LOGO_WATERMARK_SCRIPT 		= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "LOGO_WATERMARK_SCRIPT");
-_WELCOME_CREDITS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "WELCOME_CREDITS_SCRIPT");
-_KILL_MESSAGE_SCRIPT 		= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "KILL_MESSAGE_SCRIPT");
-_IGILOAD_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "IGILOAD_SCRIPT");
-_WEATHER_EFFECTS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "WEATHER_EFFECTS_SCRIPT");
-_AIR_PATROL_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "AIR_PATROL_SCRIPT");
-_STATUS_BAR_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "STATUS_BAR_SCRIPT");
-_FOG_SCRIPT 				= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "FOG_SCRIPT");
-_LOCK_PICK_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "LOCK_PICK_SCRIPT");
-_BLOWOUT_SCRIPT				= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "BLOWOUT_SCRIPT");
-_ELECTRICAL_STORMS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "ELECTRICAL_STORMS_SCRIPT");
-_ETG_CRASHDROP				= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "ETG_CRASHDROP");
-_AVS_SCRIPT 				= getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "AVS_SCRIPT");
+_LOGO_WATERMARK_SCRIPT 		= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "LOGO_WATERMARK_SCRIPT");
+_WELCOME_CREDITS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "WELCOME_CREDITS_SCRIPT");
+_KILL_MESSAGE_SCRIPT 		= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "KILL_MESSAGE_SCRIPT");
+_IGILOAD_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "IGILOAD_SCRIPT");
+_WEATHER_EFFECTS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "WEATHER_EFFECTS_SCRIPT");
+_AIR_PATROL_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "AIR_PATROL_SCRIPT");
+_FOG_SCRIPT 				= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "FOG_SCRIPT");
+_LOCK_PICK_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "LOCK_PICK_SCRIPT");
+_BLOWOUT_SCRIPT				= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "BLOWOUT_SCRIPT");
+_ELECTRICAL_STORMS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "ELECTRICAL_STORMS_SCRIPT");
+_AVS_SCRIPT 				= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "AVS_SCRIPT");
 
 //Loads mapcenter based on map name set in scriptcontrol
 [] execVM "code\mapcenter.sqf";
@@ -21,66 +19,51 @@ if  (_AVS_SCRIPT isEqualTo 1) then {
 [] execVM "AVS\AVS_fnc_init.sqf";
 };
 
-//ETG Heli Crash And Drop Script
-//if (_ETG_CRASHDROP	isEqualTo 1) then {
-//	if (isServer) then {
-//		 fn_crashdrop = compile preprocessFile "code\fn_crashdrop.sqf";
-//		 [2] call fn_crashdrop;
-//	};
-//};
-
 //Lockpick
 if (_LOCK_PICK_SCRIPT isEqualTo 1) then {
-	[] execVM "addons\w4_lockpick\initLockpick.sqf";
+	[] execVM "code\w4_lockpick\initLockpick.sqf";
 	diag_log "Lock Pick - Loaded";
 };
 
-//Air Patrol
-//if (_AIR_PATROL_SCRIPT isEqualTo 1) then {
-//	[] execVM "code\airpatrol.sqf";
-//	diag_log "Air Patrol - Loaded";
-//};
-
 //Watermark
-//if (_LOGO_WATERMARK_SCRIPT isEqualTo 1) then {
-//	_piclogo = "Pictures\logo.paa";
-//	[
-//		'<img align=''left'' size=''1.0'' shadow=''0'' image='+(str(_piclogo))+' />',
-//		safeZoneX+0.027,
-//		safeZoneY+safeZoneH-0.1,
-//		99999,
-//		0,
-//		0,
-//		3090
-//	] spawn bis_fnc_dynamicText;
-//	diag_log "Watermark - Loaded";
-//};
+if (_LOGO_WATERMARK_SCRIPT isEqualTo 1) then {
+	_piclogo = "Pictures\logo.paa";
+	[
+		'<img align=''left'' size=''1.0'' shadow=''0'' image='+(str(_piclogo))+' />',
+		safeZoneX+0.027,
+		safeZoneY+safeZoneH-0.1,
+		99999,
+		0,
+		0,
+		3090
+	] spawn bis_fnc_dynamicText;
+	diag_log "Watermark - Loaded";
+};
 
 // Welcome Credits by Gr8
 if (_WELCOME_CREDITS_SCRIPT isEqualTo 1) then {
 	[] execVM "code\welcome.sqf";
-	diag_log "Welcome Credits by Gr8 - Loaded";
+	diag_log "Welcome Credits Loaded";
 };
+
 // Kill Messages By GR8
 if (_KILL_MESSAGE_SCRIPT isEqualTo 1) then {
 	[] execVM "code\KillMessages.sqf";
 	diag_log "Kill Messages By GR8 - Loaded";
 };
+
 // Igiload
 if (_IGILOAD_SCRIPT isEqualTo 1) then {
 	[] execVM "code\IgiLoad\IgiLoadInit.sqf";
 	diag_log "IgiLoad - Loaded";
 };
-// Status Bar
-if (_STATUS_BAR_SCRIPT isEqualTo 1) then {
-	[] execVM "code\statusBar\statusBar.sqf";
-	diag_log "Status Bar - Loaded";
-};
+
 //Ground Fog
 if (_FOG_SCRIPT isEqualTo 1) then {
 	_GF = [] execVM "code\fog.sqf";
 	diag_log "Ground Fog - Loaded";
 };
+
 //blow out
 if (_BLOWOUT_SCRIPT isEqualTo 1) then {
 	// to use only 1 type 
@@ -94,7 +77,6 @@ if (_BLOWOUT_SCRIPT isEqualTo 1) then {
 	ns_blow_damage_unprotected = 0.60; //damage taken when outside unprotected
 	ns_blow_damage_invehicle = 0.0; //damage taken when in vehicle
 	ns_blow_damage_inbuilding = 0.0; // damage taken when inside
-
 	ns_prep_time = 20; //time to prepare/hide after storm is started 
 
 	ns_blowout = true;//Do not change
@@ -103,6 +85,7 @@ if (_BLOWOUT_SCRIPT isEqualTo 1) then {
 	ns_blow_status = false;//Do not change
 	ns_blow_action = false;//Do not change
 	phasAPSI = false;//Do not change
+
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//				TESTING MAY NOT WORK IF THEY CAUSE ANY ISSUES SET TO FALSE
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -114,23 +97,25 @@ if (_BLOWOUT_SCRIPT isEqualTo 1) then {
 	ns_blow_disable_vehicles = false; // disable vehicles during storm - 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-	fnc_isInsideBuilding = compile preprocessFileLineNumbers "addons\blowout\external\fn_isInsideBuilding.sqf";
-	fnc_hasAPSI = compile preprocessFileLineNumbers "addons\blowout\external\fn_hasAPSI.sqf";
+	fnc_isInsideBuilding = compile preprocessFileLineNumbers "code\blowout\external\fn_isInsideBuilding.sqf";
+	fnc_hasAPSI = compile preprocessFileLineNumbers "code\blowout\external\fn_hasAPSI.sqf";
 
 	if (!isDedicated) then {
-		 _bul = [] execVM "addons\blowout\module\blowout_client.sqf";
+		 _bul = [] execVM "code\blowout\module\blowout_client.sqf";
 		diag_log "BLOWOUT CLIENT - Loading";
 	};
+
 	if (isServer) then {
-		_bul = [] execVM "addons\blowout\module\blowout_server.sqf";
+		_bul = [] execVM "code\blowout\module\blowout_server.sqf";
 		sleep 2;
 	};
 };
+
 if (_ELECTRICAL_STORMS_SCRIPT isEqualTo 1) then {
 	[] execVM "code\storms\config_storms.sqf";
 	diag_log "Electrical Storms - Loaded";
 };
+
 if (_WEATHER_EFFECTS_SCRIPT isEqualTo 1) then {
 	[] execVM "code\weatherEffects.sqf";
 	diag_log "Weather Effects - Loaded";

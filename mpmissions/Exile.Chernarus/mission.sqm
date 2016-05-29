@@ -1044,80 +1044,94 @@ class Mission
 		};
 	};
 	class Markers
-	{
-		items=9;
-		class Item0
-		{
-			position[]={1696.6591,14.285818,2291.1062};
-			name="SpawnKamenka";
-			text="Kamenka";
-			type="ExileSpawnZone";
-		};
-		class Item1
-		{
-			position[]={6711.7202,6,2589.9814};
-			name="SpawnChernogorsk";
-			text="Chernogorsk";
-			type="ExileSpawnZone";
-		};
-		class Item2
-		{
-			position[]={10513.343,6.8559303,2081.8613};
-			name="SpawnElektro";
-			text="Elektro";
-			type="ExileSpawnZone";
-		};
-		class Item3
-		{
-			position[]={13352.05,6.0021176,6301.7461};
-			name="SpawnSolnichniy";
-			text="Solnichniy";
-			type="ExileSpawnZone";
-		};
-		class Item4
-		{
-			position[]={12546.252,9.5938053,9774.4521};
-			name="SpawnBerenzino";
-			text="Berenzino";
-			type="ExileSpawnZone";
-		};
-		class Item5
-		{
-			position[]={10948.035,164.13365,19911.332};
-			name="TraderZoneAirstrip_1";
-			text="North East Aircraft Trader";
-			type="selector_selectedMission";
-			fillName="SolidBorder";
-			drawBorder=1;
-		};
-		class Item6
-		{
-			position[]={6313.6445,304.99591,7818.0708};
-			name="staryTrader";
-			text="Stary Trader";
-			markerType="mil_circle";
-			type="ExileTraderZone";
-			colorName="ColorBlue";
-		};
-		class Item7
-		{
-			position[]={4060.4097,365.20267,11671.09};
-			name="bashTrader";
-			text="Bash Trader";
-			markerType="mil_circle";
-			type="ExileTraderZone";
-			colorName="ColorBlue";
-		};
-		class Item8
-		{
-			position[]={11483.242,317.29462,11323.025};
-			name="klenTrader";
-			text="Klen Trader";
-			markerType="mil_circle";
-			type="ExileTraderZone";
-			colorName="ColorBlue";
-		};
-	};
+    {
+        items=9;
+        class Item0
+        {
+            position[]={1696.6591,14.285818,2291.1062};
+            name="SpawnKavala";
+            text="Kamenka";
+            type="ExileSpawnZone";
+        };
+        class Item1
+        {
+            position[]={6711.7202,6,2589.9814};
+            name="SpawnChernogorsk";
+            text="Chernogorsk";
+            type="ExileSpawnZone";
+        };
+        class Item2
+        {
+            position[]={10513.343,6.8559303,2081.8613};
+            name="SpawnElektro";
+            text="Elektro";
+            type="ExileSpawnZone";
+        };
+        class Item3
+        {
+            position[]={12054.753,6.1015596,3489.873};
+            name="SpawnKamyshovo";
+            text="Kamyshovo";
+            type="ExileSpawnZone";
+        };
+        class Item4
+        {
+            position[]={13352.05,6.0021176,6301.7461};
+            name="SpawnSolnichniy";
+            text="Solnichniy";
+            type="ExileSpawnZone";
+        };
+        class Item5
+        {
+            position[]={12546.252,9.5938053,9774.4521};
+            name="SpawnBerenzino";
+            text="Berenzino";
+            type="ExileSpawnZone";
+        };
+        class Item6
+        {
+            position[]={6968.5195,283.7731,7519.438};
+            name="TraderZoneExample";
+            text="Example Trader City";
+            markerType="ELLIPSE";
+            type="Empty";
+            colorName="ColorBlue";
+            fillName="SolidBorder";
+            a=100;
+            b=100;
+            drawBorder=1;
+        };
+        class Item7
+        {
+            position[]={10948.035,164.13365,19911.332};
+            name="TraderZoneAirstrip_1";
+            text="North East Aircraft Trader";
+            type="selector_selectedMission";
+            fillName="SolidBorder";
+            drawBorder=1;
+        };
+    };
+    class Sensors
+    {
+        items=1;
+        class Item0
+        {
+            position[]={6968.5029,283.77072,7519.4106};
+            a=100;
+            b=100;
+            activationBy="ANY";
+            repeating=1;
+            interruptable=1;
+            age="UNKNOWN";
+            name="ExileTrader";
+            expCond="(vehicle player) in thisList";
+            expActiv="call ExileClient_object_player_event_onEnterSafezone";
+            expDesactiv="call ExileClient_object_player_event_onLeaveSafezone";
+            class Effects
+            {
+            };
+        };
+    };
 };
 class Intro
 {

@@ -3,19 +3,16 @@
 // 0 is off
 
 //Dynamic vehicles spawn with items
-class CfgScriptControlMisson
+class CfgScriptControlMission
 {
-	
 	class SCRIPT_config
 	{
 		//Map name
-		MAPNAME = "Altis";
+		MAPNAME = "Chernarus";
 		//Spawn items in dynamic vehicles
 		DYNAMIC_ITEMS_SCRIPT = 1;
-		//Random heli crashes
-		RANDOM_HELI_CRASH_SCRIPT = 1;
 		//chopwood directly into to vehicles
-		CHOPWOOD_DIRET_TO_TRUCK = 1;
+		CHOPWOOD_DIRECT_TO_TRUCK = 1;
 		//IGILOAD
 		IGILOAD_SCRIPT = 1;
 		//Kill Messages - GR8
@@ -23,28 +20,22 @@ class CfgScriptControlMisson
 		//Welcome Credits - GR8
 		WELCOME_CREDITS_SCRIPT = 1;
 		//Watermark Logo
-		LOGO_WATERMARK_SCRIPT = 1;
+		LOGO_WATERMARK_SCRIPT = 0;
 		//Weather Effects by john
-		WEATHER_EFFECTS_SCRIPT = 1;
-		//Dynamic AirPatrol by john
-		AIR_PATROL_SCRIPT = 1;
-		//Status Bar
-		STATUS_BAR_SCRIPT = 1;
+		WEATHER_EFFECTS_SCRIPT = 0;
 		//Ground Fog
 		FOG_SCRIPT = 1;
 		//Lockpick by W4rGo
 		LOCK_PICK_SCRIPT = 1;
 		//Blowout
-		BLOWOUT_SCRIPT = 1;
+		BLOWOUT_SCRIPT = 0;
 		//Electrical Storms
-		ELECTRICAL_STORMS_SCRIPT = 1;
-		//ETG Heli Crash drops
-		ETG_CRASHDROP = 1;
+		ELECTRICAL_STORMS_SCRIPT = 0;
 		//Advanced Vehicle System
 		AVS_SCRIPT = 1;
 		//scrap bike
 		SCRAP_BIKE = 1;
-		//pack bike
+		//pack bike - Into a vehicle, not a person
 		PACK_BIKE = 1;
 		//Indestructible bases on restart
 		INDESTRUTABLE_BASE_SCRIPT = 1;
@@ -62,6 +53,5 @@ class CfgScriptControlMisson
 		REPACK_VERSION = 0.01; //current release number
 		BUILD_VERSION = 197; //should match the current git commits number
 	};
-
 };
 

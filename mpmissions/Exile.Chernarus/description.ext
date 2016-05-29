@@ -115,11 +115,3 @@ class CfgRemoteExec
 //Infistar
 #include "infiSTAR_Exile_AdminMenu.hpp"
 
-//Slot Machine
-#include"code\slotmachine\slots.hpp"
-
-//Blackjack
-#include"code\blackjack\blackjack.hpp"
-
-//XM8 Apps
-#include"xm8Apps\Xm8Apps.hpp"

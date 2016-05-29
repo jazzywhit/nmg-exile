@@ -7,7 +7,7 @@
 
 if (!hasInterface || isServer) exitWith {};
 
-_MAPNAME = getNumber(missionConfigFile >> "CfgScriptControlMisson" >> "SCRIPT_config" >> "MAPNAME");
+_MAPNAME = "Chernarus";
 
 if (_MAPNAME == "Altis") then{
 	[] execVM "code\traders\altistraders.sqf";
