@@ -6,7 +6,7 @@ if (true) then
   _this = createVehicle ["mbg_apartments_big_04_EO", [8215.3682, 6723.751, 0.16989286], [], 0, "CAN_COLLIDE"];
   _vehicle_81 = _this;
   _this setDir 45.78627;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [8215.3682, 6723.751, 0.16989286];
 };
 
@@ -223,7 +223,7 @@ if (true) then
   _this = createVehicle ["MAP_ruin_01", [8207.9639, 6676.1465, -0.067053735], [], 0, "CAN_COLLIDE"];
   _vehicle_327 = _this;
   _this setDir -137.8244;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [8207.9639, 6676.1465, -0.067053735];
 };
 
@@ -233,7 +233,7 @@ if (true) then
   _this = createVehicle ["MAP_HouseBlock_D1_ruins", [8216.7363, 6695.2949, -0.61307156], [], 0, "CAN_COLLIDE"];
   _vehicle_331 = _this;
   _this setDir -224.18501;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [8216.7363, 6695.2949, -0.61307156];
 };
 
@@ -243,7 +243,7 @@ if (true) then
   _this = createVehicle ["MAP_dulni_bs", [8200.6436, 6678.4243, -0.17001082], [], 0, "CAN_COLLIDE"];
   _vehicle_337 = _this;
   _this setDir -590.49988;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [8200.6436, 6678.4243, -0.17001082];
 };
 
@@ -1297,7 +1297,7 @@ if (true) then
   _this = createVehicle ["Land_A_CraneCon", [8190.5449, 6704.7598, -0.019030066], [], 0, "CAN_COLLIDE"];
   _vehicle_973 = _this;
   _this setDir -131.29916;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [8190.5449, 6704.7598, -0.019030066];
 };
 

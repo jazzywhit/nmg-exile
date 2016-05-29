@@ -102,7 +102,7 @@
   H_Cap_tan
   6Rnd_GreenSignal_F
 */
-class CivilianLowerClass
+class CivillianLowerClass
 {
     count = 124;
     half = 7143.29532481418;
@@ -341,7 +341,7 @@ class CivilianLowerClass
   FlareYellow_F
   Exile_Item_PlasticBottleEmpty
 */
-class CivilianUpperClass
+class CivillianUpperClass
 {
     count = 160;
     half = 7879.88239008304;

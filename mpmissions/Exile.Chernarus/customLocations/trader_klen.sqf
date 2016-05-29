@@ -51,7 +51,7 @@ if (true) then
   _this = createVehicle ["Land_afbarabizna", [11461.482, 11357.271, 0.052818015], [], 0, "CAN_COLLIDE"];
   _vehicle_34 = _this;
   _this setDir 213.82274;
-  _this setVehicleInit "_obj setVectorUp [0,0,1]";
+  //_this setVehicleInit "_obj setVectorUp [0,0,1]";
   _this setPos [11461.482, 11357.271, 0.052818015];
 };
 
@@ -376,7 +376,7 @@ if (true) then
   _this = createVehicle ["DeerStand_DZ", [11455.225, 11358.412, 6.7239819], [], 0, "CAN_COLLIDE"];
   _vehicle_173 = _this;
   _this setDir -235.0235;
-  _this setVehicleInit "_obj setVectorUp [0,0,1]";
+  //_this setVehicleInit "_obj setVectorUp [0,0,1]";
   _this setPos [11455.225, 11358.412, 6.7239819];
 };
 

@@ -15,7 +15,7 @@ if (true) then
   _this = createVehicle ["Land_Ind_SawMillPen", [7828.6826, 12611.318, -0.56032413], [], 0, "CAN_COLLIDE"];
   _vehicle_73 = _this;
   _this setDir -107.59381;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7828.6826, 12611.318, -0.56032413];
 };
 
@@ -277,7 +277,7 @@ if (true) then
   _this = createVehicle ["GraveCross2_EP1", [7816.9009, 12607.572, 6.2101817], [], 0, "CAN_COLLIDE"];
   _vehicle_184 = _this;
   _this setDir 76.901436;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7816.9009, 12607.572, 6.2101817];
 };
 
@@ -412,7 +412,7 @@ if (true) then
   _this = createVehicle ["GraveCross2_EP1", [7839.7461, 12614.333, 1.9675419], [], 0, "CAN_COLLIDE"];
   _vehicle_256 = _this;
   _this setDir 63.361465;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7839.7461, 12614.333, 1.9675419];
 };
 
@@ -618,7 +618,7 @@ if (true) then
   _this = createVehicle ["Land_dum_mesto_in", [7879.4224, 12616.669, 0.15746254], [], 0, "CAN_COLLIDE"];
   _vehicle_422 = _this;
   _this setDir 72.176918;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7879.4224, 12616.669, 0.15746254];
 };
 
@@ -628,7 +628,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7864.2144, 12628.078, -0.23839186], [], 0, "CAN_COLLIDE"];
   _vehicle_460 = _this;
   _this setDir 71.906738;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7864.2144, 12628.078, -0.23839186];
 };
 
@@ -638,7 +638,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7866.6138, 12631.912, -0.3863346], [], 0, "CAN_COLLIDE"];
   _vehicle_472 = _this;
   _this setDir 161.79021;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7866.6138, 12631.912, -0.3863346];
 };
 
@@ -648,7 +648,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_Pole", [7867.2876, 12618.994, -0.068583019], [], 0, "CAN_COLLIDE"];
   _vehicle_476 = _this;
   _this setDir -18.931719;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7867.2876, 12618.994, -0.068583019];
 };
 
@@ -658,7 +658,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7872.5522, 12633.96, -0.14935344], [], 0, "CAN_COLLIDE"];
   _vehicle_478 = _this;
   _this setDir 161.79021;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7872.5522, 12633.96, -0.14935344];
 };
 
@@ -668,7 +668,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7866.1841, 12622.26, -0.43899676], [], 0, "CAN_COLLIDE"];
   _vehicle_480 = _this;
   _this setDir 71.522942;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7866.1841, 12622.26, -0.43899676];
 };
 
@@ -678,7 +678,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7878.5503, 12635.912, -0.09111318], [], 0, "CAN_COLLIDE"];
   _vehicle_483 = _this;
   _this setDir 161.30476;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7878.5503, 12635.912, -0.09111318];
 };
 
@@ -688,7 +688,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7884.4624, 12637.874, -7.6293945e-006], [], 0, "CAN_COLLIDE"];
   _vehicle_485 = _this;
   _this setDir 161.43837;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7884.4624, 12637.874, -7.6293945e-006];
 };
 
@@ -698,7 +698,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7890.4028, 12639.956, 6.1035156e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_487 = _this;
   _this setDir 160.17514;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7890.4028, 12639.956, 6.1035156e-005];
 };
 
@@ -708,7 +708,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7894.1978, 12637.568, 0.15789092], [], 0, "CAN_COLLIDE"];
   _vehicle_489 = _this;
   _this setDir -108.20621;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7894.1978, 12637.568, 0.15789092];
 };
 
@@ -718,7 +718,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7896.168, 12631.571, 0.13271421], [], 0, "CAN_COLLIDE"];
   _vehicle_491 = _this;
   _this setDir -107.93186;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7896.168, 12631.571, 0.13271421];
 };
 
@@ -728,7 +728,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5_D_2", [7898.1484, 12625.772, 0.056015603], [], 0, "CAN_COLLIDE"];
   _vehicle_495 = _this;
   _this setDir -110.50029;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7898.1484, 12625.772, 0.056015603];
 };
 
@@ -738,7 +738,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5_D", [7899.0859, 12622.923, 0.35420328], [], 0, "CAN_COLLIDE"];
   _vehicle_498 = _this;
   _this setDir -108.44782;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7899.0859, 12622.923, 0.35420328];
 };
 
@@ -748,7 +748,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7900.9404, 12617.213, 0.26075307], [], 0, "CAN_COLLIDE"];
   _vehicle_501 = _this;
   _this setDir -107.96901;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7900.9404, 12617.213, 0.26075307];
 };
 
@@ -758,7 +758,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7898.623, 12613.494, 0.13421209], [], 0, "CAN_COLLIDE"];
   _vehicle_503 = _this;
   _this setDir -17.449892;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7898.623, 12613.494, 0.13421209];
 };
 
@@ -768,7 +768,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7892.5923, 12611.531, -0.0027708821], [], 0, "CAN_COLLIDE"];
   _vehicle_505 = _this;
   _this setDir -17.805508;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7892.5923, 12611.531, -0.0027708821];
 };
 
@@ -778,7 +778,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7886.6357, 12609.636, -0.2541762], [], 0, "CAN_COLLIDE"];
   _vehicle_507 = _this;
   _this setDir -16.860321;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7886.6357, 12609.636, -0.2541762];
 };
 
@@ -788,7 +788,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7880.603, 12607.814, -0.39092419], [], 0, "CAN_COLLIDE"];
   _vehicle_509 = _this;
   _this setDir -16.671471;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7880.603, 12607.814, -0.39092419];
 };
 
@@ -798,7 +798,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7874.7754, 12606.019, -0.407267], [], 0, "CAN_COLLIDE"];
   _vehicle_511 = _this;
   _this setDir -18.217926;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7874.7754, 12606.019, -0.407267];
 };
 
@@ -808,7 +808,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7870.8682, 12608.399, -0.4580757], [], 0, "CAN_COLLIDE"];
   _vehicle_513 = _this;
   _this setDir 70.075195;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7870.8682, 12608.399, -0.4580757];
 };
 
@@ -818,7 +818,7 @@ if (true) then
   _this = createVehicle ["MAP_Wall_IndVar1_5", [7868.8438, 12614.108, -0.35351801], [], 0, "CAN_COLLIDE"];
   _vehicle_519 = _this;
   _this setDir 71.287094;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7868.8438, 12614.108, -0.35351801];
 };
 
@@ -828,7 +828,7 @@ if (true) then
   _this = createVehicle ["DeerStand_DZ", [7873.9238, 12608.718, 0.39533994], [], 0, "CAN_COLLIDE"];
   _vehicle_528 = _this;
   _this setDir 72.127632;
-  _this setVehicleInit "this setVectorUp [0,0,1]";
+  //_this setVehicleInit "this setVectorUp [0,0,1]";
   _this setPos [7873.9238, 12608.718, 0.39533994];
 };
 
