@@ -1,3 +1,27 @@
+// Chernarus BAH Buildings
+#include "customLocations\3cities.sqf";
+#include "customLocations\northeastairfield.sqf";
+#include "customLocations\northwestairfield.sqf";
+#include "customLocations\vybor.sqf";
+#include "customLocations\BorMilitaryBase.sqf";
+#include "customLocations\DichinaMilitaryBase.sqf";
+#include "customLocations\NovyLugMilitaryBase.sqf";
+#include "customLocations\Zelenogorsk.sqf";
+#include "customLocations\ganjafarma.sqf";
+#include "customLocations\trader_guglovo.sqf";
+#include "customLocations\cult.sqf";
+#include "customLocations\trader_klen.sqf";
+#include "customLocations\trader_cherno.sqf";
+#include "customLocations\trader_berezino.sqf";
+#include "customLocations\trader_sosnovy.sqf";
+#include "customLocations\trader_hero.sqf";
+#include "customLocations\trader_bandit.sqf";
+#include "customLocations\stary_tents.sqf";
+#include "customLocations\GOC_LM_wlcr.sqf";
+
+#Replace A2 Buildings with A3 Buildings
+#include "code\buildingReplacement.sqf"
+
 _objects =
 [
     ["ZavoraAnim",[4084.43,11655.7,0],17.3713,[[0.298563,0.95439,0],[0,0,1]],false],
