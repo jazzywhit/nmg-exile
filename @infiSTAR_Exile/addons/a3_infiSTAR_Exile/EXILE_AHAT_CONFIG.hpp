@@ -38,7 +38,7 @@ passwordAdmin = "ReallyLongPassword12!@";
 
 /* "_OPEN_ADMIN_MENU_KEY": Key to open the menu (google DIK_KeyCodes (0x3B is F1))   */
 OPEN_ADMIN_MENU_KEY = 0x3B;
-HIDE_FROM_PLAYERS = false;				/* So no normal can see it :)! */
+HIDE_FROM_PLAYERS = true;				/* So no normal can see it :)! */
 announce_adminstate_changed = false;	/* whenever you type !admin as an admin it will announce that you logged out or in to all players on the server! */
 use_html_load_on_adminmenu = true;		/* default and recommended is TRUE. infiSTAR updates and news are announced in the top right corner when you open the AdminMenu if this is true! */
 
@@ -72,9 +72,9 @@ AdminNameTag = "[Admin]";
 */
 chatCommands[] =
 {
-	{"!ts","ts.mycommunity.com"},
-	{"!website","www.mycommunity.com"},
-	{"!admin","please visit ts.mycommunity.com"}
+	{"!ts","voice.narrowmindedgaming.com"},
+	{"!website","www.narrowmindedgaming.com"},
+	{"!admin","please visit voice.narrowmindedgaming.com"}
 };
 
 /*
@@ -83,7 +83,7 @@ chatCommands[] =
 */
 chatCommandsP[] =
 {
-	{"no loot","You cannot loot from non arma buildings in this map, you must move around - check the shipping yards for best loot"}
+	{"no loot", "There is loot, open your bloody eyes."}
 };
 
 
@@ -96,7 +96,7 @@ chatCommandsP[] =
 	Example:
 	{-1, -1, 4, 0.6, 0, 0, "#ff0000", "Welcome to our server"}
 */
-ENABLE_NOTIFICATION_MESSAGES = true;
+ENABLE_NOTIFICATION_MESSAGES = false;
 NOTIFY_MSG_ARRAY[] =
 {
 	{-1, -1, 6, 0.6, 0, 0, "#ff0000", "Welcome to our server"},
@@ -135,7 +135,7 @@ hiddenSuperAdmin[] =
 adminUIDandAccess[] =
 {
 	{
-		{"76561197982511285","76561197961855808","76561197998111176"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
+		{"76561197982511285","76561197961855808","76561197998111176","76561197968043534"},	/* Admins with UIDs in this Array have their Access defined in the array below. */
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","AdminConsole","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
