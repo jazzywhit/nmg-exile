@@ -25,7 +25,6 @@ Config/log/Users/Exile/**
 A3Wasteland_config/Users
 A3Wasteland_config/BattlEye
 !steamcmd/steamcmd.exe
-!a3_steamcmd.cmd
 !loottables/**
 !tbb.dll
 !tbbmalloc.dll
@@ -35,6 +34,7 @@ A3Wasteland_config/BattlEye
 *.bak
 *.pbo
 .DS_Store
+a3_steamcmd.cmd
 
 # Folders we need, pbo and all
 !@CBA_A3/**
@@ -85,4 +85,3 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.acf
-a3_steamcmd.cmd
