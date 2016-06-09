@@ -1,5 +1,7 @@
 _objects = 
-[];
+[
+    //no objects yet
+];
 
 {
     private ["_object"];
