@@ -1,4 +1,4 @@
-_objects = 
+_objects =
 [
     //no objects yet
 ];

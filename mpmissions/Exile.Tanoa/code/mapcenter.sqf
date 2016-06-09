@@ -1,0 +1,6 @@
+//Map Center
+/*
+	MAP CENTER POSITIONS: (CREDIT GOES TO FACE FOR THESE)
+*/
+
+mapCenter = [7652.9634, 7870.8076,0];
