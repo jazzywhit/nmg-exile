@@ -47,9 +47,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_TimeToFirstStaticMission		= [30,30];					// [Minimum,Maximum] time between first static mission spawn. | DEFAULT: 3-7 minutes.
 	DMS_TimeBetweenStaticMissions		= [900,1800];				// [Minimum,Maximum] time between static missions (if static mission limit is not reached) | DEFAULT: 15-30 mins
 	DMS_StaticMissionTimeOut			= [1800,3600]; 				// [Minimum,Maximum] time it will take for a static mission to timeout | DEFAULT: 30-60 mins
-	DMS_StaticMissionTimeoutResetRange	= 1500;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
+	DMS_StaticMissionTimeoutResetRange	= 2000;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
 	DMS_SMissionTimeoutResetFrequency	= 180;						// How often (in seconds) to check for nearby players and reset the mission timeout for static missions.
-	DMS_StaticMinPlayerDistance			= 1500;						// If a player is this close to a mission location, then it won't spawn the mission and will wait 60 seconds before attempting to spawn it.
+	DMS_StaticMinPlayerDistance			= 2000;						// If a player is this close to a mission location, then it won't spawn the mission and will wait 60 seconds before attempting to spawn it.
 	DMS_AllowStaticReinforcements		= true;						// Whether or not static missions will receive reinforcements. This will simply disable the calling of GroupReinforcementsMonitor;
 	DMS_SpawnFlareOnReinforcements		= true;						// Whether or not to spawn a flare and noise when AI reinforcements have spawned.
 	/*General settings for static missions*/
@@ -63,14 +63,14 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ShowDifficultyColorLegend		= true;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
 	DMS_MarkerText_ShowMissionPrefix	= true;						// Whether or not to place a prefix before the mission marker text. Enable this if your players get confused by the marker names :P
 	DMS_MarkerText_MissionPrefix		= "Mission:";				// The text displayed before the mission name in the mission marker.
-	DMS_MarkerText_ShowAICount			= true;						// Whether or not to display the number of remaining AI in the marker name.
-	DMS_MarkerText_ShowAICount_Static	= true;						// Whether or not to display the number of remaining AI in the marker name for STATIC missions.
+	DMS_MarkerText_ShowAICount			= false;						// Whether or not to display the number of remaining AI in the marker name.
+	DMS_MarkerText_ShowAICount_Static	= false;						// Whether or not to display the number of remaining AI in the marker name for STATIC missions.
 	DMS_MarkerText_AIName				= "Units";					// What the AI will be called in the map marker. For example, the marker text can show: "Car Dealer (3 Units remaining)"
-	DMS_MarkerPosRandomization			= false;					// Randomize the position of the circle marker of a mission
+	DMS_MarkerPosRandomization			= true;					    // Randomize the position of the circle marker of a mission
 	DMS_MarkerPosRandomRadius			= [25,100];					// Minimum/Maximum distance that the circle marker position will be randomized | DEFAULT: 0 meters to 200 meters
 	DMS_RandomMarkerBrush				= "Cross";					// See: https://community.bistudio.com/wiki/setMarkerBrush
-	DMS_MissionMarkerWinDot				= true;						// Keep the mission marker dot with a "win" message after mission is over
-	DMS_MissionMarkerLoseDot			= true;						// Keep the mission marker dot with a "lose" message after mission is over
+	DMS_MissionMarkerWinDot				= false;					// Keep the mission marker dot with a "win" message after mission is over
+	DMS_MissionMarkerLoseDot			= false;					// Keep the mission marker dot with a "lose" message after mission is over
 	DMS_MissionMarkerWinDot_Type		= "mil_end";				// The marker type to show when a mission is completed. Refer to: https://community.bistudio.com/wiki/cfgMarkers
 	DMS_MissionMarkerLoseDot_Type		= "KIA";					// The marker type to show when a mission fails. Refer to: https://community.bistudio.com/wiki/cfgMarkers
 	DMS_MissionMarkerWinDotTime			= 30;						// How many seconds the "win" mission dot will remain on the map
@@ -80,7 +80,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	/*Mission Marker settings*/
 
 	/*Mission Cleanup settings*/
-	DMS_CompletedMissionCleanup			= true;						// Cleanup mission-spawned buildings and AI bodies after some time
+	DMS_CompletedMissionCleanup			= false;					// Cleanup mission-spawned buildings and AI bodies after some time
 	DMS_CompletedMissionCleanupTime		= 3600;						// Minimum time until mission-spawned buildings and AI are cleaned up
 	DMS_CleanUp_PlayerNearLimit			= 20;						// Cleanup of an object is aborted if a player is this many meters close to the object
 	DMS_AIVehCleanUpTime				= 300;						// Time until a destroyed AI vehicle is cleaned up.
@@ -137,13 +137,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	/*Crate/Box settings*/
 	DMS_HideBox							= false;					// "Hide" the box from being visible by players until the mission is completed.
 	DMS_EnableBoxMoving					= true;						// Whether or not to allow the box to move and/or be lifted by choppers.
-	DMS_SpawnBoxSmoke					= true;						// Spawn a smoke grenade on mission box upon misson completion during daytime
-	DMS_SpawnBoxIRGrenade				= true;						// Spawn an IR grenade on mission box upon misson completion during nighttime
+	DMS_SpawnBoxSmoke					= false;					// Spawn a smoke grenade on mission box upon misson completion during daytime
+	DMS_SpawnBoxIRGrenade				= false;					// Spawn an IR grenade on mission box upon misson completion during nighttime
 	/*Crate/Box settings*/
 
 	/*Mine settings*/
 	DMS_SpawnMinefieldForEveryMission	= false;					// Whether or not to spawn a minefield for every dynamic mission.
-	DMS_SpawnMinesAroundMissions		= true;						// Whether or not to spawn mines around AI missions that have them.
+	DMS_SpawnMinesAroundMissions		= false;					// Whether or not to spawn mines around AI missions that have them.
 	DMS_despawnMines_onCompletion		= true;						// Despawn mines spawned around missions when the mission is completed
 	DMS_MineInfo_easy					= [5,50];					// Mine info for "easy" missions. This will spawn 5 mines within a 50m radius.
 	DMS_MineInfo_moderate				= [10,50];					// Mine info for "moderate" missions. This will spawn 10 mines within a 50m radius.
@@ -254,38 +254,38 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 /* AI Settings */
 	DMS_AI_Classname					= "O_recon_F";				// Since some of you wanted this...
 
-	DMS_Show_Kill_Poptabs_Notification	= true;						// Whether or not to show the poptabs gained/lost message on the player's screen when killing an AI. (It will still change the player's money, it just won't show the "Money Received" notification)
-	DMS_Show_Kill_Respect_Notification	= true;						// Whether or not to show the "Frag Message" on the player's screen when killing an AI. (It will still change the player's respect, it just won't show the "AI Killed" frag message)
-	DMS_Show_Kill_Rank_Notification		= true;
-	DMS_Show_Party_Kill_Notification	= true;						// Whether or not to show in chat when a party member kills an AI.
+	DMS_Show_Kill_Poptabs_Notification	= false;					// Whether or not to show the poptabs gained/lost message on the player's screen when killing an AI. (It will still change the player's money, it just won't show the "Money Received" notification)
+	DMS_Show_Kill_Respect_Notification	= false;					// Whether or not to show the "Frag Message" on the player's screen when killing an AI. (It will still change the player's respect, it just won't show the "AI Killed" frag message)
+	DMS_Show_Kill_Rank_Notification		= false;
+	DMS_Show_Party_Kill_Notification	= false;					// Whether or not to show in chat when a party member kills an AI.
 
-	DMS_Bandit_Soldier_MoneyGain		= 50;						// The amount of Poptabs gained for killing a bandit soldier
+	DMS_Bandit_Soldier_MoneyGain		= 0;						// The amount of Poptabs gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RepGain			= 10;						// The amount of Respect gained for killing a bandit soldier
 	DMS_Bandit_Soldier_RankGain			= 15;
-	DMS_Bandit_Static_MoneyGain			= 75;						// The amount of Poptabs gained for killing a bandit static gunner
+	DMS_Bandit_Static_MoneyGain			= 0;						// The amount of Poptabs gained for killing a bandit static gunner
 	DMS_Bandit_Static_RepGain			= 15;						// The amount of Respect gained for killing a bandit static gunner
 	DMS_Bandit_Static_RankGain			= 30;
-	DMS_Bandit_Vehicle_MoneyGain		= 100;						// The amount of Poptabs gained for killing a bandit vehicle crew member
+	DMS_Bandit_Vehicle_MoneyGain		= 0;						// The amount of Poptabs gained for killing a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RepGain			= 25;						// The amount of Respect gained for killing a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RankGain			= 50;
 /* DonkeyPunchDMS Custom Settings for Hero AI*/
-	DMS_Hero_Soldier_MoneyGain			= 100;						// The amount of Poptabs gained for killing a hero soldier
+	DMS_Hero_Soldier_MoneyGain			= 0;						// The amount of Poptabs gained for killing a hero soldier
 	DMS_Hero_Soldier_RepGain			= 20;						// The amount of Respect gained for killing a hero soldier
 	DMS_Hero_Soldier_RankGain			= -30;
-	DMS_Hero_Static_MoneyGain			= 120;						// The amount of Poptabs gained for killing a hero static gunner
+	DMS_Hero_Static_MoneyGain			= 0;						// The amount of Poptabs gained for killing a hero static gunner
 	DMS_Hero_Static_RepGain				= 30;						// The amount of Respect gained for killing a hero static gunner
 	DMS_Hero_Static_RankGain			= -60;
-	DMS_Hero_Vehicle_MoneyGain			= 200;						// The amount of Poptabs gained for killing a hero vehicle crew member
+	DMS_Hero_Vehicle_MoneyGain			= 0;						// The amount of Poptabs gained for killing a hero vehicle crew member
 	DMS_Hero_Vehicle_RepGain			= 50;						// The amount of Respect gained for killing a hero vehicle crew member
 	DMS_Hero_Vehicle_RankGain			= -100;
 /* DonkeyPunchDMS Custom Settings for Survivor AI*/
-	DMS_Survivor_Soldier_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor soldier
+	DMS_Survivor_Soldier_MoneyGain		= 0;						// The amount of Poptabs gained for killing a Survivor soldier
 	DMS_Survivor_Soldier_RepGain		= -100;						// The amount of Respect gained for killing a Survivor soldier
 	DMS_Survivor_Soldier_RankGain		= -250;
-	DMS_Survivor_Static_MoneyGain		= -100;						// The amount of Poptabs gained for killing a Survivor static gunner
+	DMS_Survivor_Static_MoneyGain		= 0;						// The amount of Poptabs gained for killing a Survivor static gunner
 	DMS_Survivor_Static_RepGain			= -100;						// The amount of Respect gained for killing a Survivor static gunner
 	DMS_Survivor_Static_RankGain		= -400;
-	DMS_Survivor_Vehicle_MoneyGain		= -500;						// The amount of Poptabs gained for killing a Survivor vehicle crew member
+	DMS_Survivor_Vehicle_MoneyGain		= 0;						// The amount of Poptabs gained for killing a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RepGain		= -100;						// The amount of Respect gained for killing a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RankGain		= -600;
 
@@ -293,33 +293,33 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AIKill_DistanceBonusCoefficient	= 0.05;						// If the distance from the player to the killed unit is more than "DMS_AIKill_DistanceBonusMinDistance" meters then the player gets a respect bonus equivalent to the distance multiplied by this coefficient. For example, killing an AI from 400 meters will give 100 extra respect (when the coefficient is 0.25). Set to 0 to disable the bonus. This bonus will not be applied if there isn't a regular AI kill bonus.
 
 	DMS_Diff_RepOrTabs_on_roadkill 		= true;						// Whether or not you want to use different values for giving respect/poptabs when you run an AI over. Default values are NEGATIVE. This means player will LOSE respect or poptabs.
-	DMS_Bandit_Soldier_RoadkillMoney	= -10;						// The amount of Poptabs gained/lost for running over a bandit soldier
+	DMS_Bandit_Soldier_RoadkillMoney	= 0;						// The amount of Poptabs gained/lost for running over a bandit soldier
 	DMS_Bandit_Soldier_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit soldier
 	DMS_Bandit_Soldier_RoadkillRank		= 20;
-	DMS_Bandit_Static_RoadkillMoney		= -10;						// The amount of Poptabs gained/lost for running over a bandit static gunner
+	DMS_Bandit_Static_RoadkillMoney		= 0;						// The amount of Poptabs gained/lost for running over a bandit static gunner
 	DMS_Bandit_Static_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit static gunner
 	DMS_Bandit_Static_RoadkillRank		= 30;
-	DMS_Bandit_Vehicle_RoadkillMoney	= -10;						// The amount of Poptabs gained/lost for running over a bandit vehicle crew member
+	DMS_Bandit_Vehicle_RoadkillMoney	= 0;						// The amount of Poptabs gained/lost for running over a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RoadkillRep		= -5;						// The amount of Respect gained/lost for running over a bandit vehicle crew member
 	DMS_Bandit_Vehicle_RoadkillRank		= 50;
 /* DonkeyPunchDMS Custom RoadKill Settings for Hero AI*/
-	DMS_Hero_Soldier_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero soldier
+	DMS_Hero_Soldier_RoadkillMoney		= 0;						// The amount of Poptabs gained/lost for running over a hero soldier
 	DMS_Hero_Soldier_RoadkillRep		= 10;						// The amount of Respect gained/lost for running over a hero soldier
 	DMS_Hero_Soldier_RoadkillRank		= -40;
-	DMS_Hero_Static_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero static gunner
+	DMS_Hero_Static_RoadkillMoney		= 0;						// The amount of Poptabs gained/lost for running over a hero static gunner
 	DMS_Hero_Static_RoadkillRep			= 10;						// The amount of Respect gained/lost for running over a hero static gunner
 	DMS_Hero_Static_RoadkillRank		= -60;
-	DMS_Hero_Vehicle_RoadkillMoney		= 20;						// The amount of Poptabs gained/lost for running over a hero vehicle crew member
+	DMS_Hero_Vehicle_RoadkillMoney		= 0;						// The amount of Poptabs gained/lost for running over a hero vehicle crew member
 	DMS_Hero_Vehicle_RoadkillRep		= 10;						// The amount of Respect gained/lost for running over a hero vehicle crew member
 	DMS_Hero_Vehicle_RoadkillRank		= -100;
 /* DonkeyPunchDMS Custom Roadkill Settings for Survivor AI*/
-	DMS_Survivor_Soldier_RoadkillMoney	= -200;						// The amount of Poptabs gained/lost for running over a Survivor soldier
+	DMS_Survivor_Soldier_RoadkillMoney	= 0;						// The amount of Poptabs gained/lost for running over a Survivor soldier
 	DMS_Survivor_Soldier_RoadkillRep	= -200;						// The amount of Respect gained/lost for running over a Survivor soldier
 	DMS_Survivor_Soldier_RoadkillRank	= -200;
-	DMS_Survivor_Static_RoadkillMoney	= -200;						// The amount of Poptabs gained/lost for running over a Survivor static gunner
+	DMS_Survivor_Static_RoadkillMoney	= 0;						// The amount of Poptabs gained/lost for running over a Survivor static gunner
 	DMS_Survivor_Static_RoadkillRep		= -200;						// The amount of Respect gained/lost for running over a Survivor static gunner
 	DMS_Survivor_Static_RoadkillRank	= -200;
-	DMS_Survivor_Vehicle_RoadkillMoney	= -500;						// The amount of Poptabs gained/lost for running over a Survivor vehicle crew member
+	DMS_Survivor_Vehicle_RoadkillMoney	= 0;						// The amount of Poptabs gained/lost for running over a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RoadkillRep	= -100;						// The amount of Respect gained/lost for running over a Survivor vehicle crew member
 	DMS_Survivor_Vehicle_RoadkillRank	= -100;
 
@@ -330,11 +330,11 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_clear_AI_body					= false;					// Clear AI body as soon as they die
 	DMS_clear_AI_body_chance			= 50;						// Percentage chance that AI bodies will be cleared when they die
-	DMS_ai_disable_ramming_damage 		= true;						// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
+	DMS_ai_disable_ramming_damage 		= false;					// Disables damage due to ramming into AI. !!!NOTE: THIS WILL NOT BE RELIABLE WITH "DMS_ai_offload_to_client"!!!
 	DMS_remove_roadkill					= true; 					// Remove gear from AI bodies that are roadkilled
 	DMS_remove_roadkill_chance			= 50;						// Percentage chance that roadkilled AI bodies will be deleted
-	DMS_explode_onRoadkill				= true;						// Whether or not to spawn an explosion when an AI gets run over. It will likely take out the 2 front wheels. Should help mitigate the ineffective AI vs. striders issue ;)
-	DMS_RemoveNVG						= false;					// Remove NVGs from AI bodies
+	DMS_explode_onRoadkill				= false;					// Whether or not to spawn an explosion when an AI gets run over. It will likely take out the 2 front wheels. Should help mitigate the ineffective AI vs. striders issue ;)
+	DMS_RemoveNVG						= true;					    // Remove NVGs from AI bodies
 
 	DMS_MaxAIDistance					= 500;						// The maximum distance an AI unit can be from a mission before he is killed. Helps with AI running away and forcing the mission to keep running. Set to 0 if you don't want it.
 	DMS_AIDistanceCheckFrequency		= 60;						// How often to check within DMS_fnc_TargetsKilled whether or not the AI is out of the maximum radius. Lower values increase frequency and increase server load, greater values decrease frequency and may cause longer delays for "runaway" AI.
@@ -343,34 +343,34 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_offload_Only_DMS_AI			= false;					// Do you use other mission systems on your server but still want to offload AI? You should probably enable this then, unless you have tested it for compatibility.
 	DMS_ai_offload_notifyClient			= false;					// Notify the client when AI has been offloaded to the client.
 
-	DMS_ai_share_info					= true;						// Share info about killer
+	DMS_ai_share_info					= false;					// Share info about killer
 	DMS_ai_share_info_distance			= 300;						// The distance killer's info will be shared to other AI
 
 	DMS_ai_nighttime_accessory_chance	= 75;						// Percentage chance that AI will have a flashlight or laser pointer on their guns if spawned during nighttime
 	DMS_ai_enable_water_equipment		= true;						// Enable/disable overriding default weapons of an AI if it spawns on/in water
 
 	// https://community.bistudio.com/wiki/AI_Sub-skills#general
-	DMS_ai_skill_static					= [["aimingAccuracy",0.20],["aimingShake",0.70],["aimingSpeed",0.75],["spotDistance",0.70],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]];	// Static AI Skills
-	DMS_ai_skill_easy					= [["aimingAccuracy",0.30],["aimingShake",0.50],["aimingSpeed",0.50],["spotDistance",0.50],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.50]];	// Easy
-	DMS_ai_skill_moderate				= [["aimingAccuracy",0.60],["aimingShake",0.60],["aimingSpeed",0.60],["spotDistance",0.60],["spotTime",0.60],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.60]];	// Moderate
-	DMS_ai_skill_difficult				= [["aimingAccuracy",0.70],["aimingShake",0.70],["aimingSpeed",0.70],["spotDistance",0.70],["spotTime",0.80],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.70]]; 	// Difficult
-	DMS_ai_skill_hardcore				= [["aimingAccuracy",1.00],["aimingShake",1.00],["aimingSpeed",1.00],["spotDistance",1.00],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Hardcore
+	DMS_ai_skill_static					= [["aimingAccuracy",0.25],["aimingShake",0.25],["aimingSpeed",0.25],["spotDistance",0.75],["spotTime",0.75],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00]];	// Static AI Skills
+	DMS_ai_skill_easy					= DMS_ai_skill_static; //[["aimingAccuracy",0.30],["aimingShake",0.50],["aimingSpeed",0.50],["spotDistance",0.50],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.50]];	// Easy
+	DMS_ai_skill_moderate				= DMS_ai_skill_static; //[["aimingAccuracy",0.60],["aimingShake",0.60],["aimingSpeed",0.60],["spotDistance",0.60],["spotTime",0.60],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.60]];	// Moderate
+	DMS_ai_skill_difficult				= DMS_ai_skill_static; //[["aimingAccuracy",0.70],["aimingShake",0.70],["aimingSpeed",0.70],["spotDistance",0.70],["spotTime",0.80],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.70]]; 	// Difficult
+	DMS_ai_skill_hardcore				= DMS_ai_skill_static; //[["aimingAccuracy",1.00],["aimingShake",1.00],["aimingSpeed",1.00],["spotDistance",1.00],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Hardcore
 	DMS_ai_skill_random					= ["hardcore","difficult","difficult","difficult","moderate","moderate","moderate","moderate","easy","easy"];	// Skill frequencies for "random" AI skills | Default: 10% hardcore, 30% difficult, 40% moderate, and 20% easy
 	DMS_ai_skill_randomDifficult		= ["hardcore","hardcore","difficult","difficult","difficult"];	// 60% chance for "difficult", 40% chance for "hardcore" AI.
 	DMS_ai_skill_randomEasy				= ["moderate","moderate","easy","easy","easy"];					// 60% chance for "easy", 40% chance for "moderate" AI.
 	DMS_ai_skill_randomIntermediate		= ["difficult","difficult","moderate","moderate","moderate"];	// 60% chance for "moderate", 40% chance for "difficult" AI.
-	DMS_AI_WP_Radius_easy				= 20;						// Waypoint radius for "easy" AI.
+	DMS_AI_WP_Radius_easy				= 30;						// Waypoint radius for "easy" AI.
 	DMS_AI_WP_Radius_moderate			= 30;						// Waypoint radius for "moderate" AI.
-	DMS_AI_WP_Radius_difficult			= 50;						// Waypoint radius for "difficult" AI.
-	DMS_AI_WP_Radius_hardcore			= 75;						// Waypoint radius for "hardcore" AI.
-	DMS_AI_AimCoef_easy					= 0.9;						// "Custom Aim Coefficient" (weapon sway multiplier) for "easy" AI
-	DMS_AI_AimCoef_moderate				= 0.65;						// "Custom Aim Coefficient" (weapon sway multiplier) for "moderate" AI
-	DMS_AI_AimCoef_difficult			= 0.4;						// "Custom Aim Coefficient" (weapon sway multiplier) for "difficult" AI
-	DMS_AI_AimCoef_hardcore				= 0.05;						// "Custom Aim Coefficient" (weapon sway multiplier) for "hardcore" AI
+	DMS_AI_WP_Radius_difficult			= 30;						// Waypoint radius for "difficult" AI.
+	DMS_AI_WP_Radius_hardcore			= 30;						// Waypoint radius for "hardcore" AI.
+	DMS_AI_AimCoef_easy					= 1;						// "Custom Aim Coefficient" (weapon sway multiplier) for "easy" AI
+	DMS_AI_AimCoef_moderate				= 1;						// "Custom Aim Coefficient" (weapon sway multiplier) for "moderate" AI
+	DMS_AI_AimCoef_difficult			= 1;						// "Custom Aim Coefficient" (weapon sway multiplier) for "difficult" AI
+	DMS_AI_AimCoef_hardcore				= 1;						// "Custom Aim Coefficient" (weapon sway multiplier) for "hardcore" AI
 	DMS_AI_EnableStamina_easy			= true;						// Whether or not to keep the stamina system for "easy" AI.
 	DMS_AI_EnableStamina_moderate		= true;						// Whether or not to keep the stamina system for "moderate" AI.
-	DMS_AI_EnableStamina_difficult		= false;					// Whether or not to keep the stamina system for "difficult" AI.
-	DMS_AI_EnableStamina_hardcore		= false;					// Whether or not to keep the stamina system for "hardcore" AI.
+	DMS_AI_EnableStamina_difficult		= true;					    // Whether or not to keep the stamina system for "difficult" AI.
+	DMS_AI_EnableStamina_hardcore		= true;					    // Whether or not to keep the stamina system for "hardcore" AI.
 	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases.
 	DMS_AI_WP_Radius_heli				= 500;						// Waypoint radius for AI in helis.
 
@@ -475,13 +475,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_PlateCarrierIA2_dgtl"
 										];
 	DMS_assault_backpacks =				[							// Backpacks for Assault Class
-											"B_Bergen_rgr",
-											"B_Carryall_oli",
-											"B_Kitbag_mcamo",
-											"B_Carryall_cbr",
-											"B_FieldPack_oucamo",
-											"B_FieldPack_cbr",
-											"B_Bergen_blk"
+											//"B_Bergen_rgr",
+											//"B_Carryall_oli",
+											//"B_Kitbag_mcamo",
+											//"B_Carryall_cbr",
+											//"B_FieldPack_oucamo",
+											//"B_FieldPack_cbr",
+											//"B_Bergen_blk"
 										];
 
 	//Machine Gun Class
@@ -558,11 +558,11 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_HarnessO_gry"
 										];
 	DMS_MG_backpacks =					[							// Backpacks for MG Class
-											"B_Bergen_rgr",
-											"B_Carryall_oli",
-											"B_Kitbag_mcamo",
-											"B_Carryall_cbr",
-											"B_Bergen_blk"
+											//"B_Bergen_rgr",
+											//"B_Carryall_oli",
+											//"B_Kitbag_mcamo",
+											//"B_Carryall_cbr",
+											//"B_Bergen_blk"
 										];
 
 	//Sniper Class
@@ -637,11 +637,11 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"V_HarnessO_gry"
 										];
 	DMS_sniper_backpacks =				[							// Backpacks for Sniper Class
-											"B_Bergen_rgr",
-											"B_Carryall_oli",
-											"B_Kitbag_mcamo",
-											"B_Carryall_cbr",
-											"B_Bergen_blk"
+											//"B_Bergen_rgr",
+											//"B_Carryall_oli",
+											//"B_Kitbag_mcamo",
+											//"B_Carryall_cbr",
+											//"B_Bergen_blk"
 										];
 
 	DMS_ai_SupportedClasses =			[							// Allowed AI classes. If you want to create your own class, make sure you define everything as I've defined above, and add it here
@@ -836,13 +836,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"optic_Nightstalker"			// Nightstalker scope lost thermal in Exile v0.9.4
 										];
 	DMS_BoxBackpacks =					[							//List of backpacks that can spawn in a crate
-											"B_Bergen_rgr",
-											"B_Carryall_oli",
-											"B_Kitbag_mcamo",
-											"B_Carryall_cbr",
-											"B_FieldPack_oucamo",
-											"B_FieldPack_cbr",
-											"B_Bergen_blk"
+											//"B_Bergen_rgr",
+											//"B_Carryall_oli",
+											//"B_Kitbag_mcamo",
+											//"B_Carryall_cbr",
+											//"B_FieldPack_oucamo",
+											//"B_FieldPack_cbr",
+											//"B_Bergen_blk"
 										];
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 

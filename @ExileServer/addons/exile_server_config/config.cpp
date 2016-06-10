@@ -307,7 +307,6 @@ class CfgSettings
 			"Exile_Car_Volha_White",
 			"Exile_Car_Lada_Green",
 			"Exile_Car_Lada_Taxi",
-			"Exile_Car_TowTractor_White",
 			"Exile_Car_Tractor_Red",
 			"Exile_Car_OldTractor_Red"
 		};
