@@ -67,8 +67,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MarkerText_ShowAICount_Static	= false;						// Whether or not to display the number of remaining AI in the marker name for STATIC missions.
 	DMS_MarkerText_AIName				= "Units";					// What the AI will be called in the map marker. For example, the marker text can show: "Car Dealer (3 Units remaining)"
 	DMS_MarkerPosRandomization			= true;					    // Randomize the position of the circle marker of a mission
-	DMS_MarkerPosRandomRadius			= [25,100];					// Minimum/Maximum distance that the circle marker position will be randomized | DEFAULT: 0 meters to 200 meters
-	DMS_RandomMarkerBrush				= "Cross";					// See: https://community.bistudio.com/wiki/setMarkerBrush
+	DMS_MarkerPosRandomRadius			= [50,200];					// Minimum/Maximum distance that the circle marker position will be randomized | DEFAULT: 0 meters to 200 meters
+	DMS_RandomMarkerBrush				= "FDiagonal";				// See: https://community.bistudio.com/wiki/setMarkerBrush
 	DMS_MissionMarkerWinDot				= false;					// Keep the mission marker dot with a "win" message after mission is over
 	DMS_MissionMarkerLoseDot			= false;					// Keep the mission marker dot with a "lose" message after mission is over
 	DMS_MissionMarkerWinDot_Type		= "mil_end";				// The marker type to show when a mission is completed. Refer to: https://community.bistudio.com/wiki/cfgMarkers
@@ -363,10 +363,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_WP_Radius_moderate			= 30;						// Waypoint radius for "moderate" AI.
 	DMS_AI_WP_Radius_difficult			= 30;						// Waypoint radius for "difficult" AI.
 	DMS_AI_WP_Radius_hardcore			= 30;						// Waypoint radius for "hardcore" AI.
-	DMS_AI_AimCoef_easy					= 1;						// "Custom Aim Coefficient" (weapon sway multiplier) for "easy" AI
-	DMS_AI_AimCoef_moderate				= 1;						// "Custom Aim Coefficient" (weapon sway multiplier) for "moderate" AI
-	DMS_AI_AimCoef_difficult			= 1;						// "Custom Aim Coefficient" (weapon sway multiplier) for "difficult" AI
-	DMS_AI_AimCoef_hardcore				= 1;						// "Custom Aim Coefficient" (weapon sway multiplier) for "hardcore" AI
+	DMS_AI_AimCoef_easy					= 0.65;						// "Custom Aim Coefficient" (weapon sway multiplier) for "easy" AI
+	DMS_AI_AimCoef_moderate				= 0.65;						// "Custom Aim Coefficient" (weapon sway multiplier) for "moderate" AI
+	DMS_AI_AimCoef_difficult			= 0.65;						// "Custom Aim Coefficient" (weapon sway multiplier) for "difficult" AI
+	DMS_AI_AimCoef_hardcore				= 0.65;						// "Custom Aim Coefficient" (weapon sway multiplier) for "hardcore" AI
 	DMS_AI_EnableStamina_easy			= true;						// Whether or not to keep the stamina system for "easy" AI.
 	DMS_AI_EnableStamina_moderate		= true;						// Whether or not to keep the stamina system for "moderate" AI.
 	DMS_AI_EnableStamina_difficult		= true;					    // Whether or not to keep the stamina system for "difficult" AI.
@@ -442,51 +442,53 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"ItemGPS"
 										];
 	DMS_assault_helmets	=				[							// Helmets for Assault Class
-											"H_HelmetSpecB_paint1",
-											"H_HelmetIA_camo",
-											"H_HelmetLeaderO_ocamo",
-											"H_HelmetLeaderO_oucamo"
+											"H_Booniehat_dirty",
+											"H_Booniehat_grn",
+											"H_Booniehat_indp",
+											"H_Booniehat_khk",
+											"H_Booniehat_khk_hs",
+											"H_Booniehat_mcamo",
+											"H_Booniehat_tan"
 										];
 	DMS_assault_clothes	=				[							// Uniforms for Assault Class
-											"U_O_CombatUniform_ocamo",
-											"U_O_PilotCoveralls",
-											"U_B_Wetsuit",
-											"U_BG_Guerilla3_1",
-											"U_BG_Guerilla2_3",
-											"U_BG_Guerilla2_2",
-											"U_BG_Guerilla1_1",
-											"U_BG_Guerrilla_6_1",
+											"U_IG_Guerilla1_1",
+											"U_IG_Guerilla2_1",
+											"U_IG_Guerilla2_2",
+											"U_IG_Guerilla2_3",
+											"U_IG_Guerilla3_1",
+											"U_BG_Guerilla2_1",
 											"U_IG_Guerilla3_2",
-											"U_B_SpecopsUniform_sgg",
-											"U_I_OfficerUniform",
-											"U_B_CTRG_3",
-											"U_I_G_resistanceLeader_F"
+											"U_BG_Guerrilla_6_1",
+											"U_BG_Guerilla1_1",
+											"U_BG_Guerilla2_2",
+											"U_BG_Guerilla2_3",
+											"U_BG_Guerilla3_1",
+											"U_IG_leader",
+											"U_I_G_resistanceLeader_F",
+											"U_BG_leader"
 										];
 	DMS_assault_vests =					[							// Vests for Assault Class
-											"V_PlateCarrierH_CTRG",
-											"V_PlateCarrierSpec_rgr",
-											"V_PlateCarrierGL_blk",
-											"V_PlateCarrierGL_mtp",
-											"V_PlateCarrierGL_rgr",
-											"V_PlateCarrierSpec_blk",
-											"V_PlateCarrierSpec_mtp",
-											"V_PlateCarrierL_CTRG",
-											"V_TacVest_blk_POLICE",
-											"V_PlateCarrierIA2_dgtl"
+											"V_Chestrig_rgr",
+											"V_Chestrig_oli",
+											"V_Chestrig_khk",
+											"V_Chestrig_blk",
+											"V_BandollierB_rgr",
+											"V_BandollierB_oli",
+											"V_BandollierB_khk",
+											"V_BandollierB_cbr",
+											"V_BandollierB_blk",
+											"V_HarnessO_brn",
+											"V_HarnessO_gry",
+											"V_HarnessOGL_brn",
+											"V_HarnessOGL_gry",
+											"V_HarnessOSpec_brn",
+											"V_HarnessOSpec_gry"
 										];
 	DMS_assault_backpacks =				[							// Backpacks for Assault Class
-											//"B_Bergen_rgr",
-											//"B_Carryall_oli",
-											//"B_Kitbag_mcamo",
-											//"B_Carryall_cbr",
-											//"B_FieldPack_oucamo",
-											//"B_FieldPack_cbr",
-											//"B_Bergen_blk"
 										];
 
 	//Machine Gun Class
 	DMS_MG_weps	=						[							// Machine Guns
-											"LMG_Zafir_F",
 											"LMG_Mk200_F",
 											"arifle_MX_SW_Black_F"
 										];
@@ -517,63 +519,57 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Binocular"
 										];
 	DMS_MG_helmets =					[							// Helmets for MG Class
-											"H_PilotHelmetHeli_I",
-											"H_PilotHelmetHeli_O",
-											"H_PilotHelmetFighter_I",
-											"H_PilotHelmetFighter_O",
-											"H_HelmetCrew_O",
-											"H_CrewHelmetHeli_I",
-											"H_HelmetSpecB_paint1",
-											"H_HelmetIA_camo",
-											"H_HelmetLeaderO_ocamo",
-											"H_HelmetLeaderO_oucamo"
+											"H_Booniehat_dirty",
+											"H_Booniehat_grn",
+											"H_Booniehat_indp",
+											"H_Booniehat_khk",
+											"H_Booniehat_khk_hs",
+											"H_Booniehat_mcamo",
+											"H_Booniehat_tan"
 										];
 	DMS_MG_clothes =					[							// Uniforms for MG Class
-											"U_O_CombatUniform_ocamo",
-											"U_O_PilotCoveralls",
-											"U_B_Wetsuit",
-											"U_BG_Guerilla3_1",
-											"U_BG_Guerilla2_3",
-											"U_BG_Guerilla2_2",
-											"U_BG_Guerilla1_1",
-											"U_BG_Guerrilla_6_1",
+											"U_IG_Guerilla1_1",
+											"U_IG_Guerilla2_1",
+											"U_IG_Guerilla2_2",
+											"U_IG_Guerilla2_3",
+											"U_IG_Guerilla3_1",
+											"U_BG_Guerilla2_1",
 											"U_IG_Guerilla3_2",
-											"U_B_SpecopsUniform_sgg",
-											"U_I_OfficerUniform",
-											"U_B_CTRG_3",
-											"U_I_G_resistanceLeader_F"
+											"U_BG_Guerrilla_6_1",
+											"U_BG_Guerilla1_1",
+											"U_BG_Guerilla2_2",
+											"U_BG_Guerilla2_3",
+											"U_BG_Guerilla3_1",
+											"U_IG_leader",
+											"U_I_G_resistanceLeader_F",
+											"U_BG_leader"
 										];
 	DMS_MG_vests =						[							// Vests for MG Class
-											"V_PlateCarrierH_CTRG",
-											"V_PlateCarrierSpec_rgr",
-											"V_PlateCarrierGL_blk",
-											"V_PlateCarrierGL_mtp",
-											"V_PlateCarrierGL_rgr",
-											"V_PlateCarrierSpec_blk",
-											"V_PlateCarrierSpec_mtp",
-											"V_PlateCarrierL_CTRG",
-											"V_TacVest_blk_POLICE",
-											"V_PlateCarrierIA2_dgtl",
+											"V_Chestrig_rgr",
+											"V_Chestrig_oli",
+											"V_Chestrig_khk",
+											"V_Chestrig_blk",
+											"V_BandollierB_rgr",
+											"V_BandollierB_oli",
+											"V_BandollierB_khk",
+											"V_BandollierB_cbr",
+											"V_BandollierB_blk",
 											"V_HarnessO_brn",
-											"V_HarnessO_gry"
+											"V_HarnessO_gry",
+											"V_HarnessOGL_brn",
+											"V_HarnessOGL_gry",
+											"V_HarnessOSpec_brn",
+											"V_HarnessOSpec_gry"
 										];
 	DMS_MG_backpacks =					[							// Backpacks for MG Class
-											//"B_Bergen_rgr",
-											//"B_Carryall_oli",
-											//"B_Kitbag_mcamo",
-											//"B_Carryall_cbr",
-											//"B_Bergen_blk"
 										];
 
 	//Sniper Class
 	DMS_sniper_weps =					[							// Sniper Rifles
 											"srifle_EBR_F",
 											"srifle_DMR_01_F",
-											"srifle_GM6_F",
-											"srifle_LRR_F",
 											"arifle_MXM_F",
-											"arifle_MXM_Black_F",
-											"srifle_DMR_02_F"
+											"arifle_MXM_Black_F"
 										];
 	DMS_sniper_pistols =				[							// Pistols for Sniper Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
@@ -603,45 +599,50 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"ItemGPS"
 										];
 	DMS_sniper_helmets =				[							// Helmets for Sniper Class
-											"H_HelmetSpecB_paint1",
-											"H_HelmetIA_camo",
-											"H_HelmetLeaderO_ocamo",
-											"H_HelmetLeaderO_oucamo"
+											"H_Booniehat_dirty",
+											"H_Booniehat_grn",
+											"H_Booniehat_indp",
+											"H_Booniehat_khk",
+											"H_Booniehat_khk_hs",
+											"H_Booniehat_mcamo",
+											"H_Booniehat_tan"
 										];
 	DMS_sniper_clothes =				[							// Uniforms for Sniper Class
-											"U_O_GhillieSuit",
-											"U_B_FullGhillie_ard",
-											"U_B_FullGhillie_lsh",
-											"U_B_FullGhillie_sard",
-											"U_B_GhillieSuit",
-											"U_I_FullGhillie_ard",
-											"U_I_FullGhillie_lsh",
-											"U_I_FullGhillie_sard",
-											"U_I_GhillieSuit",
-											"U_O_FullGhillie_ard",
-											"U_O_FullGhillie_lsh",
-											"U_O_FullGhillie_sard"
+											"U_IG_Guerilla1_1",
+											"U_IG_Guerilla2_1",
+											"U_IG_Guerilla2_2",
+											"U_IG_Guerilla2_3",
+											"U_IG_Guerilla3_1",
+											"U_BG_Guerilla2_1",
+											"U_IG_Guerilla3_2",
+											"U_BG_Guerrilla_6_1",
+											"U_BG_Guerilla1_1",
+											"U_BG_Guerilla2_2",
+											"U_BG_Guerilla2_3",
+											"U_BG_Guerilla3_1",
+											"U_IG_leader",
+											"U_I_G_resistanceLeader_F",
+											"U_BG_leader"
 										];
 	DMS_sniper_vests =					[							// Vests for Sniper Class
-											"V_PlateCarrierH_CTRG",
-											"V_PlateCarrierSpec_rgr",
-											"V_PlateCarrierGL_blk",
-											"V_PlateCarrierGL_mtp",
-											"V_PlateCarrierGL_rgr",
-											"V_PlateCarrierSpec_blk",
-											"V_PlateCarrierSpec_mtp",
-											"V_PlateCarrierL_CTRG",
-											"V_TacVest_blk_POLICE",
-											"V_PlateCarrierIA2_dgtl",
+											"V_Chestrig_rgr",
+											"V_Chestrig_oli",
+											"V_Chestrig_khk",
+											"V_Chestrig_blk",
+											"V_BandollierB_rgr",
+											"V_BandollierB_oli",
+											"V_BandollierB_khk",
+											"V_BandollierB_cbr",
+											"V_BandollierB_blk",
 											"V_HarnessO_brn",
-											"V_HarnessO_gry"
+											"V_HarnessO_gry",
+											"V_HarnessOGL_brn",
+											"V_HarnessOGL_gry",
+											"V_HarnessOSpec_brn",
+											"V_HarnessOSpec_gry"
 										];
+
 	DMS_sniper_backpacks =				[							// Backpacks for Sniper Class
-											//"B_Bergen_rgr",
-											//"B_Carryall_oli",
-											//"B_Kitbag_mcamo",
-											//"B_Carryall_cbr",
-											//"B_Bergen_blk"
 										];
 
 	DMS_ai_SupportedClasses =			[							// Allowed AI classes. If you want to create your own class, make sure you define everything as I've defined above, and add it here
@@ -684,10 +685,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 
 	DMS_ai_use_launchers				= true;						// Enable/disable spawning an AI in a group with a launcher
-	DMS_ai_launchers_per_group			= 2;						// How many units per AI group can get a launcher.
-	DMS_ai_use_launchers_chance			= 50;						// Percentage chance to actually spawn the launcher (per-unit). With "DMS_ai_launchers_per_group" set to 2, and "DMS_ai_use_launchers_chance" set to 50, there will be an average of 1 launcher per group.
+	DMS_ai_launchers_per_group			= 1;						// How many units per AI group can get a launcher.
+	DMS_ai_use_launchers_chance			= 100;						// Percentage chance to actually spawn the launcher (per-unit). With "DMS_ai_launchers_per_group" set to 2, and "DMS_ai_use_launchers_chance" set to 50, there will be an average of 1 launcher per group.
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
-	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
+	DMS_ai_remove_launchers				= false;					// Remove rocket launchers on AI death
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
 											"launch_NLAW_F",
@@ -739,7 +740,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 												["optic_Holosight_smg",1],
 												["muzzle_snds_L",1],
 												["5Rnd_127x108_APDS_Mag",3],
-												["7Rnd_408_Mag",3],
 												["20Rnd_762x51_Mag",5],
 												["11Rnd_45ACP_Mag",3],
 												["30Rnd_9x21_Mag",3]
@@ -761,16 +761,12 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"arifle_TRG20_F",
 											"arifle_Mk20_plain_F",
 											"arifle_Mk20_F",
-											"LMG_Zafir_F",
 											"LMG_Mk200_F",
 											"arifle_MX_SW_Black_F",
 											"srifle_EBR_F",
 											"srifle_DMR_01_F",
-											"srifle_GM6_F",
-											"srifle_LRR_F",
 											"arifle_MXM_F",
-											"arifle_MXM_Black_F",
-											"srifle_DMR_02_F"
+											"arifle_MXM_Black_F"
 										];
 	DMS_BoxFood =						[							// List of food that can spawn in a crate.
 											"Exile_Item_GloriousKnakworst_Cooked",
@@ -836,13 +832,39 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"optic_Nightstalker"			// Nightstalker scope lost thermal in Exile v0.9.4
 										];
 	DMS_BoxBackpacks =					[							//List of backpacks that can spawn in a crate
-											//"B_Bergen_rgr",
-											//"B_Carryall_oli",
-											//"B_Kitbag_mcamo",
-											//"B_Carryall_cbr",
-											//"B_FieldPack_oucamo",
-											//"B_FieldPack_cbr",
-											//"B_Bergen_blk"
+                                            "B_HuntingBackpack",
+                                            "B_OutdoorPack_blk",
+                                            "B_OutdoorPack_blu",
+                                            "B_OutdoorPack_tan",
+                                            "B_AssaultPack_blk",
+                                            "B_AssaultPack_cbr",
+                                            "B_AssaultPack_dgtl",
+                                            "B_AssaultPack_khk",
+                                            "B_AssaultPack_mcamo",
+                                            "B_AssaultPack_rgr",
+                                            "B_AssaultPack_sgg",
+                                            "B_FieldPack_blk",
+                                            "B_FieldPack_cbr",
+                                            "B_FieldPack_ocamo",
+                                            "B_FieldPack_oucamo",
+                                            "B_TacticalPack_blk",
+                                            "B_TacticalPack_rgr",
+                                            "B_TacticalPack_ocamo",
+                                            "B_TacticalPack_mcamo",
+                                            "B_TacticalPack_oli",
+                                            "B_Kitbag_cbr",
+                                            "B_Kitbag_mcamo",
+                                            "B_Kitbag_sgg",
+                                            "B_Bergen_blk",
+                                            "B_Bergen_mcamo",
+                                            "B_Bergen_rgr",
+                                            "B_Bergen_sgg",
+                                            "B_Carryall_cbr",
+                                            "B_Carryall_khk",
+                                            "B_Carryall_mcamo",
+                                            "B_Carryall_ocamo",
+                                            "B_Carryall_oli",
+                                            "B_Carryall_oucamo"
 										];
 	DMS_BoxItems						= DMS_BoxSurvivalSupplies+DMS_BoxBuildingSupplies+DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
@@ -895,15 +917,15 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_TransportHelis =				[							// List of transport helis that can spawn
 											"Exile_Chopper_Hummingbird_Green",
-											"Exile_Chopper_Orca_BlackCustom",
-											"Exile_Chopper_Mohawk_FIA",
-											"Exile_Chopper_Huron_Black",
-											"Exile_Chopper_Hellcat_Green",
-											"Exile_Chopper_Taru_Transport_Black"
+											"Exile_Chopper_Hummingbird_Civillian_Blue",
+											"Exile_Chopper_Hummingbird_Civillian_Red",
+											"Exile_Chopper_Hummingbird_Civillian_ION",
+											"Exile_Chopper_Hummingbird_Civillian_BlueLine",
+											"Exile_Chopper_Hummingbird_Civillian_Elliptical"
 										];
 
 	DMS_ReinforcementHelis =			[							// List of helis that can spawn for AI paratrooper reinforcements.
-											//"B_Heli_Transport_01_camo_F"		// Ghosthawk: You'll have to whitelist this in infistar if you want to use it.
+											"Exile_Chopper_Huron_Black"
 										] + DMS_TransportHelis;
 
 	DMS_CarThievesVehicles =			[							// List of vehicles that can spawn in the "car thieves" mission. By default, it's just "DMS_MilitaryVehicles" and "DMS_TransportTrucks".
