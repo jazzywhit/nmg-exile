@@ -28,7 +28,7 @@ ZCP_AI_Type = 'DMS'; // NONE | DMS | FUMS
 ZCP_MessagePlayersBeforeWaves = true; // True -> Inform for an icoming wave of AI, false is not inform the players inside.
 
 // ZCP_CapTime = 300; // Now defined for each mission seperate
-ZCP_ServerStartWaitTime = 120;
+ZCP_ServerStartWaitTime = 0;
 ZCP_MinWaitTime = 120; // seconds to wait to spawn a new capturepoint when 1 was capped.
 ZCP_MaxWaitTime = 120; // random between 0 and THIS number added to the ZCP_MinWaitTime to counter spawning points at the same time
 ZCP_BaseCleanupDelay = 180; // seconds to wait to delete a captured base.
@@ -92,7 +92,7 @@ ZCP_CapPoints = [
 		300, // captime in seconds for this mission (11)
 		4, // Minimum amount of AI at the start of mission (12)
         8, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
-        true, // deploy smoke on the circle border when mission is finished (14)
+        false, // deploy smoke on the circle border when mission is finished (14)
         0, // ammount of seconds to wait before deploying the smokescreen (15)
         0, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
 		true, // use Waves of AI to attack the base when a player is capping (17)
@@ -130,7 +130,7 @@ ZCP_CapPoints = [
 		300, // captime in seconds for this mission (11)
 		4, // Minimum amount of AI at the start of mission (12)
         8, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
-        true, // deploy smoke on the circle border when mission is finished (14)
+        false, // deploy smoke on the circle border when mission is finished (14)
         0, // ammount of seconds to wait before deploying the smokescreen (15)
         0, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
 		true, // use Waves of AI to attack the base when a player is capping (17)
@@ -155,10 +155,10 @@ ZCP_CapPoints = [
     ,
     [
         "West Lijnhaven", // name (0)
-        [[3192,11530,0],[11060,2474,0]], // [[x,y,z],[x,y,z]] if using static location (1)
+        [[11060,2474,0],[11060,2474,0]], // [[x,y,z],[x,y,z]] if using static location (1)
         ["Random","Random","Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "Lijnhaven", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
-        1, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
+        2, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
 		false, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
 		true, // isStatic location ( if true it will take the location specified earlier) (6)
 		["ec_audacity.sqf","ec_bravery.sqf","ec_courage.sqf", "ec_defiance.sqf","ec_endurance.sqf","ec_fortitude.sqf","m3e_exoBase1.sqf","m3e_exoBase2.sqf","m3e_exoBase3.sqf"], // baseFile -> Random OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
@@ -171,7 +171,7 @@ ZCP_CapPoints = [
         true, // deploy smoke on the circle border when mission is finished (14)
         0, // ammount of seconds to wait before deploying the smokescreen (15)
         0, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
-		true, // use Waves of AI to attack the base when a player is capping (17)
+		false, // use Waves of AI to attack the base when a player is capping (17)
 		[ // array of waves of AI () (18)
 			[
 				25, // procentage of the cap time to start attack (50 = 50% of the total captime)
