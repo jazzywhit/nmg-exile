@@ -234,7 +234,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_StaticMissionsOnServerStart =	[							// List of STATIC missions with spawn chances.
 											//"saltflats",			//<--Example
 											//"slums				//<--Example
-
 											//"sectorB"				//<--Example for Taviana
 										];
 
@@ -350,7 +349,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_enable_water_equipment		= true;						// Enable/disable overriding default weapons of an AI if it spawns on/in water
 
 	// https://community.bistudio.com/wiki/AI_Sub-skills#general
-	DMS_ai_skill_static					= [["aimingAccuracy",0.25],["aimingShake",0.25],["aimingSpeed",0.25],["spotDistance",0.75],["spotTime",0.75],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00]];	// Static AI Skills
+	DMS_ai_skill_static					= [["general",0.50],["aimingAccuracy",0.30],["aimingShake",0.25],["aimingSpeed",0.35],["spotDistance",0.75],["spotTime",0.65],["courage",1.00],["reloadSpeed",1.00],["commanding",0.65]];	// Static AI Skills
 	DMS_ai_skill_easy					= DMS_ai_skill_static; //[["aimingAccuracy",0.30],["aimingShake",0.50],["aimingSpeed",0.50],["spotDistance",0.50],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.50]];	// Easy
 	DMS_ai_skill_moderate				= DMS_ai_skill_static; //[["aimingAccuracy",0.60],["aimingShake",0.60],["aimingSpeed",0.60],["spotDistance",0.60],["spotTime",0.60],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.60]];	// Moderate
 	DMS_ai_skill_difficult				= DMS_ai_skill_static; //[["aimingAccuracy",0.70],["aimingShake",0.70],["aimingSpeed",0.70],["spotDistance",0.70],["spotTime",0.80],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.70]]; 	// Difficult
@@ -374,9 +373,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_AI_WP_Radius_base				= 5;						// Waypoint radius for AI in bases.
 	DMS_AI_WP_Radius_heli				= 500;						// Waypoint radius for AI in helis.
 
-	DMS_AI_destroyVehicleChance			= 75;						// Percent chance that an AI vehicle will be destroyed after the AI have been killed. Set to 100 for always, or 0 for never.
+	DMS_AI_destroyVehicleChance			= 0;						// Percent chance that an AI vehicle will be destroyed after the AI have been killed. Set to 100 for always, or 0 for never.
 
-	DMS_AI_destroyStaticWeapon			= true;						// Whether or not to destroy static HMGs after AI death.
+	DMS_AI_destroyStaticWeapon			= false;						// Whether or not to destroy static HMGs after AI death.
 	DMS_AI_destroyStaticWeapon_chance	= 95;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
 
 	DMS_static_weapons =				[							// Static weapons for AI
@@ -429,9 +428,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"optic_MRCO",
 											"optic_DMS"
 										];
-	DMS_assault_optic_chance			= 75;						// Percentage chance that an Assault Class AI will get an optic
-	DMS_assault_bipod_chance			= 25;						// Percentage chance that an Assault Class AI will get a bipod
-	DMS_assault_suppressor_chance		= 25;						// Percentage chance that an Assault Class AI will get a suppressor
+	DMS_assault_optic_chance			= 20;						// Percentage chance that an Assault Class AI will get an optic
+	DMS_assault_bipod_chance			= 15;						// Percentage chance that an Assault Class AI will get a bipod
+	DMS_assault_suppressor_chance		= 10;						// Percentage chance that an Assault Class AI will get a suppressor
 
 	DMS_assault_items =					[							// Items for Assault Class AI (Loot stuff that goes in uniform/vest/backpack)
 											"Exile_Item_InstaDoc",
@@ -439,7 +438,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_Energydrink"
 										];
 	DMS_assault_equipment =				[							// Equipment for Assault Class AI (stuff that goes in toolbelt slots)
-											"ItemGPS"
+                                            "ItemMap",
+                                            "ItemRadio"
 										];
 	DMS_assault_helmets	=				[							// Helmets for Assault Class
 											"H_Booniehat_dirty",
@@ -448,7 +448,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"H_Booniehat_khk",
 											"H_Booniehat_khk_hs",
 											"H_Booniehat_mcamo",
-											"H_Booniehat_tan"
+											"H_Booniehat_tan",
+											"Exile_Headgear_GasMask"
 										];
 	DMS_assault_clothes	=				[							// Uniforms for Assault Class
 											"U_IG_Guerilla1_1",
@@ -505,8 +506,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"optic_Holosight",
 											"optic_MRCO"
 										];
-	DMS_MG_optic_chance					= 50;						// Percentage chance that an MG Class AI will get an optic
-	DMS_MG_bipod_chance					= 90;						// Percentage chance that an MG Class AI will get a bipod
+	DMS_MG_optic_chance					= 20;						// Percentage chance that an MG Class AI will get an optic
+	DMS_MG_bipod_chance					= 15;						// Percentage chance that an MG Class AI will get a bipod
 	DMS_MG_suppressor_chance			= 10;						// Percentage chance that an MG Class AI will get a suppressor
 
 	DMS_MG_items =						[							// Items for MG Class AI (Loot stuff that goes in uniform/vest/backpack)
@@ -516,7 +517,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_CookingPot"
 										];
 	DMS_MG_equipment =					[							// Equipment for MG Class AI (stuff that goes in toolbelt slots)
-											"Binocular"
+											"Binocular",
+                                            "ItemMap",
+                                            "ItemRadio"
 										];
 	DMS_MG_helmets =					[							// Helmets for MG Class
 											"H_Booniehat_dirty",
@@ -525,7 +528,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"H_Booniehat_khk",
 											"H_Booniehat_khk_hs",
 											"H_Booniehat_mcamo",
-											"H_Booniehat_tan"
+											"H_Booniehat_tan",
+											"Exile_Headgear_GasMask"
 										];
 	DMS_MG_clothes =					[							// Uniforms for MG Class
 											"U_IG_Guerilla1_1",
@@ -596,7 +600,9 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 	DMS_sniper_equipment =				[							// Equipment for Sniper Class AI (stuff that goes in toolbelt slots)
 											"Rangefinder",
-											"ItemGPS"
+											"ItemGPS",
+											"ItemMap",
+											"ItemRadio"
 										];
 	DMS_sniper_helmets =				[							// Helmets for Sniper Class
 											"H_Booniehat_dirty",
@@ -688,7 +694,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_launchers_per_group			= 1;						// How many units per AI group can get a launcher.
 	DMS_ai_use_launchers_chance			= 100;						// Percentage chance to actually spawn the launcher (per-unit). With "DMS_ai_launchers_per_group" set to 2, and "DMS_ai_use_launchers_chance" set to 50, there will be an average of 1 launcher per group.
 	DMS_AI_launcher_ammo_count			= 2;						// How many rockets an AI will get with its launcher
-	DMS_ai_remove_launchers				= false;					// Remove rocket launchers on AI death
+	DMS_ai_remove_launchers				= true;					// Remove rocket launchers on AI death
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
 											"launch_NLAW_F",
@@ -709,8 +715,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 /* Loot Settings */
 	DMS_GodmodeCrates 					= true;						// Whether or not crates will have godmode after being filled with loot.
-	DMS_MinimumMagCount					= 3;						// Minimum number of magazines for weapons.
-	DMS_MaximumMagCount					= 5;						// Maximum number of magazines for weapons.
+	DMS_MinimumMagCount					= 0;						// Minimum number of magazines for weapons.
+	DMS_MaximumMagCount					= 3;						// Maximum number of magazines for weapons.
 	DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, then it will spawn these weapons/items/backpacks
 											[
 												["Rangefinder",1],
@@ -926,7 +932,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_ReinforcementHelis =			[							// List of helis that can spawn for AI paratrooper reinforcements.
 											"Exile_Chopper_Huron_Black"
-										] + DMS_TransportHelis;
+										];
 
 	DMS_CarThievesVehicles =			[							// List of vehicles that can spawn in the "car thieves" mission. By default, it's just "DMS_MilitaryVehicles" and "DMS_TransportTrucks".
 											//"Exile_Car_Offroad_Armed_Guerilla01"
