@@ -103,3 +103,6 @@ if (_WEATHER_EFFECTS_SCRIPT isEqualTo 1) then {
 	[] execVM "code\weatherEffects.sqf";
 	diag_log "Weather Effects - Loaded";
 };
+
+// Zupa Control Points
+execVM "zcp.sqf";
