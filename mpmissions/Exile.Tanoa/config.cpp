@@ -11,6 +11,66 @@
 
 #include "ScriptControlClient.cpp"
 
+// ZUPA Control Points
+class CfgNotifications
+{
+    class Success
+    {
+       description = "%1";
+       title = "Success";
+       iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+       iconText = "";
+       color[] = {0.7, 0.93, 0, 1};
+       duration = 5;
+       priority = 0;
+       difficulty[] = {};
+    };
+    class Whoops
+    {
+       description = "%1";
+       title = "Error";
+       iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+       iconText = "";
+       color[] = {0.7, 0.93, 0, 1};
+       duration = 5;
+       priority = 0;
+       difficulty[] = {};
+    };
+    class ZCP_Init
+    {
+        description = "%1";
+        title = "ZCP Spawned";
+        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+        iconText = "";
+        color[] = {0.7, 0.93, 0, 1};
+        duration = 5;
+        priority = 0;
+        difficulty[] = {};
+    };
+    class ZCP_Capped
+    {
+        description = "%1";
+        title = "ZCP Capped";
+        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+        iconText = "";
+        color[] = {0.7, 0.93, 0, 1};
+        duration = 5;
+        priority = 0;
+        difficulty[] = {};
+    };
+    class ZCP_Capping
+    {
+        description = "%1";
+        title = "ZCP alert";
+        iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+        iconText = "";
+        color[] = {0.7, 0.93, 0, 1};
+        duration = 5;
+        priority = 0;
+        difficulty[] = {};
+    };
+};
+
 class CfgClans
 {
 	/*
@@ -25,6 +85,7 @@ class CfgClans
 	*/
 	clanNameAlphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 -!";
 };
+
 class Exile_AbstractCraftingRecipe
 {
 	name = "";
@@ -2905,24 +2966,24 @@ class CfgInteractionModels
 class CfgPlayer 
 {
 	// In minutes ammount of time it takes to go from 100 - 0 if stationary
-	hungerDecay = 90;
-	thirstDecay = 60;
+	hungerDecay = 120;
+	thirstDecay = 45;
 
 	// Damage taken from 0 (health||thirst)/sec
-	healthDecay = 5.0;
+	healthDecay = 0.25;
 
 	// Health regen if over BOTH
 	thirstRegen = 90;
-	hungerRegen = 90;
+	hungerRegen = 80;
 
 	// IF above meet recover HP%/MIN
-	recoveryPerMinute = 2;
+	recoveryPerMinute = 6;
 
 	// Set custom aim precision coefficient for weapon sway
 	// https://community.bistudio.com/wiki/Arma_3_Stamina
 	// Set to -1 if you want to use Arma 3 default value
 	// setCustomAimCoef
-	customAimCoefficient = 0.5;
+	customAimCoefficient = -1;
 
 	// 0 or 1
 	enableFatigue = 0;

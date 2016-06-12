@@ -93,26 +93,8 @@ class Mission
 	};
 	class Entities
 	{
-		items=10;
+		items=8;
 		class Item0
-		{
-			dataType="Marker";
-			position[]={1802.4985,7.8694425,12156.599};
-			name="SpawnTuvanaka";
-			text="Tuvanaka";
-			type="ExileSpawnZone";
-			id=0;
-		};
-		class Item1
-		{
-			dataType="Marker";
-			position[]={9216.5137,4.0336657,3927.6426};
-			name="SpawnModdergat";
-			text="Moddergat";
-			type="ExileSpawnZone";
-			id=1;
-		};
-		class Item2
 		{
 			dataType="Marker";
 			position[]={10810.645,105.86671,9553.3818};
@@ -121,7 +103,7 @@ class Mission
 			type="ExileSpawnZone";
 			id=2;
 		};
-		class Item3
+		class Item1
 		{
 			dataType="Marker";
 			position[]={5743.1533,3.0097947,10593.242};
@@ -130,7 +112,7 @@ class Mission
 			type="ExileSpawnZone";
 			id=3;
 		};
-		class Item4
+		class Item2
 		{
 			dataType="Marker";
 			position[]={2493.5627,55.203499,7149.1538};
@@ -139,17 +121,16 @@ class Mission
 			type="ExileSpawnZone";
 			id=4;
 		};
-		class Item5
-		{
-			dataType="Marker";
-			position[]={3551.1941,37.774315,2151.5266};
-			name="SpawnLailai";
-			text="Lailai";
-			type="ExileSpawnZone";
-			id=5;
-			atlOffset=-1.3927612;
-		};
-		class Item6
+        class Item3
+        {
+            dataType="Marker";
+            position[]={9216.5137,4.0336657,3927.6426};
+            name="SpawnModdergat";
+            text="Moddergat";
+            type="ExileSpawnZone";
+            id=1;
+        };
+		class Item4
 		{
 			dataType="Marker";
 			position[]=
@@ -170,7 +151,7 @@ class Mission
 			id=6;
 			atlOffset=1.#QNAN;
 		};
-		class Item7
+		class Item5
 		{
 			dataType="Marker";
 			position[]={23334.6,4.0095601,24188.9};
@@ -186,7 +167,7 @@ class Mission
 			id=7;
 			atlOffset=65.809563;
 		};
-		class Item8
+		class Item6
 		{
 			dataType="Marker";
 			position[]={14288.407,-2.313377e-025,11601.379};
@@ -202,7 +183,7 @@ class Mission
 			id=8;
 			atlOffset=-6.2290425;
 		};
-		class Item9
+		class Item7
 		{
 			dataType="Group";
 			side="Independent";
