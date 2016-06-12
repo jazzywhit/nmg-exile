@@ -43,7 +43,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	/*General settings for static missions*/
 	DMS_StaticMission					= true;						// Enable/disable static mission system.
-	DMS_MaxStaticMissions				= 1;						// Maximum number of Static Missions running at the same time. It's recommended you set this to the same amount of static missions that you have in total. This config will be ignored by "DMS_StaticMissionsOnServerStart".
+	DMS_MaxStaticMissions				= 0;						// Maximum number of Static Missions running at the same time. It's recommended you set this to the same amount of static missions that you have in total. This config will be ignored by "DMS_StaticMissionsOnServerStart".
 	DMS_TimeToFirstStaticMission		= [30,30];					// [Minimum,Maximum] time between first static mission spawn. | DEFAULT: 3-7 minutes.
 	DMS_TimeBetweenStaticMissions		= [900,1800];				// [Minimum,Maximum] time between static missions (if static mission limit is not reached) | DEFAULT: 15-30 mins
 	DMS_StaticMissionTimeOut			= [1800,3600]; 				// [Minimum,Maximum] time it will take for a static mission to timeout | DEFAULT: 30-60 mins
@@ -60,7 +60,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	/*Mission Marker settings*/
 	DMS_MissionMarkerCount				= 2;						// If you modify your CreateMarker and have multiple markers, you probably want to change this. *cough*Vish*cough*
-	DMS_ShowDifficultyColorLegend		= true;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
+	DMS_ShowDifficultyColorLegend		= false;						// Whether or not to show a "color legend" at the bottom left of the map that shows which color corresponds to which difficulty. I know it's not very pretty, meh.
 	DMS_MarkerText_ShowMissionPrefix	= true;						// Whether or not to place a prefix before the mission marker text. Enable this if your players get confused by the marker names :P
 	DMS_MarkerText_MissionPrefix		= "Mission:";				// The text displayed before the mission name in the mission marker.
 	DMS_MarkerText_ShowAICount			= false;						// Whether or not to display the number of remaining AI in the marker name.
@@ -68,7 +68,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MarkerText_AIName				= "Units";					// What the AI will be called in the map marker. For example, the marker text can show: "Car Dealer (3 Units remaining)"
 	DMS_MarkerPosRandomization			= true;					    // Randomize the position of the circle marker of a mission
 	DMS_MarkerPosRandomRadius			= [50,200];					// Minimum/Maximum distance that the circle marker position will be randomized | DEFAULT: 0 meters to 200 meters
-	DMS_RandomMarkerBrush				= "FDiagonal";				// See: https://community.bistudio.com/wiki/setMarkerBrush
+	DMS_RandomMarkerBrush				= "SolidFull";				// See: https://community.bistudio.com/wiki/setMarkerBrush
 	DMS_MissionMarkerWinDot				= false;					// Keep the mission marker dot with a "win" message after mission is over
 	DMS_MissionMarkerLoseDot			= false;					// Keep the mission marker dot with a "lose" message after mission is over
 	DMS_MissionMarkerWinDot_Type		= "mil_end";				// The marker type to show when a mission is completed. Refer to: https://community.bistudio.com/wiki/cfgMarkers
@@ -381,7 +381,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_enable_water_equipment		= true;						// Enable/disable overriding default weapons of an AI if it spawns on/in water
 
 	// https://community.bistudio.com/wiki/AI_Sub-skills#general
-	DMS_ai_skill_static					= [["general",0.50],["aimingAccuracy",0.30],["aimingShake",0.25],["aimingSpeed",0.35],["spotDistance",0.75],["spotTime",0.65],["courage",1.00],["reloadSpeed",1.00],["commanding",0.65]];	// Static AI Skills
+	DMS_ai_skill_static					= [["general",0.50],["aimingAccuracy",0.30],["aimingShake",0.25],["aimingSpeed",0.55],["spotDistance",0.75],["spotTime",0.65],["courage",1.00],["reloadSpeed",1.00],["commanding",0.50]];	// Static AI Skills
 	DMS_ai_skill_easy					= DMS_ai_skill_static; //[["aimingAccuracy",0.30],["aimingShake",0.50],["aimingSpeed",0.50],["spotDistance",0.50],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.50]];	// Easy
 	DMS_ai_skill_moderate				= DMS_ai_skill_static; //[["aimingAccuracy",0.60],["aimingShake",0.60],["aimingSpeed",0.60],["spotDistance",0.60],["spotTime",0.60],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.60]];	// Moderate
 	DMS_ai_skill_difficult				= DMS_ai_skill_static; //[["aimingAccuracy",0.70],["aimingShake",0.70],["aimingSpeed",0.70],["spotDistance",0.70],["spotTime",0.80],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",0.70]]; 	// Difficult

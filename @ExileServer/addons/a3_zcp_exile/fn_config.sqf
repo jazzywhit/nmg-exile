@@ -72,50 +72,12 @@ ZCP_RewardWeightForRandomChoice = [
 // baseFile -> Random or the basefile name. Random will chose from ZCP_CapBases
 // capradius -> 0 for Random, real number for Static base files.
 ZCP_CapPoints = [
-	[
-		"South Losi", // name (0)
-		[[10447,4863,0],[10447,4863,0]], // [[x,y,z],[x,y,z]] if using static location (1)
-		["Random","Random","Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
-		"Losi", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
-		0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
-		true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
-		true, // isStatic location ( if true it will take the location specified earlier) (6)
-		["ec_audacity.sqf","ec_bravery.sqf","ec_courage.sqf", "ec_defiance.sqf","ec_endurance.sqf","ec_fortitude.sqf","m3e_exoBase1.sqf","m3e_exoBase2.sqf","m3e_exoBase3.sqf"], // baseFile -> Random OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
-		-1, // capradius if you use a specific static basefile. -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
-		-1, // max terrainGradient -> when specific static basefile is used (9) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
-		-1, // distancefromojects -> when specific static basefile is used (10) -> put -1 if you want to use the corresponding one from the ZCP_Capbasses array).
-		900, // captime in seconds for this mission (11)
-		2, // Minimum amount of AI at the start of mission (12)
-        4, // Maximum amount of AI at start of mission ( If you want it to always be a number change MIN and MAX to the same number. )
-        false, // deploy smoke on the circle border when mission is finished (14)
-        0, // ammount of seconds to wait before deploying the smokescreen (15)
-        0, // ammount of meters outside the circle to place the smoke sources ( 0 is ON the circle border, 50 would be 50 meter outside the border)
-		true, // use Waves of AI to attack the base when a player is capping (17)
-		[ // array of waves of AI () (18)
-			[
-				20, // procentage of the cap time to start attack (50 = 50% of the total captime)
-				3, // Amount of AI units in a group
-				2, // Amount of AI groups
-				200, // distance in meter form ZCP for the ai to spawn
-				true // false -> all groups from 1 random location, true -> all groups from their own random location
-			]
-			,
-			[
-				50, // procentage of the cap time to start attack (50 = 50% of the total captime)
-				5, // Amount of AI units in a group
-				2, // Amount of AI groups
-				200, // distance in meter form ZCP for the ai to spawn
-				true // false -> all groups from 1 random location, true -> all groups from their own random location
-			]
-		]
-	]
-	,
     [
         "North Belfort", // name (0)
         [[3192,11530,0],[3192,11530,0]], // [[x,y,z],[x,y,z]] if using static location (1)
         ["Random","Random","Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "Belfort", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
-        1, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
+        0, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
 		true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
 		true, // isStatic location ( if true it will take the location specified earlier) (6)
 		["ec_audacity.sqf","ec_bravery.sqf","ec_courage.sqf", "ec_defiance.sqf","ec_endurance.sqf","ec_fortitude.sqf","m3e_exoBase1.sqf","m3e_exoBase2.sqf","m3e_exoBase3.sqf"], // baseFile -> Random OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
@@ -153,7 +115,7 @@ ZCP_CapPoints = [
         [[11060,2474,0],[11060,2474,0]], // [[x,y,z],[x,y,z]] if using static location (1)
         ["Random","Random","Reputation"], // Reward -> Random, Poptabs, Vehicle, Buildingbox, WeaponBox , BigWeaponBox, SniperWeaponBox (2)
         "Lijnhaven", // unique varname -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
-        2, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
+        1, // unique index -> this gets checked and fixed automaticly on server start ( so don't really worry about it ).
 		true, // spawnAI on start of the missions ( NEEDS AI system for this ) (5)
 		true, // isStatic location ( if true it will take the location specified earlier) (6)
 		["ec_audacity.sqf","ec_bravery.sqf","ec_courage.sqf", "ec_defiance.sqf","ec_endurance.sqf","ec_fortitude.sqf","m3e_exoBase1.sqf","m3e_exoBase2.sqf","m3e_exoBase3.sqf"], // baseFile -> Random OR the name of the sqf file OR array of basefiles to choose from ( eg: ["m3e_base1.sqf","m3e_village.sqf"], )
@@ -243,15 +205,15 @@ ZCP_SecondsCheckPlayers = 600; // seconds for loop check if the server holds mor
 // For every spawned mission,
 // buildeditor currenty supported -> m3e, xcam, EdenConverted ( THis is exported as terrainbuilder and converted with my site), m3eEden
 ZCP_CapBases = [ // located in capbases folder [filename, capradius, buildeditor, max terraingradient (if not overwritten by staticbasefile), radius of open space for it to spawn base]
-	//["m3e_base1.sqf", 60, "m3e", 90, 60],
+	["m3e_base1.sqf", 60, "m3e", 90, 60],
 	["m3e_village.sqf", 50, "m3e", 90, 50],
-	//["xcam_milPoint.sqf", 50, "xcam", 90, 50],
-	//["ec_audacity.sqf", 30, "EdenConverted", 90, 30],
-	//["ec_bravery.sqf", 35, "EdenConverted", 90, 35],
-	//["ec_courage.sqf", 25, "EdenConverted", 90, 25],
-	//["ec_defiance.sqf", 20, "EdenConverted", 90, 20],
-	//["ec_endurance.sqf", 20, "EdenConverted", 90, 20],
-	//["ec_fortitude.sqf", 25, "EdenConverted", 90, 25],
+	["xcam_milPoint.sqf", 50, "xcam", 90, 50],
+	["ec_audacity.sqf", 30, "EdenConverted", 90, 30],
+	["ec_bravery.sqf", 35, "EdenConverted", 90, 35],
+	["ec_courage.sqf", 25, "EdenConverted", 90, 25],
+	["ec_defiance.sqf", 20, "EdenConverted", 90, 20],
+	["ec_endurance.sqf", 20, "EdenConverted", 90, 20],
+	["ec_fortitude.sqf", 25, "EdenConverted", 90, 25],
 	["m3e_exoBase1.sqf", 30, "m3e", 90, 50],
     ["m3e_exoBase2.sqf", 30, "m3e", 90, 50],
     ["m3e_exoBase3.sqf", 35, "m3e", 90, 50]

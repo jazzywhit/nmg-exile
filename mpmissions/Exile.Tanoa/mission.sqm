@@ -93,7 +93,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=7;
+		items=8;
 		class Item0
 		{
 			dataType="Marker";
@@ -121,7 +121,16 @@ class Mission
 			type="ExileSpawnZone";
 			id=4;
 		};
-		class Item3
+        class Item3
+        {
+            dataType="Marker";
+            position[]={9216.5137,4.0336657,3927.6426};
+            name="SpawnModdergat";
+            text="Moddergat";
+            type="ExileSpawnZone";
+            id=1;
+        };
+		class Item4
 		{
 			dataType="Marker";
 			position[]=
@@ -142,7 +151,7 @@ class Mission
 			id=6;
 			atlOffset=1.#QNAN;
 		};
-		class Item4
+		class Item5
 		{
 			dataType="Marker";
 			position[]={23334.6,4.0095601,24188.9};
@@ -158,7 +167,7 @@ class Mission
 			id=7;
 			atlOffset=65.809563;
 		};
-		class Item5
+		class Item6
 		{
 			dataType="Marker";
 			position[]={14288.407,-2.313377e-025,11601.379};
@@ -174,7 +183,7 @@ class Mission
 			id=8;
 			atlOffset=-6.2290425;
 		};
-		class Item6
+		class Item7
 		{
 			dataType="Group";
 			side="Independent";
