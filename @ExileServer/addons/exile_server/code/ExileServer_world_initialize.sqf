@@ -16,6 +16,8 @@ call ExileServer_world_loadAllDatabaseConstructions;
 call ExileServer_world_loadAllDatabaseVehicles;
 call ExileServer_world_loadAllDatabaseContainers;
 call ExileServer_world_spawnSpawnZoneVehicles;
-call ExileServer_world_spawnVehicles;
+call ExileServer_world_spawnVehiclesGround;
+call ExileServer_world_spawnVehiclesWater;
+call ExileServer_world_spawnVehiclesAir;
 "Game world initialized! Let the fun begin!" call ExileServer_util_log;
 true

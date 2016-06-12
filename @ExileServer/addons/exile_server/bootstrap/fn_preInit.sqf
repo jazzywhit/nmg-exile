@@ -218,7 +218,9 @@ forEach
 	['ExileServer_world_loadAllDatabaseVehicles', 'exile_server\code\ExileServer_world_loadAllDatabaseVehicles.sqf'],
 	['ExileServer_world_loadAllTerritories', 'exile_server\code\ExileServer_world_loadAllTerritories.sqf'],
 	['ExileServer_world_spawnSpawnZoneVehicles', 'exile_server\code\ExileServer_world_spawnSpawnZoneVehicles.sqf'],
-	['ExileServer_world_spawnVehicles', 'exile_server\code\ExileServer_world_spawnVehicles.sqf']
+    ['ExileServer_world_spawnVehiclesGround', 'exile_server\code\ExileServer_world_spawnVehiclesGround.sqf'],
+    ['ExileServer_world_spawnVehiclesWater', 'exile_server\code\ExileServer_world_spawnVehiclesWater.sqf'],
+    ['ExileServer_world_spawnVehiclesAir', 'exile_server\code\ExileServer_world_spawnVehiclesAir.sqf']
 ];
 
 call ExileServer_system_process_preInit;

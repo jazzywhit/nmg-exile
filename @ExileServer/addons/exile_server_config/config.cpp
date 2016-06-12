@@ -255,87 +255,293 @@ class CfgSettings
 
 	///////////////////////////////////////////////////////////////////////
 	// VEHICLE SPAWN CONFIGURATION
+	// Updated based on http://www.exilemod.com/topic/14289-guide-custom-vehicle-spawn-airgroundwater/?page=1
 	///////////////////////////////////////////////////////////////////////
 
 	class VehicleSpawn
-	{
-		/**
-		* Grid Size for vehicle spawning,
-		* smaller the number more vehicles,
-		* you get the point
-		*/
-		vehiclesGridSize = 2200;
+    {
+        /** Grid Size for Vehicle spawning,
+        * smaller the number more Vehicle,
+        * you get the point
+        */
+        groundGridSize = 2200;
+        waterGridSize = 2200;
+        airGridSize = 2200;
 
-		/**
-		* Vehicle ammount per grid
-		* kinda self explanitory
-		*/
-		vehiclesGridAmount = 1;
+        /**
+        * Vehicle ammount per grid
+        * kinda self explanitory
+        */
+        groundGridAmount = 2;
+        waterGridAmount = 1;
+        airGridAmount = 1;
+        /**
+        * Creates global markers for vehicle spawn tweeking,
+        * after you are satisfied with vehicle ammount and spread set this to 0.
+        */
+        groundDebugMarkers = 0;
+        waterDebugMarkers = 0;
+        airDebugMarkers = 0;
+        /**
+         * Radius of spawn around Airport.
+         */
+        groundSpawnRadius = 9000;
+        waterSpawnRadius = 5000;
+        airSpawnRadius = 2000;
+        /**
+         * Radius of spawn around Road/Coast
+         */
+        groundSpawnRadiusRoad = 10;
+        waterSpawnRadiusCoast = 50;
+        airSpawnRadiusRoad = 50;
+        /**
+        * The server will apply random damage up to this value when spawning a vehicle.
+        */
+        groundDamageChance = 100; // % chance for a vehicle HITPOINT to be damaged
+        waterDamageChance = 100; // % chance for a vehicle HITPOINT to be damaged
+        airDamageChance = 100; // % chance for a vehicle HITPOINT to be damaged
 
-		/**
-		* Creates global markers for vehicle spawn tweeking,
-		* after you are satisfied with vehicle ammount and spread set this to 0.
-		*/
-		vehiclesDebugMarkers = 0;
+        groundMaximumDamage = 0.9; // maximum vehicle HITPOINT to be damaged
+        waterMaximumDamage = 0.9; // maximum vehicle HITPOINT to be damaged
+        airMaximumDamage = 0.9; // maximum vehicle HITPOINT to be damaged
+        /**
+         * Enables or disables nightvision optics on ALL vehicles
+         *
+         * 0 = off
+         * 1 = on
+         */
+        NightVision = 1;
 
-		/**
-		* The server will apply random damage up to this value when spawning a vehicle.
-		*/
-		damageChance = 100; // 20% chance for a vehicle HITPOINT to be damaged
-		maximumDamage = 0.9;
+        /**
+         * Enables or disables thermal optics on ALL vehicles
+         *
+         * 0 = off
+         * 1 = on
+         */
+        ThermalVision = 0;
 
-		// Stuff to spawn on water
-		water[] =
-		{
-			"Exile_Boat_MotorBoat_Police",
-			"Exile_Boat_MotorBoat_Orange",
-			"Exile_Boat_MotorBoat_White",
-			"Exile_Boat_RubberDuck_CSAT",
-			"Exile_Boat_RubberDuck_Digital",
-			"Exile_Boat_RubberDuck_Orange",
-			"Exile_Boat_RubberDuck_Blue",
-			"Exile_Boat_RubberDuck_Black",
-			"Exile_Boat_SDV_CSAT",
-			"Exile_Boat_SDV_Digital",
-			"Exile_Boat_SDV_Grey"
-		};
+        /**
+         * Set this to 1 to unlock vehicles on server boot if they are in safe zones
+         *
+         * 0 = off
+         * 1 = on
+         */
+        UnlockInSafeZonesAfterRestart = 1;
 
-		// Stuff to spawn on roads
-		ground[] =
-		{
-			"Exile_Car_Volha_Blue",
-			"Exile_Car_Volha_White",
-			"Exile_Car_Lada_Green",
-			"Exile_Car_Lada_Taxi",
-			"Exile_Car_TowTractor_White",
-			"Exile_Car_Tractor_Red",
-			"Exile_Car_OldTractor_Red"
-		};
+        // Stuff to spawn on roads
+        ground[] =
+        {
+            "Exile_Bike_QuadBike_Black",
+            "Exile_Bike_QuadBike_Blue",
+            "Exile_Bike_QuadBike_Red",
+            "Exile_Bike_QuadBike_White",
+            "Exile_Bike_QuadBike_Nato",
+            "Exile_Bike_QuadBike_Csat",
+            "Exile_Bike_QuadBike_Fia",
+            "Exile_Bike_QuadBike_Guerilla01",
+            "Exile_Bike_QuadBike_Guerilla02",
+            "Exile_Car_Hatchback_Beige",
+            "Exile_Car_Hatchback_Green",
+            "Exile_Car_Hatchback_Blue",
+            "Exile_Car_Hatchback_BlueCustom",
+            "Exile_Car_Hatchback_BeigeCustom",
+            "Exile_Car_Hatchback_Yellow",
+            "Exile_Car_Hatchback_Grey",
+            "Exile_Car_Hatchback_Black",
+            "Exile_Car_Hatchback_Dark",
+            "Exile_Car_Hatchback_Rusty1",
+            "Exile_Car_Hatchback_Rusty2",
+            "Exile_Car_Hatchback_Rusty3",
+            "Exile_Car_Ikarus_Blue",
+            "Exile_Car_Ikarus_Red",
+            "Exile_Car_Ikarus_Party",
+            "Exile_Car_Ural_Open_Blue",
+            "Exile_Car_Ural_Open_Yellow",
+            "Exile_Car_Ural_Open_Worker",
+            "Exile_Car_Ural_Open_Military",
+            "Exile_Car_Ural_Covered_Blue",
+            "Exile_Car_Ural_Covered_Yellow",
+            "Exile_Car_Ural_Covered_Worker",
+            "Exile_Car_Ural_Covered_Military",
+            "Exile_Car_SUVXL_Black",
+            "Exile_Car_Tractor_Red",
+            "Exile_Car_OldTractor_Red",
+            "Exile_Car_Octavius_White",
+            "Exile_Car_Octavius_Black",
+            "Exile_Car_UAZ_Green",
+            "Exile_Car_UAZ_Open_Green",
+            "Exile_Car_LandRover_Red",
+            "Exile_Car_LandRover_Urban",
+            "Exile_Car_LandRover_Green",
+            "Exile_Car_LandRover_Sand",
+            "Exile_Car_LandRover_Desert",
+            "Exile_Car_LandRover_Ambulance_Green",
+            "Exile_Car_LandRover_Ambulance_Desert",
+            "Exile_Car_LandRover_Ambulance_Sand",
+            "Exile_Car_Lada_Green",
+            "Exile_Car_Lada_Taxi",
+            "Exile_Car_Lada_Red",
+            "Exile_Car_Lada_White",
+            "Exile_Car_Lada_Hipster",
+            "Exile_Car_Volha_Blue",
+            "Exile_Car_Volha_White",
+            "Exile_Car_Volha_Black",
+            "Exile_Car_Hatchback_Sport_Red",
+            "Exile_Car_Hatchback_Sport_Blue",
+            "Exile_Car_Hatchback_Sport_Orange",
+            "Exile_Car_Hatchback_Sport_White",
+            "Exile_Car_Hatchback_Sport_Beige",
+            "Exile_Car_Hatchback_Sport_Green",
+            "Exile_Car_HEMMT",
+            "Exile_Car_Hunter",
+            "Exile_Car_Ifrit",
+            "Exile_Car_Offroad_Red",
+            "Exile_Car_Offroad_Beige",
+            "Exile_Car_Offroad_White",
+            "Exile_Car_Offroad_Blue",
+            "Exile_Car_Offroad_DarkRed",
+            "Exile_Car_Offroad_BlueCustom",
+            "Exile_Car_Offroad_Guerilla01",
+            "Exile_Car_Offroad_Guerilla02",
+            "Exile_Car_Offroad_Guerilla03",
+            "Exile_Car_Offroad_Guerilla04",
+            "Exile_Car_Offroad_Guerilla05",
+            "Exile_Car_Offroad_Guerilla06",
+            "Exile_Car_Offroad_Guerilla07",
+            "Exile_Car_Offroad_Guerilla08",
+            "Exile_Car_Offroad_Guerilla09",
+            "Exile_Car_Offroad_Guerilla10",
+            "Exile_Car_Offroad_Guerilla11",
+            "Exile_Car_Offroad_Guerilla12",
+            "Exile_Car_Offroad_Rusty1",
+            "Exile_Car_Offroad_Rusty2",
+            "Exile_Car_Offroad_Rusty3",
+            "Exile_Car_Offroad_Armed_Guerilla01",
+            "Exile_Car_Offroad_Armed_Guerilla02",
+            "Exile_Car_Offroad_Armed_Guerilla03",
+            "Exile_Car_Offroad_Armed_Guerilla04",
+            "Exile_Car_Offroad_Armed_Guerilla05",
+            "Exile_Car_Offroad_Armed_Guerilla06",
+            "Exile_Car_Offroad_Armed_Guerilla07",
+            "Exile_Car_Offroad_Armed_Guerilla08",
+            "Exile_Car_Offroad_Armed_Guerilla09",
+            "Exile_Car_Offroad_Armed_Guerilla10",
+            "Exile_Car_Offroad_Armed_Guerilla11",
+            "Exile_Car_Offroad_Armed_Guerilla12",
+            "Exile_Car_Offroad_Repair_Civillian",
+            "Exile_Car_Offroad_Repair_Red",
+            "Exile_Car_Offroad_Repair_Beige",
+            "Exile_Car_Offroad_Repair_White",
+            "Exile_Car_Offroad_Repair_Blue",
+            "Exile_Car_Offroad_Repair_DarkRed",
+            "Exile_Car_Offroad_Repair_BlueCustom",
+            "Exile_Car_Offroad_Repair_Guerilla01",
+            "Exile_Car_Offroad_Repair_Guerilla02",
+            "Exile_Car_Offroad_Repair_Guerilla03",
+            "Exile_Car_Offroad_Repair_Guerilla04",
+            "Exile_Car_Offroad_Repair_Guerilla05",
+            "Exile_Car_Offroad_Repair_Guerilla06",
+            "Exile_Car_Offroad_Repair_Guerilla07",
+            "Exile_Car_Offroad_Repair_Guerilla08",
+            "Exile_Car_Offroad_Repair_Guerilla09",
+            "Exile_Car_Offroad_Repair_Guerilla10",
+            "Exile_Car_Offroad_Repair_Guerilla11",
+            "Exile_Car_Offroad_Repair_Guerilla12",
+            "Exile_Car_Strider",
+            "Exile_Car_SUV_Red",
+            "Exile_Car_SUV_Black",
+            "Exile_Car_SUV_Grey",
+            "Exile_Car_SUV_Orange",
+            "Exile_Car_Tempest",
+            "Exile_Car_Van_Black",
+            "Exile_Car_Van_White",
+            "Exile_Car_Van_Red",
+            "Exile_Car_Van_Guerilla01",
+            "Exile_Car_Van_Guerilla02",
+            "Exile_Car_Van_Guerilla03",
+            "Exile_Car_Van_Guerilla04",
+            "Exile_Car_Van_Guerilla05",
+            "Exile_Car_Van_Guerilla06",
+            "Exile_Car_Van_Guerilla07",
+            "Exile_Car_Van_Guerilla08",
+            "Exile_Car_Van_Box_Black",
+            "Exile_Car_Van_Box_White",
+            "Exile_Car_Van_Box_Red",
+            "Exile_Car_Van_Box_Guerilla01",
+            "Exile_Car_Van_Box_Guerilla02",
+            "Exile_Car_Van_Box_Guerilla03",
+            "Exile_Car_Van_Box_Guerilla04",
+            "Exile_Car_Van_Box_Guerilla05",
+            "Exile_Car_Van_Box_Guerilla06",
+            "Exile_Car_Van_Box_Guerilla07",
+            "Exile_Car_Van_Box_Guerilla08",
+            "Exile_Car_Van_Fuel_Black",
+            "Exile_Car_Van_Fuel_White",
+            "Exile_Car_Van_Fuel_Red",
+            "Exile_Car_Van_Fuel_Guerilla01",
+            "Exile_Car_Van_Fuel_Guerilla02",
+            "Exile_Car_Van_Fuel_Guerilla03",
+            "Exile_Car_Zamak"
+        };
 
-		/**
-		 * Enables or disables nightvision optics on ALL vehicles
-		 *
-		 * 0 = off
-		 * 1 = on
-		 */
-		nightVision = 1;
+        // Stuff to spawn on water
+        water[] =
+        {
+            "Exile_Boat_MotorBoat_Police",
+            "Exile_Boat_MotorBoat_Orange",
+            "Exile_Boat_MotorBoat_White",
+            "Exile_Boat_RubberDuck_CSAT",
+            "Exile_Boat_RubberDuck_Digital",
+            "Exile_Boat_RubberDuck_Orange",
+            "Exile_Boat_RubberDuck_Blue",
+            "Exile_Boat_RubberDuck_Black",
+            "Exile_Boat_SDV_CSAT",
+            "Exile_Boat_SDV_Digital",
+            "Exile_Boat_SDV_Grey"
+        };
 
-		/**
-		 * Enables or disables thermal optics on ALL vehicles
-		 *
-		 * 0 = off
-		 * 1 = on
-		 */
-		thermalVision = 0;
-
-		/**
-		 * Set this to 1 to unlock vehicles on server boot if they are in safe zones
-		 *
-		 * 0 = off
-		 * 1 = on
-		 */
-		unlockInSafeZonesAfterRestart = 1;
-	};
+        // Stuff to spawn on airfield
+        air[] =
+        {
+//            "Exile_Chopper_Huey_Green",
+//            "Exile_Chopper_Huey_Desert",
+//            "Exile_Chopper_Huey_Armed_Green",
+//            "Exile_Chopper_Huey_Armed_Desert",
+//            "Exile_Chopper_Hellcat_Green",
+//            "Exile_Chopper_Hellcat_FIA",
+            "Exile_Chopper_Hummingbird_Green",
+            "Exile_Chopper_Hummingbird_Civillian_Blue",
+            "Exile_Chopper_Hummingbird_Civillian_Red",
+            "Exile_Chopper_Hummingbird_Civillian_ION",
+            "Exile_Chopper_Hummingbird_Civillian_BlueLine",
+            "Exile_Chopper_Hummingbird_Civillian_Digital",
+            "Exile_Chopper_Hummingbird_Civillian_Elliptical",
+            "Exile_Chopper_Hummingbird_Civillian_Furious",
+            "Exile_Chopper_Hummingbird_Civillian_GrayWatcher",
+            "Exile_Chopper_Hummingbird_Civillian_Jeans",
+            "Exile_Chopper_Hummingbird_Civillian_Light",
+            "Exile_Chopper_Hummingbird_Civillian_Shadow",
+            "Exile_Chopper_Hummingbird_Civillian_Sheriff",
+            "Exile_Chopper_Hummingbird_Civillian_Speedy",
+            "Exile_Chopper_Hummingbird_Civillian_Sunset",
+            "Exile_Chopper_Hummingbird_Civillian_Vrana",
+            "Exile_Chopper_Hummingbird_Civillian_Wasp",
+            "Exile_Chopper_Hummingbird_Civillian_Wave",
+//            "Exile_Chopper_Huron_Black",
+//            "Exile_Chopper_Huron_Green",
+//            "Exile_Chopper_Mohawk_FIA",
+//            "Exile_Chopper_Orca_CSAT",
+//            "Exile_Chopper_Orca_Black",
+//            "Exile_Chopper_Orca_BlackCustom",
+//            "Exile_Chopper_Taru_Transport_CSAT",
+//            "Exile_Chopper_Taru_Transport_Black",
+//            "Exile_Chopper_Taru_CSAT",
+//            "Exile_Chopper_Taru_Black",
+//            "Exile_Chopper_Taru_Covered_CSAT",
+//            "Exile_Chopper_Taru_Covered_Black",
+            "Exile_Plane_Cessna"
+        };
+    };
 
 	class Weather
 	{
