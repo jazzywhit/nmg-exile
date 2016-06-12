@@ -67,8 +67,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MarkerText_ShowAICount_Static	= false;						// Whether or not to display the number of remaining AI in the marker name for STATIC missions.
 	DMS_MarkerText_AIName				= "Units";					// What the AI will be called in the map marker. For example, the marker text can show: "Car Dealer (3 Units remaining)"
 	DMS_MarkerPosRandomization			= true;					    // Randomize the position of the circle marker of a mission
-	DMS_MarkerPosRandomRadius			= [50,200];					// Minimum/Maximum distance that the circle marker position will be randomized | DEFAULT: 0 meters to 200 meters
-	DMS_RandomMarkerBrush				= "SolidFull";				// See: https://community.bistudio.com/wiki/setMarkerBrush
+	DMS_MarkerPosRandomRadius			= [0,200];					// Minimum/Maximum distance that the circle marker position will be randomized | DEFAULT: 0 meters to 200 meters
+	DMS_RandomMarkerBrush				= "Solid";				// See: https://community.bistudio.com/wiki/setMarkerBrush
 	DMS_MissionMarkerWinDot				= false;					// Keep the mission marker dot with a "win" message after mission is over
 	DMS_MissionMarkerLoseDot			= false;					// Keep the mission marker dot with a "lose" message after mission is over
 	DMS_MissionMarkerWinDot_Type		= "mil_end";				// The marker type to show when a mission is completed. Refer to: https://community.bistudio.com/wiki/cfgMarkers
@@ -407,8 +407,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	DMS_AI_destroyVehicleChance			= 0;						// Percent chance that an AI vehicle will be destroyed after the AI have been killed. Set to 100 for always, or 0 for never.
 
-	DMS_AI_destroyStaticWeapon			= false;						// Whether or not to destroy static HMGs after AI death.
-	DMS_AI_destroyStaticWeapon_chance	= 95;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
+	DMS_AI_destroyStaticWeapon			= true;						// Whether or not to destroy static HMGs after AI death.
+	DMS_AI_destroyStaticWeapon_chance	= 65;						// Percent chance that a static weapon will be destroyed (only applied if "DMS_AI_destroyStaticWeapon" is true)
 
 	DMS_static_weapons =				[							// Static weapons for AI
 											"O_HMG_01_high_F"
