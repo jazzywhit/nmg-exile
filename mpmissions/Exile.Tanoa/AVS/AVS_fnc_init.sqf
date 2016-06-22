@@ -24,14 +24,26 @@ AVS_fnc_getConfigLoadout = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_
 
 if (AVS_RearmSystemActive || AVS_RefuelSystemActive) then
 {
-	diag_log "AVS Rearm System active.";
-	AVS_fnc_getRearmCost = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getRearmCost.sqf");
-	AVS_fnc_getRefuelCost = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getRefuelCost.sqf");
-	AVS_fnc_getVehicleLoadout = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getVehicleLoadout.sqf");
-	AVS_fnc_rearmTurret = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_rearmTurret.sqf");
-	AVS_fnc_refuelVehicleClient = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_refuelVehicleClient.sqf");
-	AVS_fnc_requestRearm = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_requestRearm.sqf");
-	AVS_fnc_requestRefuel = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_requestRefuel.sqf");
+	if (AVS_RearmSystemActive) then {
+		diag_log "AVS Rearm System active.";
+		AVS_fnc_getRearmCost = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getRearmCost.sqf");
+		AVS_fnc_getVehicleLoadout = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getVehicleLoadout.sqf");
+		AVS_fnc_rearmTurret = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_rearmTurret.sqf");
+		AVS_fnc_requestRearm = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_requestRearm.sqf");
+	};
+	if (AVS_RefuelSystemActive) then {
+		diag_log "AVS Refuel System active.";
+		AVS_fnc_sanitizegastation = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_sanitizegastation.sqf");
+		AVS_fnc_getRefuelCost = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getRefuelCost.sqf");
+		AVS_fnc_refuelVehicleClient = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_refuelVehicleClient.sqf");
+		AVS_fnc_requestRefuel = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_requestRefuel.sqf");
+		if (AVS_FillCanisterActive) then {
+			diag_log "AVS Fill Canister active.";
+			AVS_fnc_fillCanisterClient = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_fillCanisterClient.sqf");
+			AVS_fnc_getFillCanCost = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getFillCanCost.sqf");
+			AVS_fnc_requestFillCanister = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_requestFillCanister.sqf");
+		};
+	};
 	AVS_fnc_setPlayerMoney = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_setPlayerMoney.sqf");
 	AVS_fnc_updateInteractionMenu = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_updateInteractionMenu.sqf");
 
@@ -44,6 +56,7 @@ if (AVS_RearmSystemActive || AVS_RefuelSystemActive) then
 	{
 		// Client-side only stuff.
 		AVS_fnc_getConfigLoadout = compileFinal (preprocessFileLineNumbers "AVS\AVS_fnc_getConfigLoadout.sqf");	// Server already processed this file.
+		[] spawn AVS_fnc_sanitizegastation;
 		[] spawn AVS_fnc_updateInteractionMenu;
 		diag_log format ["AVS - Client code version %1 initialized.", AVS_Version];
 	};

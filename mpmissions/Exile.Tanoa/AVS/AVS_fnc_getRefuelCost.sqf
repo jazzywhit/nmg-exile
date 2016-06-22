@@ -28,5 +28,5 @@ _totalCapacity = (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "fuelCapac
 
 _litersToRefuel = round(_totalCapacity * _fuelEmpty);
 
-_totalCost = AVS_RefuelCost * _litresToRefuel;
+_totalCost = AVS_RefuelCost * _litersToRefuel;
 _totalCost
