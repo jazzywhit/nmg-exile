@@ -264,17 +264,17 @@ class CfgSettings
         * smaller the number more Vehicle,
         * you get the point
         */
-        groundGridSize = 2200;
-        waterGridSize = 2200;
-        airGridSize = 2200;
+        groundGridSize = 10000;
+        waterGridSize = 10000;
+        airGridSize = 10000;
 
         /**
         * Vehicle ammount per grid
         * kinda self explanitory
         */
-        groundGridAmount = 2;
-        waterGridAmount = 1;
-        airGridAmount = 1;
+        groundGridAmount = 30;
+        waterGridAmount = 15;
+        airGridAmount = 5;
         /**
         * Creates global markers for vehicle spawn tweeking,
         * after you are satisfied with vehicle ammount and spread set this to 0.
@@ -287,7 +287,7 @@ class CfgSettings
          */
         groundSpawnRadius = 9000;
         waterSpawnRadius = 5000;
-        airSpawnRadius = 2000;
+        airSpawnRadius = 500;
         /**
          * Radius of spawn around Road/Coast
          */
@@ -509,24 +509,24 @@ class CfgSettings
 //            "Exile_Chopper_Huey_Armed_Desert",
 //            "Exile_Chopper_Hellcat_Green",
 //            "Exile_Chopper_Hellcat_FIA",
-            "Exile_Chopper_Hummingbird_Green",
-            "Exile_Chopper_Hummingbird_Civillian_Blue",
-            "Exile_Chopper_Hummingbird_Civillian_Red",
-            "Exile_Chopper_Hummingbird_Civillian_ION",
-            "Exile_Chopper_Hummingbird_Civillian_BlueLine",
-            "Exile_Chopper_Hummingbird_Civillian_Digital",
-            "Exile_Chopper_Hummingbird_Civillian_Elliptical",
-            "Exile_Chopper_Hummingbird_Civillian_Furious",
-            "Exile_Chopper_Hummingbird_Civillian_GrayWatcher",
-            "Exile_Chopper_Hummingbird_Civillian_Jeans",
-            "Exile_Chopper_Hummingbird_Civillian_Light",
-            "Exile_Chopper_Hummingbird_Civillian_Shadow",
-            "Exile_Chopper_Hummingbird_Civillian_Sheriff",
-            "Exile_Chopper_Hummingbird_Civillian_Speedy",
-            "Exile_Chopper_Hummingbird_Civillian_Sunset",
-            "Exile_Chopper_Hummingbird_Civillian_Vrana",
-            "Exile_Chopper_Hummingbird_Civillian_Wasp",
-            "Exile_Chopper_Hummingbird_Civillian_Wave",
+//            "Exile_Chopper_Hummingbird_Green",
+//            "Exile_Chopper_Hummingbird_Civillian_Blue",
+//            "Exile_Chopper_Hummingbird_Civillian_Red",
+//            "Exile_Chopper_Hummingbird_Civillian_ION",
+//            "Exile_Chopper_Hummingbird_Civillian_BlueLine",
+//            "Exile_Chopper_Hummingbird_Civillian_Digital",
+//            "Exile_Chopper_Hummingbird_Civillian_Elliptical",
+//            "Exile_Chopper_Hummingbird_Civillian_Furious",
+//            "Exile_Chopper_Hummingbird_Civillian_GrayWatcher",
+//            "Exile_Chopper_Hummingbird_Civillian_Jeans",
+//            "Exile_Chopper_Hummingbird_Civillian_Light",
+//            "Exile_Chopper_Hummingbird_Civillian_Shadow",
+//            "Exile_Chopper_Hummingbird_Civillian_Sheriff",
+//            "Exile_Chopper_Hummingbird_Civillian_Speedy",
+//            "Exile_Chopper_Hummingbird_Civillian_Sunset",
+//            "Exile_Chopper_Hummingbird_Civillian_Vrana",
+//            "Exile_Chopper_Hummingbird_Civillian_Wasp",
+//            "Exile_Chopper_Hummingbird_Civillian_Wave",
 //            "Exile_Chopper_Huron_Black",
 //            "Exile_Chopper_Huron_Green",
 //            "Exile_Chopper_Mohawk_FIA",
