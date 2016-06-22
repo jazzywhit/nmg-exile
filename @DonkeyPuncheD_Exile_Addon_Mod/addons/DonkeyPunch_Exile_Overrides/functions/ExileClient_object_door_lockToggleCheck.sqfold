@@ -1,0 +1,45 @@
+/**
+ * ExileClient_object_door_lockToggleCheck
+ *
+ * DonkeyPuncheD Exile Mod
+ * DonkeyPunch.INFO
+ * © 2016 DirtySanchez
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+
+private["_flagNear","_flagInRange","_locationDoor","_numberOfFlags","_playerUID","_radius","_buildRights"];
+_locationDoor = getPos ExileClientInteractionObject;
+_canUseLock = false;
+_flagNear = [];
+_flagInRange = false;
+_flagNear = _locationDoor nearObjects ["Exile_Construction_Flag_Static", 300];
+_numberOfFlags = count _flagNear;
+if (_numberOfFlags > 0)then{
+	_flagInRange = true;
+}
+else
+{
+	_flagInRange = false;
+};
+if(_flagInRange)then{
+	_playerUID = getPlayerUID player;
+	{
+		_radius = _x getVariable ["ExileTerritorySize", -1];
+		if ((_locationDoor distance2D _x) < _radius) then
+		{
+			_buildRights = _x getVariable ["ExileTerritoryBuildRights", []];
+			if (_playerUID in _buildRights) exitWith
+			{
+				_canUseLock = true;
+			};
+		};
+	}
+	forEach (_locationDoor nearObjects ["Exile_Construction_Flag_Static", 300]);
+}
+else
+{
+	_canUseLock = true;
+};
+_canUseLock

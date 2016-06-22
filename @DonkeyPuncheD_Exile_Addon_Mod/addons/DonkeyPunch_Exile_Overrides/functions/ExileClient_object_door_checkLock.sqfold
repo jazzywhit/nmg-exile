@@ -1,0 +1,19 @@
+_playerUID = getPlayerUID player;
+_inTerritory = this nearObjects ["Exile_Construction_Flag_Static", 300];
+_buildRights = this getVariable ["DonkeyPunch_House_Owners", []];
+if!(_inTerritory)then
+{
+	_result = true;
+}
+else
+{
+	if(_playerUID in _buildRights)then
+	{
+		_result = true;
+	}
+	else
+	{
+		_result = false;
+	};
+};
+_result

@@ -1,0 +1,26 @@
+How to use the override included
+Move the overrides folder into your mission file
+Find this class cfg and add the code that looks like this:
+	//BUILDING <---HERE
+	ExileClient_gui_hud_event_onKeyUp = "overrides\ExileClient_gui_hud_event_onKeyUp.sqf";
+
+class CfgExileCustomCode 
+{
+	/*
+		You can overwrite every single file of our code without touching it.
+		To do that, add the function name you want to overwrite plus the 
+		path to your custom file here. If you wonder how this works, have a
+		look at our bootstrap/fn_preInit.sqf function.
+
+		Simply add the following scheme here:
+
+		<Function Name of Exile> = "<New File Name>";
+
+		Example:
+
+		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
+	*/	
+	//BUILDING <---HERE
+	ExileClient_gui_hud_event_onKeyUp = "overrides\ExileClient_gui_hud_event_onKeyUp.sqf";
+};
+if you have no other overrides your class CfgExileCustomCode will look like it does here, if you have overrides just add the code to it :)
