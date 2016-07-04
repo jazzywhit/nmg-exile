@@ -29,12 +29,12 @@ sleep 8; //Wait in seconds before the credits start after player IS ingame
 private ["_role1","_role1names","_role2","_role2names","_role3","_role3names","_role4","_role4names"];
 _role1 = "Narrow Minded Gaming";
 _role1names = ["narrowmindedgaming.com", "twitter.com/narrowmgaming", "reddit.com/r/nmg/"];
-_role2 = "Bolt Action Hardcore III v0.1.6";
-_role2names = ["Arma3 Exile (0.9.6|1.56)"];
+_role2 = "Bolt Action Hardcore v0.5.4";
+_role2names = ["Arma3 Exile (0.9.8|1.56)"];
 _role3 = "True Hardcore";
-_role3names = ["First Person", "No P2W", "No Safe Zones", "Custom Traders/Locales", "Balanced Loot"];
+_role3names = ["First Person", "No P2W", "No Safe Zones", "Base/Vault/Lockbox Raiding", "Custom Traders/Locales", "Realistic Loot"];
 _role4 = "Game Design / Operations";
-_role4names = ["Carbonoid","jesquik","NcA","Neb","Phobix"];
+_role4names = ["jesquik","Cyco","Phobix"];
 
 {
 	sleep 2;

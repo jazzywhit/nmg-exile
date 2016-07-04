@@ -5,10 +5,10 @@
  * www.exilemod.com
  * © 2015 Exile Mod Team
  *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
-
+ 
 class CfgPatches
 {
 	class exile_server_config
@@ -35,18 +35,30 @@ class CfgLootTables
 class CfgSettings
 {
 	///////////////////////////////////////////////////////////////////////
+	// Community Base Addons
+	///////////////////////////////////////////////////////////////////////
+	class CBA 
+	{
+		// Set this to 1 if you want to have CBA support
+		useStackedEH = 0;
+
+		// If you set this to 1 ...........................................
+		iReallyWantToGetHackedAndImRetarded = 0;
+	};
+
+	///////////////////////////////////////////////////////////////////////
 	// GARBAGE COLLECTOR
 	///////////////////////////////////////////////////////////////////////
 	class GarbageCollector
 	{
 		/*
-			Remark:
+			Remark: 
 			In 0.9.35 and below, Exile has checked if a player was nearby and then delayed
 			the deletion. This check has been removed to save server performance.
 
-			Do NOT touch these if you are not 10000% sure what you do!
+			Do NOT touch these if you are not 10000% sure what you do!	
 		*/
-		class Ingame
+		class Ingame 
 		{
 			// Dropped items without fissix
 			class GroundWeaponHolder
@@ -63,28 +75,31 @@ class CfgSettings
 			};
 
 			// Corpses and wrecks
-			class AllDead
+			class AllDead 
 			{
 				lifeTime = 15;
 				interval = 5;
 			};
 
 			// Loot spawned inside a building
-			class Loot
+			class Loot 
 			{
 				lifeTime = 8;
 				interval = 1;
 			};
 
 			// Never touch this or you will break your sever!
-			class Groups
+			class Groups 
 			{
 				interval = 0.5;
 			};
 		};
 
-		class Database
+		class Database 
 		{
+			// Remove all deleted items from the database after X days
+			_permanentlyDeleteTime = 3;
+			
 			// Remove all territories (and contructions + containers in it) that were not paid after X days
 			territoryLifeTime = 7;
 
@@ -92,16 +107,21 @@ class CfgSettings
 			// Example: Tents
 			containerLifeTime = 10;
 
-			// Remove all constructions outside of territories that are older than X days or not moved for X days
+			// Remove all constructions outside of territories that are older than X days or not moved for X days 
 			// Example: Work Benches
 			constructionLifeTime = 2;
 
 			// Remove all vehicles that were not moved/used for X days
 			vehicleLifeTime = 3;
-
+			
 			// Set safe as abandoned
 			abandonedTime = 7;
-
+			
+			// Deletes a base X days after the flag is stolen if the ransom money isn't paid
+			stolenFlagLifeTime = 3;
+			
+			// Sets door & safe pins to 0000 and marks safes to abandoned X days after the flag is stolen if the ransom money isn't paid
+			unlockLifeTime = 2;
 		};
 	};
 
@@ -113,9 +133,14 @@ class CfgSettings
 		/**
 		* Defines the factor of respect you gain for every pop tab in revenue
 		*
-		* Default: Get 1 respect for every 10 pop tabs
+		* Default: Get 1 respect for every 10 pop tabs 
 		*/
 		tradingRespectFactor = 0.1;
+		
+		/**
+		* Defines the the minimum amount of Respect earned/lost for a kill
+		*/
+		minRespectTransfer = 50;
 
 		/**
 		* Defines the amount of respect earned/lost for certain types of frags
@@ -131,15 +156,26 @@ class CfgSettings
 			passenger = 400;			// Out of car/chopper/boat
 			roadKill = 200;				// :)
 			bigBird = 600;				// Roadkill, but with chopper/plane
-			chuteGreaterChopper = 1000;	// Someone flies into chute and chopper/plane explodes
+			chuteGreaterChopper = 1000;	// Someone flies into chute and chopper/plane explodes	
 		};
 
-		class Handcuffs
+		class Percentages 
 		{
-			trapping = -200;				// A handcuffs B
-			breakingFree = 200; 			// B broke free
-			releasedByHero = 50; 			// C releases B
-			releasedByHostageTaker = 50; 	// A releases B
+			unlucky = 1; // Dying for an unknown reason costs you 1% respect
+			crash = 1; // Crashing your car costs you 1% respect
+			suicide = 25; // Comitting suicide costs you 2% of your respect
+			friendyFire = 5; // Friendly fire costs you 3%
+			npc = 2; // Being killed by an NPC costs you 4%
+			bambiKill = 10; // Killing a bambi costs you 5%
+			frag = 10; // Killing someone will get you 5% and remove 5% from the victim
+		};
+
+		class Handcuffs 
+		{
+			trapping = -50;					// A handcuffs B
+			breakingFree = 100; 			// B broke free
+			releasedByHero = 100; 			// C releases B
+			releasedByHostageTaker = 50; 	// A releases B	
 		};
 
 		class Bonus
@@ -190,13 +226,13 @@ class CfgSettings
 		/**
 		 * Loadout of new bambi players
 		 *
-		 * (They will always spawn with a bambi overall - you cannot
+		 * (They will always spawn with a bambi overall - you cannot 
 		 * change the loadout uniform)
 		 */
-		loadOut[] =
+		loadOut[] = 
 		{
-			"Exile_Item_XM8",
-			"V_Rangemaster_belt"
+			"ItemMap", // Because why not
+			"Exile_Item_XM8"
 		};
 
 		/**
@@ -208,7 +244,7 @@ class CfgSettings
 		parachuteSpawning = 1;
 
 		/**
-		 * Enables or disables halo jumping. Only applies
+		 * Enables or disables halo jumping. Only applies 
 		 * if parachute spawning is enabled.
 		 *
 		 * Remember that if you enable halo jump, it is adviced
@@ -221,7 +257,7 @@ class CfgSettings
 		haloJump = 1;
 
 		/**
-		 * Parachute drop height in meters.
+		 * Parachute drop height in meters. 
 		 */
 		parachuteDropHeight = 1000;
 
@@ -255,293 +291,100 @@ class CfgSettings
 
 	///////////////////////////////////////////////////////////////////////
 	// VEHICLE SPAWN CONFIGURATION
-	// Updated based on http://www.exilemod.com/topic/14289-guide-custom-vehicle-spawn-airgroundwater/?page=1
 	///////////////////////////////////////////////////////////////////////
 
 	class VehicleSpawn
-    {
-        /** Grid Size for Vehicle spawning,
-        * smaller the number more Vehicle,
-        * you get the point
-        */
-        groundGridSize = 10000;
-        waterGridSize = 10000;
-        airGridSize = 10000;
+	{
+		/**
+		* Grid Size for vehicle spawning,
+		* smaller the number more vehicles,
+		* you get the point
+		*/
+		vehiclesGridSize = 2200;
 
-        /**
-        * Vehicle ammount per grid
-        * kinda self explanitory
-        */
-        groundGridAmount = 30;
-        waterGridAmount = 15;
-        airGridAmount = 5;
-        /**
-        * Creates global markers for vehicle spawn tweeking,
-        * after you are satisfied with vehicle ammount and spread set this to 0.
-        */
-        groundDebugMarkers = 0;
-        waterDebugMarkers = 0;
-        airDebugMarkers = 0;
-        /**
-         * Radius of spawn around Airport.
-         */
-        groundSpawnRadius = 9000;
-        waterSpawnRadius = 5000;
-        airSpawnRadius = 500;
-        /**
-         * Radius of spawn around Road/Coast
-         */
-        groundSpawnRadiusRoad = 10;
-        waterSpawnRadiusCoast = 50;
-        airSpawnRadiusRoad = 50;
-        /**
-        * The server will apply random damage up to this value when spawning a vehicle.
-        */
-        groundDamageChance = 100; // % chance for a vehicle HITPOINT to be damaged
-        waterDamageChance = 100; // % chance for a vehicle HITPOINT to be damaged
-        airDamageChance = 100; // % chance for a vehicle HITPOINT to be damaged
+		/**
+		* Vehicle ammount per grid
+		* kinda self explanitory
+		*/
+		vehiclesGridAmount = 2;
 
-        groundMaximumDamage = 0.9; // maximum vehicle HITPOINT to be damaged
-        waterMaximumDamage = 0.9; // maximum vehicle HITPOINT to be damaged
-        airMaximumDamage = 0.9; // maximum vehicle HITPOINT to be damaged
-        /**
-         * Enables or disables nightvision optics on ALL vehicles
-         *
-         * 0 = off
-         * 1 = on
-         */
-        NightVision = 1;
+		/**
+		* Creates global markers for vehicle spawn tweeking,
+		* after you are satisfied with vehicle ammount and spread set this to 0.
+		*/
+		vehiclesDebugMarkers = 0;
 
-        /**
-         * Enables or disables thermal optics on ALL vehicles
-         *
-         * 0 = off
-         * 1 = on
-         */
-        ThermalVision = 0;
+		/**
+		* The server will apply random damage up to this value when spawning a vehicle.
+		*/
+		damageChance = 20; // 20% chance for a vehicle HITPOINT to be damaged
+		maximumDamage = 0.9;
 
-        /**
-         * Set this to 1 to unlock vehicles on server boot if they are in safe zones
-         *
-         * 0 = off
-         * 1 = on
-         */
-        UnlockInSafeZonesAfterRestart = 1;
+		// Stuff to spawn on water
+		water[] = 
+		{
+			"Exile_Boat_MotorBoat_Police",
+			"Exile_Boat_MotorBoat_Orange",
+			"Exile_Boat_MotorBoat_White",
+			"Exile_Boat_RubberDuck_CSAT",
+			"Exile_Boat_RubberDuck_Digital",
+			"Exile_Boat_RubberDuck_Orange",
+			"Exile_Boat_RubberDuck_Blue",
+			"Exile_Boat_RubberDuck_Black",
+			"Exile_Boat_SDV_CSAT",
+			"Exile_Boat_SDV_Digital",
+			"Exile_Boat_SDV_Grey"
+		};
 
-        // Stuff to spawn on roads
-        ground[] =
-        {
-            "Exile_Bike_QuadBike_Black",
-            "Exile_Bike_QuadBike_Blue",
-            "Exile_Bike_QuadBike_Red",
-            "Exile_Bike_QuadBike_White",
-            "Exile_Bike_QuadBike_Nato",
-            "Exile_Bike_QuadBike_Csat",
-            "Exile_Bike_QuadBike_Fia",
-            "Exile_Bike_QuadBike_Guerilla01",
-            "Exile_Bike_QuadBike_Guerilla02",
-            "Exile_Car_Hatchback_Beige",
-            "Exile_Car_Hatchback_Green",
-            "Exile_Car_Hatchback_Blue",
-            "Exile_Car_Hatchback_BlueCustom",
-            "Exile_Car_Hatchback_BeigeCustom",
-            "Exile_Car_Hatchback_Yellow",
-            "Exile_Car_Hatchback_Grey",
-            "Exile_Car_Hatchback_Black",
-            "Exile_Car_Hatchback_Dark",
-            "Exile_Car_Hatchback_Rusty1",
-            "Exile_Car_Hatchback_Rusty2",
-            "Exile_Car_Hatchback_Rusty3",
-            "Exile_Car_Ikarus_Blue",
-            "Exile_Car_Ikarus_Red",
-            "Exile_Car_Ikarus_Party",
-            "Exile_Car_Ural_Open_Blue",
-            "Exile_Car_Ural_Open_Yellow",
-            "Exile_Car_Ural_Open_Worker",
-            "Exile_Car_Ural_Open_Military",
-            "Exile_Car_Ural_Covered_Blue",
-            "Exile_Car_Ural_Covered_Yellow",
-            "Exile_Car_Ural_Covered_Worker",
-            "Exile_Car_Ural_Covered_Military",
-            "Exile_Car_SUVXL_Black",
-            "Exile_Car_Tractor_Red",
-            "Exile_Car_OldTractor_Red",
-            "Exile_Car_Octavius_White",
-            "Exile_Car_Octavius_Black",
-            "Exile_Car_UAZ_Green",
-            "Exile_Car_UAZ_Open_Green",
-            "Exile_Car_LandRover_Red",
-            "Exile_Car_LandRover_Urban",
-            "Exile_Car_LandRover_Green",
-            "Exile_Car_LandRover_Sand",
-            "Exile_Car_LandRover_Desert",
-            "Exile_Car_LandRover_Ambulance_Green",
-            "Exile_Car_LandRover_Ambulance_Desert",
-            "Exile_Car_LandRover_Ambulance_Sand",
-            "Exile_Car_Lada_Green",
-            "Exile_Car_Lada_Taxi",
-            "Exile_Car_Lada_Red",
-            "Exile_Car_Lada_White",
-            "Exile_Car_Lada_Hipster",
-            "Exile_Car_Volha_Blue",
-            "Exile_Car_Volha_White",
-            "Exile_Car_Volha_Black",
-            "Exile_Car_Hatchback_Sport_Red",
-            "Exile_Car_Hatchback_Sport_Blue",
-            "Exile_Car_Hatchback_Sport_Orange",
-            "Exile_Car_Hatchback_Sport_White",
-            "Exile_Car_Hatchback_Sport_Beige",
-            "Exile_Car_Hatchback_Sport_Green",
-            "Exile_Car_HEMMT",
-            "Exile_Car_Hunter",
-            "Exile_Car_Ifrit",
-            "Exile_Car_Offroad_Red",
-            "Exile_Car_Offroad_Beige",
-            "Exile_Car_Offroad_White",
-            "Exile_Car_Offroad_Blue",
-            "Exile_Car_Offroad_DarkRed",
-            "Exile_Car_Offroad_BlueCustom",
-            "Exile_Car_Offroad_Guerilla01",
-            "Exile_Car_Offroad_Guerilla02",
-            "Exile_Car_Offroad_Guerilla03",
-            "Exile_Car_Offroad_Guerilla04",
-            "Exile_Car_Offroad_Guerilla05",
-            "Exile_Car_Offroad_Guerilla06",
-            "Exile_Car_Offroad_Guerilla07",
-            "Exile_Car_Offroad_Guerilla08",
-            "Exile_Car_Offroad_Guerilla09",
-            "Exile_Car_Offroad_Guerilla10",
-            "Exile_Car_Offroad_Guerilla11",
-            "Exile_Car_Offroad_Guerilla12",
-            "Exile_Car_Offroad_Rusty1",
-            "Exile_Car_Offroad_Rusty2",
-            "Exile_Car_Offroad_Rusty3",
-            "Exile_Car_Offroad_Armed_Guerilla01",
-            "Exile_Car_Offroad_Armed_Guerilla02",
-            "Exile_Car_Offroad_Armed_Guerilla03",
-            "Exile_Car_Offroad_Armed_Guerilla04",
-            "Exile_Car_Offroad_Armed_Guerilla05",
-            "Exile_Car_Offroad_Armed_Guerilla06",
-            "Exile_Car_Offroad_Armed_Guerilla07",
-            "Exile_Car_Offroad_Armed_Guerilla08",
-            "Exile_Car_Offroad_Armed_Guerilla09",
-            "Exile_Car_Offroad_Armed_Guerilla10",
-            "Exile_Car_Offroad_Armed_Guerilla11",
-            "Exile_Car_Offroad_Armed_Guerilla12",
-            "Exile_Car_Offroad_Repair_Civillian",
-            "Exile_Car_Offroad_Repair_Red",
-            "Exile_Car_Offroad_Repair_Beige",
-            "Exile_Car_Offroad_Repair_White",
-            "Exile_Car_Offroad_Repair_Blue",
-            "Exile_Car_Offroad_Repair_DarkRed",
-            "Exile_Car_Offroad_Repair_BlueCustom",
-            "Exile_Car_Offroad_Repair_Guerilla01",
-            "Exile_Car_Offroad_Repair_Guerilla02",
-            "Exile_Car_Offroad_Repair_Guerilla03",
-            "Exile_Car_Offroad_Repair_Guerilla04",
-            "Exile_Car_Offroad_Repair_Guerilla05",
-            "Exile_Car_Offroad_Repair_Guerilla06",
-            "Exile_Car_Offroad_Repair_Guerilla07",
-            "Exile_Car_Offroad_Repair_Guerilla08",
-            "Exile_Car_Offroad_Repair_Guerilla09",
-            "Exile_Car_Offroad_Repair_Guerilla10",
-            "Exile_Car_Offroad_Repair_Guerilla11",
-            "Exile_Car_Offroad_Repair_Guerilla12",
-            "Exile_Car_Strider",
-            "Exile_Car_SUV_Red",
-            "Exile_Car_SUV_Black",
-            "Exile_Car_SUV_Grey",
-            "Exile_Car_SUV_Orange",
-            "Exile_Car_Tempest",
-            "Exile_Car_Van_Black",
-            "Exile_Car_Van_White",
-            "Exile_Car_Van_Red",
-            "Exile_Car_Van_Guerilla01",
-            "Exile_Car_Van_Guerilla02",
-            "Exile_Car_Van_Guerilla03",
-            "Exile_Car_Van_Guerilla04",
-            "Exile_Car_Van_Guerilla05",
-            "Exile_Car_Van_Guerilla06",
-            "Exile_Car_Van_Guerilla07",
-            "Exile_Car_Van_Guerilla08",
-            "Exile_Car_Van_Box_Black",
-            "Exile_Car_Van_Box_White",
-            "Exile_Car_Van_Box_Red",
-            "Exile_Car_Van_Box_Guerilla01",
-            "Exile_Car_Van_Box_Guerilla02",
-            "Exile_Car_Van_Box_Guerilla03",
-            "Exile_Car_Van_Box_Guerilla04",
-            "Exile_Car_Van_Box_Guerilla05",
-            "Exile_Car_Van_Box_Guerilla06",
-            "Exile_Car_Van_Box_Guerilla07",
-            "Exile_Car_Van_Box_Guerilla08",
-            "Exile_Car_Van_Fuel_Black",
-            "Exile_Car_Van_Fuel_White",
-            "Exile_Car_Van_Fuel_Red",
-            "Exile_Car_Van_Fuel_Guerilla01",
-            "Exile_Car_Van_Fuel_Guerilla02",
-            "Exile_Car_Van_Fuel_Guerilla03",
-            "Exile_Car_Zamak"
-        };
+		// Stuff to spawn on roads
+		ground[] = 
+		{
+			"Exile_Bike_QuadBike_Black",
+			"Exile_Bike_QuadBike_Blue",
+			"Exile_Bike_QuadBike_Red",
+			"Exile_Bike_QuadBike_White",
+			"Exile_Bike_QuadBike_Nato",
+			"Exile_Bike_QuadBike_Csat",
+			"Exile_Bike_QuadBike_Fia",
+			"Exile_Bike_QuadBike_Guerilla01",
+			"Exile_Bike_QuadBike_Guerilla02",
+			"Exile_Car_Volha_Blue",
+			"Exile_Car_Volha_White",
+			"Exile_Car_Lada_Green",
+			"Exile_Car_Lada_Taxi",
+			"Exile_Car_TowTractor_White",
+			"Exile_Car_UAZ_Open_Green",
+			"Exile_Car_UAZ_Green",
+			"Exile_Car_LandRover_Ambulance_Desert",
+			"Exile_Car_Tractor_Red",
+			"Exile_Car_OldTractor_Red",
+			"Exile_Car_Octavius_White"
+		};
 
-        // Stuff to spawn on water
-        water[] =
-        {
-            "Exile_Boat_MotorBoat_Police",
-            "Exile_Boat_MotorBoat_Orange",
-            "Exile_Boat_MotorBoat_White",
-            "Exile_Boat_RubberDuck_CSAT",
-            "Exile_Boat_RubberDuck_Digital",
-            "Exile_Boat_RubberDuck_Orange",
-            "Exile_Boat_RubberDuck_Blue",
-            "Exile_Boat_RubberDuck_Black",
-            "Exile_Boat_SDV_CSAT",
-            "Exile_Boat_SDV_Digital",
-            "Exile_Boat_SDV_Grey"
-        };
+		/**
+		 * Enables or disables nightvision optics on ALL vehicles
+		 *
+		 * 0 = off
+		 * 1 = on
+		 */
+		nightVision = 1;
 
-        // Stuff to spawn on airfield
-        air[] =
-        {
-//            "Exile_Chopper_Huey_Green",
-//            "Exile_Chopper_Huey_Desert",
-//            "Exile_Chopper_Huey_Armed_Green",
-//            "Exile_Chopper_Huey_Armed_Desert",
-//            "Exile_Chopper_Hellcat_Green",
-//            "Exile_Chopper_Hellcat_FIA",
-//            "Exile_Chopper_Hummingbird_Green",
-//            "Exile_Chopper_Hummingbird_Civillian_Blue",
-//            "Exile_Chopper_Hummingbird_Civillian_Red",
-//            "Exile_Chopper_Hummingbird_Civillian_ION",
-//            "Exile_Chopper_Hummingbird_Civillian_BlueLine",
-//            "Exile_Chopper_Hummingbird_Civillian_Digital",
-//            "Exile_Chopper_Hummingbird_Civillian_Elliptical",
-//            "Exile_Chopper_Hummingbird_Civillian_Furious",
-//            "Exile_Chopper_Hummingbird_Civillian_GrayWatcher",
-//            "Exile_Chopper_Hummingbird_Civillian_Jeans",
-//            "Exile_Chopper_Hummingbird_Civillian_Light",
-//            "Exile_Chopper_Hummingbird_Civillian_Shadow",
-//            "Exile_Chopper_Hummingbird_Civillian_Sheriff",
-//            "Exile_Chopper_Hummingbird_Civillian_Speedy",
-//            "Exile_Chopper_Hummingbird_Civillian_Sunset",
-//            "Exile_Chopper_Hummingbird_Civillian_Vrana",
-//            "Exile_Chopper_Hummingbird_Civillian_Wasp",
-//            "Exile_Chopper_Hummingbird_Civillian_Wave",
-//            "Exile_Chopper_Huron_Black",
-//            "Exile_Chopper_Huron_Green",
-//            "Exile_Chopper_Mohawk_FIA",
-//            "Exile_Chopper_Orca_CSAT",
-//            "Exile_Chopper_Orca_Black",
-//            "Exile_Chopper_Orca_BlackCustom",
-//            "Exile_Chopper_Taru_Transport_CSAT",
-//            "Exile_Chopper_Taru_Transport_Black",
-//            "Exile_Chopper_Taru_CSAT",
-//            "Exile_Chopper_Taru_Black",
-//            "Exile_Chopper_Taru_Covered_CSAT",
-//            "Exile_Chopper_Taru_Covered_Black",
-            "Exile_Plane_Cessna"
-        };
-    };
+		/**
+		 * Enables or disables thermal optics on ALL vehicles
+		 *
+		 * 0 = off
+		 * 1 = on
+		 */
+		thermalVision = 0;
+
+		/**
+		 * Set this to 1 to unlock vehicles on server boot if they are in safe zones
+		 *
+		 * 0 = off
+		 * 1 = on
+		 */
+		unlockInSafeZonesAfterRestart = 1;	
+	};
 
 	class Weather
 	{
@@ -553,7 +396,7 @@ class CfgSettings
 		interval = 30;
 
 		/*
-			Add the keyframes here. The server will pick one random, so if you want one
+			Add the keyframes here. The server will pick one random, so if you want one 
 			weather type of be more dominant compared to others, add it multiple times
 		*/
 		keyframes[] = {"Cloudy", "Thunderstorm"};
@@ -687,7 +530,7 @@ class CfgSettings
 		*/
 		restartWarningTime[] = {15, 10, 5, 3};
 
-		/*
+		/* 
 			If set to 1 server will execute '#shutdown',
 			to try to shutdown the server
 		*/
@@ -708,23 +551,23 @@ class CfgSettings
 		*/
 		devFriendyMode = 1;
 
-		devs[] =
+		devs[] = 
 		{
-			"76561197985241690", // Eichi
-			"76561198022879703", // Grim
-			"76561197968999666", // Mr.White^ex
-			"76561198075905447"  // Vishpala
+			{"76561197985241690","[EXILE|DEV] Eichi"},
+			{"76561198022879703","[EXILE|DEV] Grim"},
+			{"76561198075905447","[EXILE|DEV] Vishpala"},
+			{"76561197968613061","[EXILE|DEV] Niuva"}
 		};
 	};
 
-	class Events
+	class Events 
 	{
 		/*
 			A list of events that are active
 		*/
-		enabledEvents[] = {"SupplyBox","AbandonedSafe"};
+		enabledEvents[] = {"SupplyBox", "AbandonedSafe", "AmbientFlyOver"};
 
-		class SupplyBox // DONT USE IT: WIP BROKEN
+		class SupplyBox 
 		{
 			/*
 				Drops a supply box on a parachute next to a random airport on the map.
@@ -750,25 +593,17 @@ class CfgSettings
 
 			class BoxTypes
 			{
-				class Beer
+				class Beer 
 				{
-					items[] =
+					items[] = 
 					{
 						{"Exile_Item_Beer", 24}
 					};
 				};
 
-				class Nades
+				class Food 
 				{
-					items[] =
-					{
-						{"Exile_Item_Beer", 10}
-					};
-				};
-
-				class Food
-				{
-					items[] =
+					items[] = 
 					{
 						{"Exile_Item_BBQSandwich", 5},
 						{"Exile_Item_Catfood", 5},
@@ -782,9 +617,9 @@ class CfgSettings
 					};
 				};
 
-				class Tools
+				class Tools 
 				{
-					items[] =
+					items[] = 
 					{
 						{"Exile_Item_Wrench", 1},
 						{"Exile_Item_Shovel", 1},
@@ -796,9 +631,9 @@ class CfgSettings
 					};
 				};
 
-				class RepairParts
+				class RepairParts 
 				{
-					items[] =
+					items[] = 
 					{
 						{"Exile_Item_CarWheel", 8},
 						{"Exile_Item_FuelCanisterFull", 4},
@@ -809,9 +644,9 @@ class CfgSettings
 				};
 			};
 		};
+
 		class AbandonedSafe
 		{
-
 			type = "spawn";
 			function = "ExileServer_system_event_abandonedSafe_start";
 			minTime = 60; // minutes
@@ -819,5 +654,24 @@ class CfgSettings
 			minimumPlayersOnline = 0;
 			markerTime = 15; // minutes
 		};
+
+		class AmbientFlyOver
+		{
+			type = "call";
+			function = "ExileServer_system_event_ambientFlyOver_start";
+			minTime = 15; // minutes
+			maxTime = 90; // minutes
+			minimumPlayersOnline = 1;
+		};
+	};
+	
+	class Logging
+	{
+		/*
+			If logging is enabled separate logs will be made in the sql logs folder for each type
+		*/
+		traderLogging = 1;
+		deathLogging = 1;
+		territoryLogging = 1;
 	};
 };

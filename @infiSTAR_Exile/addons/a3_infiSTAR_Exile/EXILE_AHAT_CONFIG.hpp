@@ -1,27 +1,27 @@
 /*
 	Author: Chris(tian) "infiSTAR" Lorenzen
 	Contact: infiSTAR23@gmail.com // www.infiSTAR.de
-
+	
 	Copyright infiSTAR - 2011 - 2016. All rights reserved.
 	Christian (Chris) L. (infiSTAR23@gmail.com) Developer of infiSTAR
-
+	
 	Description:
 	Arma AntiHack & AdminTools - infiSTAR.de
-
+	
 	UPDATEEMAIL for http://update.infiSTAR.de is:
 	'devin.p.harris85@gmail.com'
-
+	
 	Last download was on:
-	'23-May-2016 13-14-01';
+	'04-Jul-2016 20-48-08';
 */
 class Cfg_infiSTAR_settings {
 /*
 	"serverCommandPassword" is serverCommandPassword - in your servers config.cfg
 	if your config.cfg does not have serverCommandPassword yet, simply add it in a new line:
 	serverCommandPassword = "changeme";
-
+	
 	This is   VERY IMPORTANT   as it is needed to KICK & BAN people.
-
+	
 	It will try to get this password from "@ExileServer\addons\exile_server_config" first. If you did not set a password there (config.cpp),
 	then it will take what you put here.
 */
@@ -29,7 +29,7 @@ serverCommandPassword = "ReallyLongCommandPassword12!@";
 
 /*
 	"passwordAdmin" is passwordAdmin - in your servers config.cfg, needed for servercommands from client
-
+	
 	This is used to be able to use the "login" function ingame. Will log you in as Arma "Admin".
 */
 passwordAdmin = "ReallyLongPassword12!@";
@@ -46,7 +46,7 @@ use_html_load_on_adminmenu = true;		/* default and recommended is TRUE. infiSTAR
 	DLL SETTINGS
 	"" is the Arma3Server directory
 	"infiSTAR_Logs/" would be a folder called "infiSTAR_Logs" within your Arma3Server directory.
-	You need to create the defined folder if it doesn't exist. If you don't create it - the DLL won't be able to write any Log files.
+	You need to create the defined folder if it doesn't exist. If you don't create it - the DLL won't be able to write any Log files ! ! !
 */
 LOG_PATH = "infiSTAR_Logs/";
 
@@ -57,7 +57,7 @@ LOG_PATH = "infiSTAR_Logs/";
 LogAdminActions = true;
 enableIngameLogs = true;
 
-/*
+/* 
 	if you set "needAdminNameTag" to true, this string needs to be a part of the admins name, or he can't use infiSTAR Admin Menu!
 	example names: "[Admin] infiSTAR" or "infiSTAR [Admin]"
 	note: this is case sensitive as well, meaning "infiSTAR [admin]" would not work as we set it in our example to "[Admin]"
@@ -91,9 +91,9 @@ chatCommandsP[] =
 /*
 	Noficiations shown to all players on the server. Could be used to replace BEC messages.
 	{first occurrence after x min, show again after x min, show message for x seconds, font size (recommended is 0.6), x pos, y pos,text color, text (<br/> is a linebreak)}
-
+	
 	if you want the client to see a message only once when logging in, you put the first and second entry in the array to -1.
-	Example:
+	Example:	
 	{-1, -1, 4, 0.6, 0, 0, "#ff0000", "Welcome to our server"}
 */
 ENABLE_NOTIFICATION_MESSAGES = false;
@@ -106,10 +106,15 @@ NOTIFY_MSG_ARRAY[] =
 };
 
 
-
 /*
 	If admin has rights to "Create Billboard", he will have new options to create a Billboard ingame with one of the following textures
 	{"name shown in adminmenu","path to texture"}
+	
+	should be looking somewhat like this:
+	{"example picture","\mpmissions\Exile.Altis.pbo\example.paa"}
+	
+	the picture has to be available on EACH client AND the server.
+	So you either need a client-side mod for it or you need to put it in the MPMission
 */
 pathToCustomBillBoardTextures[] =
 {
@@ -139,9 +144,9 @@ adminUIDandAccess[] =
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","AdminConsole","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
-			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
+			"HealSelf","HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
 			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
-			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
+			"Remove Gear","Revive","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)",
 			"Player ESP","Player ESP (safezone style)","AI ESP","Dead ESP","Loot ESP",
 			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
@@ -155,7 +160,10 @@ adminUIDandAccess[] =
 			"MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
 			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
-			"MapIcons: AI"
+			"MapIcons: AI",
+			"Arsenal",	// Adds Arsenal to the mousewheel actions if you press "," on the Numpad!
+			"Unconscious","Remove Unconscious",
+			"Light"	// Zeus like Lighting from the Air strikes down at selected player / target / location - use ctrl+1 or the menu to use it!
 		}
 	},
 	{
@@ -163,9 +171,9 @@ adminUIDandAccess[] =
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","AdminConsole","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
-			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
+			"HealSelf","HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
 			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
-			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
+			"Remove Gear","Revive","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)",
 			"Player ESP","Player ESP (safezone style)","AI ESP","Dead ESP","Loot ESP",
 			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
@@ -179,7 +187,10 @@ adminUIDandAccess[] =
 			"MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
 			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
-			"MapIcons: AI"
+			"MapIcons: AI",
+			"Arsenal",	// Adds Arsenal to the mousewheel actions if you press "," on the Numpad!
+			"Unconscious","Remove Unconscious",
+			"Light"	// Zeus like Lighting from the Air strikes down at selected player / target / location - use ctrl+1 or the menu to use it!
 		}
 	},
 	{
@@ -187,9 +198,9 @@ adminUIDandAccess[] =
 		{
 			"Teleport On Map Click","Teleport - Target To Me","Teleport - Me To Target","Teleport In Facing Direction (10m steps)",
 			"spectating","AdminConsole","Delete Vehicle","FlyUp","ShowGear","Show Server Information",
-			"HealSelf","HealRepairNear","AdminLog","Freeze Target","UnFreeze Target","Restrain","UnRestrain",
+			"HealSelf","HealRepairNear","AdminLog","Freeze","UnFreeze","Restrain","UnRestrain",
 			"==== Loadouts ====","==== Base Deleter ====","==== WeatherLord ====","Items spawn menu",
-			"Remove Gear","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
+			"Remove Gear","Revive","Heal","Restore","Flip Vehicle","Move In My Vehicle","Move In Target Vehicle","Eject","Eject Crew",
 			"Kill","Explode","Force Disconnect","Kick (Silent)","Kick (Announce)","Ban (Silent)","Ban (Announce)",
 			"Player ESP","Player ESP (safezone style)","AI ESP","Dead ESP","Loot ESP",
 			"Vehicle Marker","Flag Marker (with radius)","DeadPlayer Marker",
@@ -203,10 +214,23 @@ adminUIDandAccess[] =
 			"MapIcons: Buildings","MapIcons: Flags",
 			"MapIcons: Player","MapIcons: DeadPlayer","MapIcons: Vehicles",
 			"MapIcons: Vehicle Types","MapIcons: Vehicle lockstate","MapIcons: DeadVehicles",
-			"MapIcons: AI"
+			"MapIcons: AI",
+			"Arsenal",	// Adds Arsenal to the mousewheel actions if you press "," on the Numpad!
+			"Unconscious","Remove Unconscious",
+			"Light"	// Zeus like Lighting from the Air strikes down at selected player / target / location - use ctrl+1 or the menu to use it!
 		}
 	}
 };
+
+/*
+	Use Database WhiteList?
+	if "USE_DATABASE_WHITELIST = true;", UIDs that are not whitelisted in your exile server database, will be kicked on connect.
+	
+	To use this, you need to use what I've added to "infiSTAR.de_Exile\SERVER_ARMA3_FOLDER\db_related_changes"
+*/
+USE_DATABASE_WHITELIST = false;
+
+
 
 /*
 	Use UID WhiteList?
@@ -234,7 +258,7 @@ PRIVATE_CHAT_MENU_8GNETWORK = false;	/* if this is true - players will only be a
 USE_RESTART_TIMER = true;			/* show time left to next restart */
 RESTART_TIME_IN_M = 180;			/* restart time in minutes (default: 180min == 3 hours) */
 SHOW_TIMER_IN_MIN[] = {1,2,3,5,10};	/* minutes before restart, when message is shown */
-USE_RESTART_TIMER_SHUTDOWN = false;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
+USE_RESTART_TIMER_SHUTDOWN = true;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
 
 
 /* Allow Player to vote Day/Night by typing vote day / vote night in Chat*/
@@ -246,40 +270,59 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 
 /* The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;" */
 /* Terrain Grid Value   */ TGV = 40;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
-/* ViewDistance Value   */ VDV = 2000;
-/* ObjectViewDistance   */ VOV = 2000;
-/* ShadowViewDistance   */ SVD = 100;
+/* ViewDistance Value   */ VDV = 1000;
+/* ObjectViewDistance   */ VOV = 800;
+/* ShadowViewDistance   */ SVD = 50;
+
+
+
+/****************************************************************************************************/
+/***************************FIXES DUE TO ARMA BEING BROKEN - BELOW***********************************/
+/****************************************************************************************************/
+/*
+	*readded new old uniform and vest check since some people asked for it.
+	http://www.exilemod.com/topic/14179-miss-uniform_and_vest_check/
+	the game is still broken and sometimes you can see people naked when they are not.
+	I did not add the old check back in, I made a new one making use of new functions :)
+*/
+fix_uniform_and_vest = false;
+
+/*
+	So far only checking for duped backpacks and not taking any actions besides logging. Need to test more before It will start to remove duped items.
+*/
+experimental_dupe_check = false;
+/****************************************************************************************************/
+/***************************FIXES DUE TO ARMA BEING BROKEN - ABOVE***********************************/
+/****************************************************************************************************/
+
+/*
+	re-assigning "InventoryOpened" eventhandler to stop glitch open a locked safe
+*/
+stopSafeGlitchAndCorpseDupe = true;
+
+
 /* ********************************************************************************* */
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
-URC = true;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
-LVC = true;		/* Local Vehicle Check */
-CAP = true;		/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
+LVC = true;			/* Local Vehicle Check - ALWAYS HAVE THIS TRUE! */
+URC = false;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
+CAP = false;		/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
 
 
-KCM = false;		/* Just close ALL CommandingMenus */
-CMC = true;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
+KCM = false;	/* Just close ALL CommandingMenus */
+CMC = false;		/* Check for CommandingMenus that are not in the allowedCommandingMenus array */
 allowedCommandingMenus[] = {"#user:example","#user:example2"};
 
 
-check_Notifications = true;			/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
+check_Notifications = false;		/* checks if BIS_fnc_showNotification was used, as it is used with many hacks - some custom addons however use them too. */
 disconnect_dupe_check = false;		/* checks if player tries to dupe using the "disconnect trick" -> sends a ping to the server whenever a player opens the escape menu */
 wall_look = false;					/* checks if a players tries to look through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_object = true;			/* checks if a players tries to glitch through a wall (if player is allowed to build in that territory, it will not be logged.) */
 wall_glitch_vehicle = true;			/* stops players from glitching into bases using "eject" or "getout" of a vehicle.. */
-check_doors_n_gates = true;			/* check if a door is locked but still being opened */
-forceWalk_near_enemyBase = false;	/* forcing players to walk when near an enemy base (only runs when wall_glitch_object = true) */
+check_doors_n_gates = false;		/* check if a door is locked but still being opened */
 checkHiddenObjects = true;			/* checks if there is hidden objects close to the player (hidden objects could be walked through..) */
 attach_to_check = false;			/* logs and detaches attached vehicles that are close.. basically completely disallow attaching of vehicles! */
 slingload_check = true;				/* forbid sling loading / rope attaching a vehicle with a crew */
-
-stopSafeGlitch = true;				/* re-assigning "InventoryOpened" eventhandler to stop glitch open a locked safe */
-
-checkPopTabIncrease = true;
-LogPopTabIncrease = 15000;			/* Only if checkPopTabIncrease = true; logs if poptabs increased by x within ~10 seconds */
-
-checkRespectIncrease = true;
-LogRespectIncrease = 5000;			/* Only if checkRespectIncrease = true; logs if respect increased by x within ~10 seconds */
 
 checkFilePatchingEnabled = true;	/* checks if filepatching is enabled on the client (if it is, the client could inject any script based hack easily) */
 
@@ -299,45 +342,26 @@ ban_for_steam_ban = false;	/* if "check_steam_ban = true;" then steambanned play
 	UAT = false; To disable Anti Teleport
 	Arrays below show position & radius where Teleporting is allowed.
 	Mainly for the Traders (because when you purchase a vehicle, it teleports you into the vehicle)
-	at_option = 0; means it will try to get the array by the worldNames below
-	at_option = 1; means, YOU have to define positions and radius below in "custom[] = {};"
+	
+	You can white-list "Teleport Zones" by adding them like below:
+	class allowTP {
+		custom[] = {
+			{{0,0,0},1},
+			{{1,1,1},1},
+			{{2,2,2},1}
+		};
+	};
+	Trading zones are white-listed by default.
 */
-UAT = true;
+UAT = true;	
 class allowTP {
-	at_option = 0;
-	custom[] = {
-		{{0,0,0},1},
-		{{1,1,1},1},
-		{{2,2,2},1}
-	};
-	Altis[] = {
-		{{14599.966,16797.193,0},325},
-		{{23334.605,24188.938,0},325},
-		{{2998.0603,18175.479,0},325}
-	};
-	Namalsk[] = {
-		{{4992.78,8005.07,0},225},
-		{{9120.65,10076.6,0},100},
-		{{4357.36,4724.03,0},100}
-	};
-	Esseker[] = {
-		{{3943,9284,0},325},
-		{{10810,4765,0},325},
-		{{4739,4671,0},325}
-	};
-	Bornholm[] = {
-		{{3092.2,5468.97,0},325},
-		{{12737.6,8757.8,0},325},
-		{{6420.46,17217.2,0},325}
-	};
-	pja310[] = {
-		{{1599.4,8260.6,0},325},
-		{{6609.4,17282.3,0},325},
-		{{19628.4,19227.7,0},325},
-		{{13965.6,12502,0},325},
-		{{17800.5,2185.05,0},325}
-	};
+	custom[] = {};
 };
+
+
+
+/*  Check Drawing on the Map (global channel) */
+CHECK_DRAWING = true;	/* logs & deletes global drawing */
 
 
 /*  Check Global Markers */
@@ -352,9 +376,13 @@ UMW = false;	/* use allowed marker array from below (for example AltisLife uses 
 aLocalM[] = {"MissionMarker"};
 
 
-/* Not allowed Chat words on server. Example: badChat[] = {"BLUE"}; would freeze all players that write "BLUE GOAT" or "BLUES" in the chat (not case sensitive) */
-/* 2016 we don't want so much hate in our sidechats! */
-badChat[] = {"nigger","get cancer"};
+/*
+	Not allowed Chat words on server.
+	Example:
+		badChat[] = {"blue"};
+	will log if somebody writes "blue goat" or "blues" in the chat (not case sensitive).
+*/
+badChat[] = {};
 
 
 /* Not allowed Names on server. Example: badNamesFull[] = {"THE"}; would kick all players that are named "THE", it would NOT kick players named "THE CAR" (not case sensitive) */
@@ -386,12 +414,16 @@ badIDDsToClose[] =
 allowedIDDs[] =
 {
 	/* default idds */
-	0,4,5,6,8,12,18,24,49,54,55,70,160,174,999,131,
+	0,4,5,6,8,12,18,24,49,54,55,70,160,174,177,999,131,63,602,301,
 
 	/* exile idds */
-	63,301,602,20016,20017,20018,20019,20020,20021,20023,20024,24000,24001,24002,24004,
-	24005,24006,24007,24008,24010,24011,24012,24014,24015,24025,24026,24027,
+	24001,24002,20023,24005,24004,24010,24025,20021,20017,24012,24027,
+	20019,20016,24007,20024,20018,24008,24011,24015,24000,24006,24014,
+	20020,24026,
 
+	24033,24030,24029,24028,24031,24034,
+
+	4004,21000,	// Bounty system and MarXet
 	8457,	// http://www.exilemod.com/topic/9040-xm8-apps/
 	65431,	// r3f menu fix
 	6666,	// Paintshop
@@ -405,25 +437,6 @@ allowedIDDs[] =
 };
 
 
-
-/*
-	shows "MissionEventhandler added! NAME - ID" in the logs.
-
-	if your logs show:
-	26-04-2016 04:17:51 infiSTAR.de | TEMPBANNED | SomeDude(SomeUIDxx) MissionEventhandler added! Loaded - 1
-	That means that you had {"Loaded",0} and it needs to be put to {"Loaded",1} to allow 1 of these handlers
-*/
-checkMissionEventhandler = false;
-missionEventhandlers[] =
-{
-	{"Ended",1},{"Loaded",1},
-	{"HandleDisconnect",0},{"EntityRespawned",0},{"EntityKilled",0},{"EachFrame",0},{"MapSingleClick",0},
-	{"HCGroupSelectionChanged",0},{"CommandModeChanged",0},{"GroupIconClick",0},{"GroupIconOverEnter",0},
-	{"GroupIconOverLeave",0},{"PlayerConnected",0},{"PlayerDisconnected",0},{"TeamSwitch",0},{"PreloadStarted",0},
-	{"PreloadFinished",0}
-};
-
-
 /*
 	it is highly recommended to have this check turned on (useBlacklistedVariableCheck = true;)
 	shows "BadVariable in xxxxxxxx " in the logs.
@@ -431,6 +444,7 @@ missionEventhandlers[] =
 useBlacklistedVariableCheck = true;
 blacklistedVariables[] =
 {
+	"BIS_DEBUG_CAM",
 	"arsenalOpened","BIS_fnc_arsenal_fullArsenal","babecore_escM_mousepos",
 	"BIS_fnc_dbg_reminder_value","BIS_fnc_dbg_reminder","BIS_MENU_GroupCommunication","BIS_fnc_addCommMenuItem_menu",
 	"rscspectator","rscspectator_hints","rscspectator_display","rscspectator_playericon",
@@ -445,7 +459,7 @@ blacklistedVariables[] =
 	"Fanatic_InfiPass","keybindings_xxx","AndysClosed","UserFuncs","AltisFuncs","RemExe","BB_nofatigue","bis_fnc_diagkey_var_code","First_PAGE","Get_in_D","i_t_s__m_e_o","smissles","Whippy_ESP",
 	"TargetFuncs2","life_fnc_antiFreeeeze","LY_keyForward","TY_re_onetime","life_fnc_XaAxAA","mein1","GodDamnVehiclesXD","Mystic_FNC_ESP_distance","Esp_Id_setter","DummyMen","whipbut","UserFuncs",
 	"KrohdoFreedom","selectedPlayer","Lmenu1","ggplayer","throx_menu_item","lvl1","Init_Menu_Slew","D_B_R_T_Y_Slew","V6_GEF","xasfjisisafudmmyx","kekse","UPDATED_RE_36","first","second",
-	"SNI_PRZ_ZZZ_TargetPlayer","healit","O_fnc_ArmA","MLRN_EXEC","running_threads","catchemall123","killtarget","GMToggle","t1"
+	"SNI_PRZ_ZZZ_TargetPlayer","healit","O_fnc_ArmA","MLRN_EXEC","running_threads","catchemall123","killtarget","GMToggle","t1","FUCK_ME_keyp"
 };
 
 
@@ -455,7 +469,7 @@ UVC_adminspawn = false;	/* use vehicle check(s) on vehicles spawned by infiSTAR.
 	Use vehicle white list? (everything not on white-list will be flagged as BadVehicle and deleted!)
 	"EXILE" vehicles are white-listed by default!
 */
-VehicleWhiteList_check = true;
+VehicleWhiteList_check = false;
 VehicleWhiteList[] =
 {
 	"B_Parachute","B_Parachute_02_F","O_Parachute_02_F","Steerable_Parachute_F",
@@ -465,7 +479,7 @@ VehicleWhiteList[] =
 /*
 	Use forbidden vehicle check? (everything in the ForbiddenVehicles will be flagged as BadVehicle and deleted (even when it is on the white-list)!)
 */
-ForbiddenVehicles_check = true;
+ForbiddenVehicles_check = false;
 ForbiddenVehicles[] =
 {
 	"B_Heli_Light_01_armed_F","B_Heli_Attack_01_F","B_Plane_CAS_01_F","B_APC_Tracked_01_rcws_F","B_APC_Tracked_01_CRV_F","B_APC_Tracked_01_AA_F","B_MBT_01_cannon_F",
@@ -478,6 +492,18 @@ ForbiddenVehicles[] =
 	"B_G_Mortar_01_F","O_G_Mortar_01_F","B_GMG_01_F","O_GMG_01_F","I_GMG_01_F","O_GMG_01_high_F","I_GMG_01_high_F","B_GMG_01_A_F","O_GMG_01_A_F","I_GMG_01_A_F",
 	"B_static_AA_F","O_static_AA_F","I_static_AA_F","B_static_AT_F","I_static_AT_F","B_GMG_01_high_F"
 };
+
+/*
+	If you use VehicleWhiteList_check or ForbiddenVehicles_check then the vehicle check automatically checks for locally created vehicles.
+	Locally created vehicles are these that get created by a player and not the server. E.g. when a player assambles a UAV or a static weapon!
+	Also some public posted scripts for example the "bike script" are creating the vehicle (the bike) locally (so the type of the vehicle needs to get added to the array below!).
+*/
+LocalWhitelist[] =
+{
+	"O_HMG_01_weapon_F","O_HMG_01_F","O_HMG_01_support_F","I_UavTerminal","I_UAV_01_backpack_F",
+	"Exile_Bike_OldBike"
+};
+
 
 
 
@@ -505,23 +531,21 @@ ForbiddenItems[] =
 	custom Box content:
 	just an item like it is in the example with   "ItemMap"   will put the item once in the box.
 	if an array is used like the   {"ItemGPS",5}   example, well I assume you could guess what it will do.
-
+	
 	You can just define as many as you want.
 	{
-		"BOX TYPE",
-		"BOX NAME",
+		"BOX NAME",	// function name in the admin menu
 		{
 			"Item1","Item2",	// one per just item in a string
 			{"Item1",5},{"Item2",10}	// second entry in each array defiens how many of items of the first entry are wanted.
 		}
 	}
-
+	
 	The last closing bracket in an array can not have a "," afterwards. So make sure to have no syntax errors here.
 */
 allSupportBoxes[] =
 {
 	{
-		"Exile_Container_StorageCrate",
 		"Support-Box1",
 		{
 			"Exile_Item_Flag","Exile_Item_CookingPot",
@@ -534,7 +558,6 @@ allSupportBoxes[] =
 		}
 	},
 	{
-		"Exile_Container_StorageCrate",
 		"Support-Box2",
 		{
 			"Exile_Item_Flag",
@@ -546,7 +569,6 @@ allSupportBoxes[] =
 		}
 	},
 	{
-		"Exile_Container_StorageCrate",
 		"Support-Box3",
 		{
 			{"Exile_Item_Flag",5},{"Exile_Item_WoodDoorKit",15},{"Exile_Item_WoodWallKit",15},
@@ -554,7 +576,6 @@ allSupportBoxes[] =
 		}
 	},
 	{
-		"Exile_Container_SupplyBox",
 		"Support-Box4",
 		{
 			"ItemMap",{"ItemGPS",5},"ItemWatch"

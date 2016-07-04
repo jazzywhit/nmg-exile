@@ -4,9 +4,6 @@
 	
 	Copyright infiSTAR - 2011 - 2016. All rights reserved.
 	Christian (Chris) L. (infiSTAR23@gmail.com) Developer of infiSTAR
-	
-	Description:
-	Arma AntiHack & AdminTools - infiSTAR.de
 */
 #include "EXILE_AHAT_CONFIG.hpp"
 class CfgPatches
@@ -19,11 +16,11 @@ class CfgPatches
 		weapons[] = {};
 		magazines[] = {};
 		ammo[] = {};
-		a3_infiSTAR_Exile_version = 0.746;
 		author[]= {"Chris(tian) 'infiSTAR' Lorenzen"};
-		website[]= {"http://infiSTAR.de"};
-		contact[]= {"admin@infiSTAR.de"};
-		contact_alt[]= {"infiSTAR23@gmail.com"};
+		website[]= {"https://infiSTAR.de"};
+		contact[]= {"admin@infiSTAR.de","infiSTAR23@gmail.com"};
+		version = v0053;
+		licensed = "devin.p.harris85@gmail.com";
 	};
 };
 class CfgFunctions
