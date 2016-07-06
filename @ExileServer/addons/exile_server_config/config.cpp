@@ -135,7 +135,7 @@ class CfgSettings
 		*
 		* Default: Get 1 respect for every 10 pop tabs 
 		*/
-		tradingRespectFactor = 0.1;
+		tradingRespectFactor = 0.0;
 		
 		/**
 		* Defines the the minimum amount of Respect earned/lost for a kill
@@ -147,13 +147,13 @@ class CfgSettings
 		*/
 		class Frags
 		{
-			domination = 80;			// Keeps killing the same guy
+			domination = 100;			// Keeps killing the same guy
 			letItRain = 150;			// MG, also vehicle MGs
-			humiliation = 300;			// Axe
-			passenger = 400;			// Out of car/chopper/boat
-			roadKill = 200;				// :)
-			bigBird = 600;				// Roadkill, but with chopper/plane
-			chuteGreaterChopper = 1000;	// Someone flies into chute and chopper/plane explodes	
+			humiliation = 500;			// Axe
+			passenger = 200;			// Out of car/chopper/boat
+			roadKill = 250;				// :)
+			bigBird = 500;				// Roadkill, but with chopper/plane
+			chuteGreaterChopper = 2000;	// Someone flies into chute and chopper/plane explodes
 		};
 
 		class Percentages 
@@ -184,10 +184,10 @@ class CfgSettings
 			firstBlood = 200;
 
 			// If you kill someone while you are in your own territory
-			homie = 20;
+			homie = 100;
 
 			// If you kill someone who is in his own territory
-			raid = 20;
+			raid = 25;
 
 			/*
 				Example with killstreak = 50
@@ -212,6 +212,7 @@ class CfgSettings
 	class KillFeed
 	{
 		// Shows a kill feed for well kills
+		// TODO test this and remove if not immersive
 		showKillFeed = 1;
 	};
 
@@ -228,7 +229,7 @@ class CfgSettings
 		 */
 		loadOut[] = 
 		{
-			"ItemMap", // Because why not
+			"ItemMap",
 			"Exile_Item_XM8"
 		};
 
@@ -264,12 +265,12 @@ class CfgSettings
 		 * expired or when they pick up their first weapon. Whatever
 		 * happens first.
 		 */
-		protectionDuration = 5;
+		protectionDuration = 10;
 
 		/**
 		 * Radius of spawn zones around the center of spawn zone markers.
 		 */
-		spawnZoneRadius = 500;
+		spawnZoneRadius = 250;
 
 		/**
 		 * These vehicles spawn on server restart close to spawn zones.
@@ -314,7 +315,7 @@ class CfgSettings
 		/**
 		* The server will apply random damage up to this value when spawning a vehicle.
 		*/
-		damageChance = 20; // 20% chance for a vehicle HITPOINT to be damaged
+		damageChance = 100; // 20% chance for a vehicle HITPOINT to be damaged
 		maximumDamage = 0.9;
 
 		// Stuff to spawn on water
@@ -467,7 +468,7 @@ class CfgSettings
 		// time in ARMA FORMAT << CONFIG
 		// https://community.bistudio.com/wiki/setDate
 
-		staticTime[] = {2039,10,24,15,30};
+		staticTime[] = {2015,10,3,15,0};
 	};
 
 
@@ -478,10 +479,10 @@ class CfgSettings
 		*/
 
 		// This needs to match config.cfg serverCommandPassword
-		serverPassword = "";
+		serverPassword = "ReallyLongCommandPassword12!@";
 
 		// Autolocks server until its ready to accept players
-		useAutoLock = 0;
+		useAutoLock = 1;
 
 		// Server will autoLock at that time before restart (minutes)
 		restartAutoLock = 3;
@@ -494,7 +495,7 @@ class CfgSettings
 			{4, 0} = Every 4 hours
 			{1, 30} = Every one and a half hour (who the hell would do this?)
 		*/
-		restartTimer[] = {3, 0};
+		restartTimer[] = {4, 0};
 
 		/*
 			Kicks players before restart to prevent gear loss.
@@ -503,7 +504,7 @@ class CfgSettings
 			0 = off
 			1 = on
 		*/
-		useAutoKick = 0;
+		useAutoKick = 1;
 
 		/*
 			Number of minutes before the server kicks players that did
@@ -518,7 +519,7 @@ class CfgSettings
 			0 = off
 			1 = on
 		*/
-		useRestartMessages = 0;
+		useRestartMessages = 1;
 
 		/*
 			Number of minutes before the restart to inform your players.
@@ -532,7 +533,7 @@ class CfgSettings
 			to try to shutdown the server
 		*/
 
-		useShutdown = 0;
+		useShutdown = 1;
 	};
 
 	class ServerSettings
@@ -646,10 +647,10 @@ class CfgSettings
 		{
 			type = "spawn";
 			function = "ExileServer_system_event_abandonedSafe_start";
-			minTime = 60; // minutes
-			maxTime = 120; // minutes
+			minTime = 15; // minutes
+			maxTime = 90; // minutes
 			minimumPlayersOnline = 0;
-			markerTime = 15; // minutes
+			markerTime = 30; // minutes
 		};
 
 		class AmbientFlyOver
@@ -658,7 +659,7 @@ class CfgSettings
 			function = "ExileServer_system_event_ambientFlyOver_start";
 			minTime = 15; // minutes
 			maxTime = 90; // minutes
-			minimumPlayersOnline = 1;
+			minimumPlayersOnline = 0;
 		};
 	};
 	
