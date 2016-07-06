@@ -147,10 +147,7 @@ class CfgSettings
 		*/
 		class Frags
 		{
-			bambi = -1000;				// Bambi slayers
-			friendlyFire = -1000;		// For party members
-			standard = 100;				// Normal kill
-			domination = 100;			// Keeps killing the same guy
+			domination = 80;			// Keeps killing the same guy
 			letItRain = 150;			// MG, also vehicle MGs
 			humiliation = 300;			// Axe
 			passenger = 400;			// Out of car/chopper/boat
@@ -565,7 +562,7 @@ class CfgSettings
 		/*
 			A list of events that are active
 		*/
-		enabledEvents[] = {"SupplyBox", "AbandonedSafe", "AmbientFlyOver"};
+		enabledEvents[] = {"SupplyBox", "AbandonedSafe", "AmbientFlyOver"}; 
 
 		class SupplyBox 
 		{
@@ -578,7 +575,7 @@ class CfgSettings
 			function = "ExileServer_system_event_supplyBox_start";
 			minTime = 15; // minutes
 			maxTime = 30; // minutes
-			minimumPlayersOnline = 0;
+			minimumPlayersOnline = 1;
 			dropRadius = 500; // 500m around an airport (including the main airport on Altis!)
 			dropAltitude = 100; // altitude of the drop
 			markerTime = 10; // minutes
