@@ -159,12 +159,12 @@ class CfgSettings
 		class Percentages 
 		{
 			unlucky = 1; // Dying for an unknown reason costs you 1% respect
-			crash = 1; // Crashing your car costs you 1% respect
-			suicide = 25; // Comitting suicide costs you 2% of your respect
-			friendyFire = 5; // Friendly fire costs you 3%
-			npc = 2; // Being killed by an NPC costs you 4%
-			bambiKill = 10; // Killing a bambi costs you 5%
-			frag = 10; // Killing someone will get you 5% and remove 5% from the victim
+			crash = 5; // Crashing your car costs you 5% respect
+			suicide = 25; // Comitting suicide costs you 25% of your respect
+			friendyFire = 10; // Friendly fire costs you 10%
+			npc = 5; // Being killed by an NPC costs you 5%
+			bambiKill = 10; // Killing a bambi costs you 10%
+			frag = 10; // Killing someone will get you 10% and remove 10% from the victim
 		};
 
 		class Handcuffs 
