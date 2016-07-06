@@ -20,7 +20,7 @@ class CfgScriptControlMission
 		//Electrical Storms
 		ELECTRICAL_STORMS_SCRIPT = 0;
 		//Advanced Vehicle System
-		AVS_SCRIPT = 1;
+		AVS_SCRIPT = 0;
 		//Need gps for map markers
 		GPS_MAP_MARKERS = 1;
 		//Respect Based loadouts
