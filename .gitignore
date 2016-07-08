@@ -86,3 +86,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.acf
+battleye/BEClient.dll
+battleye/BEService_x64.exe
+config/config.vdf
+mpmissions/readme.txt
+battleye/BEService.exe
