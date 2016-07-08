@@ -9,6 +9,7 @@ class CfgRemoteExec
 		class AVS_fnc_rearmVehicle									{ allowedTargets=2; };
         class AVS_fnc_refuelVehicle									{ allowedTargets=2; };
         class AVS_fnc_fillCanister									{ allowedTargets=2; };
+        class bloodlust_onunithitpart                               { allowedTargets=0; };
 	};
 	class Commands
 	{
