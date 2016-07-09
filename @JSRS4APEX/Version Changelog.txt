@@ -1,0 +1,135 @@
+JSRS4 Apex - 1.0:
+
+- Ported on new framework
+- Fixed missing forest (6).wss files
+- Fixed .wss entries
+- Separated Reloading sounds from main sounds
+- Added some sort of binaural closure effects
+- Added crack tails to all weapons
+- Tweaked Ak family shot sounds
+- Fixed CTD when using LIM85
+- Fixed updating base classes on UGL
+- Fixed error message on main menu 3GL/EGLM
+- Tweaked reload sound volume
+- Tweaked Environmental SFX noises
+- Tweaked new crack reflectors
+- Tweaked silenced weapon sound effects
+- Added new noise layers
+- Tweaked CMR shot sounds
+- Tweaked stereo sounds for vehicles
+- Fixed distortion for vehicle sounds external
+- Added different sounds for different SPAR versions
+- Added Apex Content sounds
+- Added new sounds for AK-12 7.62mm
+- Added new sounds for AK-M 7.62mm
+- Added new sounds for AK-SU74 7.62mm
+- Added new sounds for CMR-76 6.5mm
+- Added new sounds for CTAR-95 5.8mm
+- Added new sounds for LIM-85 5.56mm
+- Added new sounds for PM9M 9mm
+- Added new sounds for Protector 9mm
+- Added new sounds for SPAR-16 5.56mm
+- Added new sounds for Type-115 ARX
+- Fixed missing Tanoa footstep/crawl sounds
+- Fixed missing class CTAR GL
+- Added different sounds for SPAR, SPAR S and SPAR 17
+- Tweaked Tank sounds
+- Added new Tank Idle sounds
+
+JSRS3 DragonFyre EDEN Version 1.4 RC:
+
+- Added sounds for RGN Mini Grenade
+- Tweaked reloading sound volume/distance
+- Tweaked Closure effects for various weapons
+- Tweaked Framework reflector sounds
+- Added new Tank engine sounds external
+- Tweaked explosion/thud sound effects
+- Tweaked snap sound distance/volume
+- Tweaked SD weapon sound effects
+- Added soniccrack snap effects to various ammunition
+- Tweaked explosion sound effect muffler
+- Added Server Side Files for JSRS public server support
+- Tweaked debris noises for 20mm/30mm/40mm HE/AP rounds (performance)
+- Tweaked Gatling Cannon 20mm distance
+- Fixed removed tails from 20mm/30mm/40mm HE/AP rounds (performance)
+- Tweaked body hit sounds volume lowered
+- Tweaked volume and distance for grenade bouncing sounds
+- Fixed AP 30mm, 120mm shells caused explosion sounds
+- Tweaked snap and crack volume and distances
+- Tweaked global snaps louder in forests/on meadows
+- Fixed updating base class issues
+- Tweaked MX rifle sounds
+- Tweaked soldier movement volumes and distances
+- Tweaked helicopter gear and hydraulic sound volume
+- Fixed wrong Sniper Bolt Action sounds
+- Added new Flare launcher sounds
+- Tweaked REFLECTOR SOUNDS volumes
+- Fixed missing REFLECTOR SOUNDS on MX Full Auto Mode
+- Added new OGG file format
+- Tweaked mod size due to decoding
+- Fixed missing sprint sounds on concrete surfaces
+- Fixed .wss sound entries in cfgs
+- Fixed missing sound files
+- Fixed wrong numbering in environment cfg
+- Fixed missing tree wind sounds
+- Fixed missing houses wind sounds
+- Fixed error message "helicopter landing sounds missing"
+- Tweaked handheld weapon handling sounds in cfgs (Reload,Dry,Firemode...)
+- Increased performance and faster transaction of sound files
+- Tweaked mod loads faster
+- Fixed updating base class MXC_Rifle
+
+	
+Update 1.1:
+	
+- Weapons and explosion volumes for distances
+- Louder soundscape overall
+- Louder helicopters and jets
+- Fix missing reloading sound (what 5.56mm weapon exactly?)
+- Fix missing weapon sounds for handheld and vehicle weapons
+- Fix missing SD sounds for heavy mg's
+- Fix missing building collapse sounds
+- Add Flyby Sounds for rockets
+- Add falling mortar incoming sound
+- Fix missing beach and wave sounds
+- Tweak suspension sounds for vehicle Offroad
+- Add another soundShader called "first" for weapons
+- Tweak "pop'iness" of weapon and distance sounds
+- Full RHS support
+
+
+- Fixed missing sound Twin Cannon 20mm on Buzzard
+- Fixed missing sound Cannon 20mm on Blackfoot
+- Fixed missing sound Caseless Cannon 30mm Kajman
+- Tweak off road rattle and suspension on vehicle OffRoad
+- Added FakeFall incomming sounds to shellcore and mortar
+- Added interior bullethits for vehicles
+- Tweak FlyBy sounds for rockets, missiles and shells
+- Tweak sound volume of distance explosions
+- Tweak sound volume of distance weapons
+- Fixed missing beach and coast wave sounds
+- Tweak all air vehicle increased volume and sound distances
+- Tweak M134 Gatling sounds
+- Fixed missing SD sounds for NAVID HMG
+- Fixed low volume building destruction sounds
+- Tweak decreased cartridge distanz from 50 to 5 meters
+- Tweak explosions of 20mm cannons were to strong/sounded bigger
+- Added loop function/sound to gatling weapons
+- Added new sound for 20mm cannon
+- Added new sound for 30mm caseless cannon
+- Tweak increased volume of gatling weapons
+- Tweak CAS plane gau loop function
+- Added new CAS (gau8) weapon sound
+- Fixed Navid HMG background bolt action sound in some samples
+- Tweak Increased turbine sound distance of jets
+- Added missing CAS missiles 03 and 04 sounds
+
+Changed PBOs
+
+Bullethits
+Soniccracks
+Explosions
+NAVID
+All Air vehicles
+OffRoad vehicle
+Environment

@@ -1,0 +1,13 @@
+name = "BloodLust";
+picture = "mod.paa";
+actionName = "Website";
+action = "http://bitdungeon.org/arma/bloodlust/";
+description = "Adds more gore to the game.";
+logo = "mod.paa";
+logoOver = "mod.paa";
+tooltip = "BloodLust";
+tooltipOwned = "";
+overview = "Adds more gore to the game.";
+author = "Gavin N. Alvesteffer";
+overviewPicture = "mod.paa";
+overviewText = "";
