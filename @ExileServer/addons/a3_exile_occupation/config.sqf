@@ -16,13 +16,13 @@
 
 SC_debug 				    = false;			    // set to true to turn on debug features (not for live servers) 
 SC_useApexClasses           = true;                // true if you want to use the Apex class list over rides, false to use vanilla Arma gear
-SC_useMapOverrides          = true;                	// set to true to enable over riding options per map (see the bottom of this file for examples)
+SC_useMapOverrides          = false;                // set to true to enable over riding options per map (see the bottom of this file for examples)
 SC_extendedLogging          = false;                // set to true for additional logging
 SC_processReporter          = true;                 // log the a list of active server processes every 60 seconds (useful for debugging server problems)
 SC_infiSTAR_log			    = true;		            // true Use infiSTAR logging, false logs to server rpt
-SC_maxAIcount 			    = 100;					// the maximum amount of AI, if the AI count is above this then additional AI won't spawn
+SC_maxAIcount 			    = 50;					// the maximum amount of AI, if the AI count is above this then additional AI won't spawn
 SC_mapMarkers			    = false;			    // Place map markers at the occupied areas (occupyPlaces and occupyMilitary only) true/false
-SC_minFPS 				    = 5;					// any lower than minFPS on the server and additional AI won't spawn
+SC_minFPS 				    = 10;					// any lower than minFPS on the server and additional AI won't spawn
 SC_scaleAI 				    = 10; 					// any more than _scaleAI players on the server and _maxAIcount is reduced for each extra player
 
 SC_removeUserMapMarkers     = true;                 // true to delete map markers placed by players every 10 seconds
@@ -47,13 +47,13 @@ SC_randomSpawnMinPlayers    = 1;                    // Minimum number of players
 SC_randomSpawnMaxAI         = 5;                    // Maximum amount of random AI groups allowed at any time
 SC_randomSpawnIgnoreCount	= true;					// true if you want spawn random AI groups regardless of overall AI count (they still count towards the total though)
 
-SC_occupyPlaces 			= true;				    // true if you want villages,towns,cities patrolled by bandits
+SC_occupyPlaces 			= false;				    // true if you want villages,towns,cities patrolled by bandits
 
 SC_occupyVehicle			= true;					// true if you want to have roaming AI vehicles
-SC_occupyVehicleIgnoreCount	= true;					// true if you want spawn vehicles regardless of overall AI count
+SC_occupyVehicleIgnoreCount	= false;					// true if you want spawn vehicles regardless of overall AI count
 SC_occupyVehiclesLocked		= false;				// true if AI vehicles to stay locked until all the linked AI are dead
 
-SC_occupyTraders            = true;                // (WORK IN PROGRESS, NOT WORKING YET) true if you want to create trader camps at positions specified in SC_occupyTraderDetails
+SC_occupyTraders            = false;                // (WORK IN PROGRESS, NOT WORKING YET) true if you want to create trader camps at positions specified in SC_occupyTraderDetails
 SC_occupyTraderDetails      = [
                                 ["Tanoa","Lifou Traders",[7317,7217,0],"trader1.sqf",true],
                                 ["Tanoa","Lijnhaven Traders",[11580,2051,0],"trader1.sqf",true],
@@ -104,9 +104,9 @@ SC_staticSurvivors          = [	                    //[[pos],ai count,radius,sea
                               ];      
 
 SC_occupySky				= true;					// true if you want to have roaming AI helis
-SC_occupySea				= false;		        // true if you want to have roaming AI boats
+SC_occupySea				= true;		        // true if you want to have roaming AI boats
 
-SC_occupyTransport 	        = true;					// true if you want pubic transport (travels between traders)
+SC_occupyTransport 	        = false;					// true if you want pubic transport (travels between traders)
 SC_colourTransport          = true;                 // true if you want the public transport coloured
 SC_secureTransport          = true;                 // true if you want the public transport and pilot to be indestructible
 SC_occupyTransportClass 	= ["Exile_Chopper_Mohawk_FIA"]; // to always use the same vehicle, specify one option only
@@ -129,7 +129,7 @@ SC_TransportLandWaypoints   = [
                                 ];
 
 
-SC_occupyLootCrates		    = true;					// true if you want to have random loot crates with guards
+SC_occupyLootCrates		    = false;					// true if you want to have random loot crates with guards
 SC_numberofLootCrates       = 6;                    // if SC_occupyLootCrates = true spawn this many loot crates (overrided below for Namalsk)
 SC_LootCrateGuards          = 3;                    // number of AI to spawn at each crate
 SC_LootCrateGuardsRandomize = true;                 // Use a random number of guards up to a maximum = SC_LootCrateGuards (so between 1 and SC_LootCrateGuards)
@@ -306,7 +306,7 @@ if (worldName == 'Napf' AND SC_useMapOverrides) then
 // Napf specific settings (if you want to override settings for specific maps if you run multiple servers)
 if (worldName == 'Tanoa' AND SC_useMapOverrides) then 
 { 
-	SC_occupyTraders		= true;
+	SC_occupyTraders		= false;
     SC_useApexClasses       = true;
 };
 
