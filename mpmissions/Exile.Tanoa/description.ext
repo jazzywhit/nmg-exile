@@ -1,50 +1,34 @@
-// https://community.bistudio.com/wiki/Description.ext#forceRotorLibSimulation
-forceRotorLibSimulation = 1;
-
-// https://community.bistudio.com/wiki/Description.ext#disableChannels
-disableChannels[] = {0, 2};
-
+///////////////////////////////////////////////////////////////////////////////
+// Server Settings - Modify at will
+///////////////////////////////////////////////////////////////////////////////
 author = "Exile Mod Team";
-loadScreen = "exile_assets\texture\mod\logo.paa"; 
+onLoadName = "Exile Mod";
 onLoadMission= "www.exilemod.com";
+loadScreen = "exile_assets\texture\mod\logo.paa"; 
+disableChannels[] = {0, 2};
 OnLoadIntro = "";
 OnLoadIntroTime = false;
 OnLoadMissionTime = false;
-onLoadName = "Exile Mod";
 
 class Header
 {
-	gameType = Sandbox;
-	minPlayers = 1;
-	maxPlayers = 100;
+    gameType = Survive; // Do NOT change this
+    minPlayers = 1;
+    maxPlayers = 100;
 };
 
-// DO NOT CHANGE THIS! +
+///////////////////////////////////////////////////////////////////////////////
+// Exile Settings - Do not change these!
+///////////////////////////////////////////////////////////////////////////////
+forceRotorLibSimulation = 2;
 skipLobby = 1;
-showHUD[] = 
-{
-    true,   // Scripted HUD (same as showHUD command)
-    true,   // Vehicle + soldier info
-    true,   // Vehicle radar 
-    true,   // Vehicle compass
-    true,   // Tank direction indicator
-    false,   // Commanding menu
-    false,   // Group Bar
-    true,    // HUD Weapon Cursors
-    false   // Squad Radar
-};
-
-// Automatically take a free slot in lobby
 joinUnassigned = 1;
-
 respawn = "BASE";
 respawnDelay = 120;
 respawnDialog = 0;
 respawnOnStart = 0;
 respawnButton = 1; 
 respawnTemplates[] = {"Exile"};
-
-// These are broken as fuck, do not use them!
 corpseManagerMode = 0;
 corpseLimit = 20;
 corpseRemovalMinTime = 1800;
@@ -53,34 +37,36 @@ wreckManagerMode = 0;
 wreckLimit = 2;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 360;
-// DO NOT CHANGE THIS! -
-
-// When scripted player is enabled, game no longer shows "No player select" error message upon mission start when no player unit is present. 
 scriptedPlayer = 1;
-
-// Removes all playable units which do not have a human player.
-disabledAI = true;
-
-// Disable dropping items while swimming
+disabledAI = 1;
 enableItemsDropping = 0;
-
-// Briefing will still be displayed until all clients are connected and done loading :(
 briefing = 0;
-
-// Defines if the debriefing is shown or not at the end of the mission. 
 debriefing = 0;
-
-// Allow RPT loging
 allowFunctionsLog = 1;
-
-// Allows access to the Debug Console outside of the editor during normal gameplay. 
+// Allows access to the Debug Console outside of the editor during normal gameplay.
 // 0 = Default behavior, available only in editor
 // 1 = Available in SP and for hosts / logged in admins
 // 2 = Available for everyone
-enableDebugConsole = 2; // 2 = dangerous in MP
-
-// NO NO NO
+enableDebugConsole = 2;
 allowFunctionsRecompile = 0;
+showSquadRadar = 1;
+showUAVFeed = 1;
+reviveDelay = 6;
+reviveForceRespawnDelay = 3;
+reviveBleedOutDelay = 120;
+
+showHUD[] = 
+{
+    true,   // Scripted HUD (same as showHUD command)
+    true,   // Vehicle + soldier info
+    true,   // Vehicle radar 
+    true,   // Vehicle compass
+    true,   // Tank direction indicator
+    false,  // Commanding menu
+    false,  // Group Bar
+    true,   // HUD Weapon Cursors
+    false   // Squad Radar
+};
 
 #include "config.cpp"
 

@@ -98,7 +98,7 @@ class CfgSettings
 		class Database 
 		{
 			// Remove all deleted items from the database after X days
-			_permanentlyDeleteTime = 3;
+			permanentlyDeleteTime = 3;
 			
 			// Remove all territories (and contructions + containers in it) that were not paid after X days
 			territoryLifeTime = 7;
