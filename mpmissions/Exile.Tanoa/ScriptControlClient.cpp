@@ -4,7 +4,7 @@ class CfgScriptControlMission
 	class SCRIPT_config
 	{
 		//IGILOAD
-		IGILOAD_SCRIPT = 1;
+		IGILOAD_SCRIPT = 0;
 		//Kill Messages - GR8
 		KILL_MESSAGE_SCRIPT = 0;
 		//Welcome Credits
@@ -12,7 +12,7 @@ class CfgScriptControlMission
 		//Weather Effects by john
 		WEATHER_EFFECTS_SCRIPT = 0;
 		//Ground Fog
-		FOG_SCRIPT = 1;
+		FOG_SCRIPT = 0;
 		//Lockpick by W4rGo
 		LOCK_PICK_SCRIPT = 1;
 		//Blowout
@@ -25,6 +25,8 @@ class CfgScriptControlMission
 		GPS_MAP_MARKERS = 1;
 		//Respect Based loadouts
 		RESPECT_BASED_LOADOUTS = 0;
+		//Water Crates
+		WATER_CRATES = 1;
 	};
 };
 

@@ -8,6 +8,7 @@ _LOCK_PICK_SCRIPT 			= getNumber(missionConfigFile >> "CfgScriptControlMission" 
 _BLOWOUT_SCRIPT				= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "BLOWOUT_SCRIPT");
 _ELECTRICAL_STORMS_SCRIPT 	= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "ELECTRICAL_STORMS_SCRIPT");
 _AVS_SCRIPT 				= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "AVS_SCRIPT");
+_WATER_CRATES 				= getNumber(missionConfigFile >> "CfgScriptControlMission" >> "SCRIPT_config" >> "WATER_CRATES");
 
 //Loads mapcenter based on map name set in scriptcontrol
 [] execVM "code\mapcenter.sqf";
@@ -104,5 +105,10 @@ if (_WEATHER_EFFECTS_SCRIPT isEqualTo 1) then {
 	diag_log "Weather Effects - Loaded";
 };
 
+if (_WATER_CRATES isEqualTo 1) then {
+	[] execVM "code\waterCrates\init.sqf";
+	diag_log "Water Crates - Loaded";
+};
+
 // Zupa Control Points
-execVM "zcp.sqf";
+//execVM "zcp.sqf";

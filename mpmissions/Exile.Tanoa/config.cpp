@@ -2786,6 +2786,8 @@ class CfgExileCustomCode
 
 		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
 	*/
+	ExileClient_object_item_construct = "CfgExileCustomCode\ExileClient_object_item_construct.sqf";
+	ExileClient_gui_selectSpawnLocation_show = "CfgExileCustomCode\ExileClient_gui_selectSpawnLocation_show.sqf";
 };
 class CfgExileEnvironment
 {
