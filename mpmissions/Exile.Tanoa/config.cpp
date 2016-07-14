@@ -1304,16 +1304,16 @@ class CfgExileArsenal
 	// Ghillie Suits
 	///////////////////////////////////////////////////////////////////////////////
 	class U_B_FullGhillie_ard						{ quality = 4; price = 150; };
-	class U_B_FullGhillie_lsh						{ quality = 4; price = 150; };
-	class U_B_FullGhillie_sard						{ quality = 4; price = 150; };
+	//class U_B_FullGhillie_lsh						{ quality = 4; price = 150; };
+	//class U_B_FullGhillie_sard						{ quality = 4; price = 150; };
 	class U_B_GhillieSuit							{ quality = 3; price = 100; };
-	class U_I_FullGhillie_ard						{ quality = 4; price = 150; };
-	class U_I_FullGhillie_lsh						{ quality = 4; price = 150; };
-	class U_I_FullGhillie_sard						{ quality = 4; price = 150; };
+	//class U_I_FullGhillie_ard						{ quality = 4; price = 150; };
+	//class U_I_FullGhillie_lsh						{ quality = 4; price = 150; };
+	//class U_I_FullGhillie_sard						{ quality = 4; price = 150; };
 	class U_I_GhillieSuit							{ quality = 3; price = 100; };
 	class U_O_FullGhillie_ard						{ quality = 6; price = 150; };
-	class U_O_FullGhillie_lsh						{ quality = 6; price = 150; };
-	class U_O_FullGhillie_sard						{ quality = 6; price = 150; };
+	//class U_O_FullGhillie_lsh						{ quality = 6; price = 150; };
+	//class U_O_FullGhillie_sard						{ quality = 6; price = 150; };
 	class U_O_GhillieSuit							{ quality = 5; price = 100; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -1549,7 +1549,7 @@ class CfgExileArsenal
 	class H_HelmetIA_net							{ quality = 3; price = 40; };
 	class H_HelmetB									{ quality = 3; price = 60; };
 	class H_HelmetB_black							{ quality = 3; price = 60; };
-	class H_HelmetB_camo							{ quality = 3; price = 80; }; // This one is awesome!
+	class H_HelmetB_camo							{ quality = 3; price = 80; };
 	class H_HelmetB_desert							{ quality = 3; price = 60; };
 	class H_HelmetB_grass							{ quality = 3; price = 60; };
 	class H_HelmetB_paint							{ quality = 3; price = 60; };
@@ -1836,21 +1836,21 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	class 100Rnd_65x39_caseless_mag 				{ quality = 2; price = 30; };
 	class 100Rnd_65x39_caseless_mag_Tracer 			{ quality = 2; price = 40; };
-	class 10Rnd_127x54_Mag 							{ quality = 4; price = 30; };
+	//class 10Rnd_127x54_Mag 							{ quality = 4; price = 30; };
 	// Broken in Arma
-	class 10Rnd_338_Mag 							{ quality = 5; price = 30; };
+	//class 10Rnd_338_Mag 							{ quality = 5; price = 30; };
 
 	class 10Rnd_762x54_Mag 							{ quality = 3; price = 30; };
 	//class 10Rnd_762x51_Mag 						{ quality = 1; price = 30; };
-	class 10Rnd_93x64_DMR_05_Mag 					{ quality = 4; price = 40; };
+	//class 10Rnd_93x64_DMR_05_Mag 					{ quality = 4; price = 40; };
 	class 11Rnd_45ACP_Mag 							{ quality = 1; price = 8; };
 	class 150Rnd_762x54_Box 						{ quality = 3; price = 20; };
 	class 150Rnd_762x54_Box_Tracer 					{ quality = 3; price = 30; };
 	class 16Rnd_9x21_Mag 							{ quality = 1; price = 20; };
 	class 200Rnd_65x39_cased_Box 					{ quality = 2; price = 30; };
 	class 200Rnd_65x39_cased_Box_Tracer 			{ quality = 2; price = 30; };
-	class 150Rnd_93x64_Mag 							{ quality = 6; price = 50; };
-	class 130Rnd_338_Mag 							{ quality = 5; price = 40; };
+	//class 150Rnd_93x64_Mag 							{ quality = 6; price = 50; };
+	//class 130Rnd_338_Mag 							{ quality = 5; price = 40; };
 	class 20Rnd_556x45_UW_mag 						{ quality = 1; price = 20; };
 	class 20Rnd_762x51_Mag 							{ quality = 2; price = 20; };
 	class 30Rnd_45ACP_Mag_SMG_01 					{ quality = 1; price = 10; };
@@ -1969,11 +1969,11 @@ class CfgExileArsenal
 	class arifle_MX_SW_F							{ quality = 2; price = 250; };
 	class LMG_Mk200_F								{ quality = 2; price = 300; };
 	class LMG_Zafir_F								{ quality = 3; price = 350; };
-	class MMG_01_hex_F								{ quality = 6; price = 800; };
-	class MMG_01_tan_F								{ quality = 6; price = 800; };
-	class MMG_02_black_F							{ quality = 6; price = 450; };
-	class MMG_02_camo_F								{ quality = 5; price = 450; };
-	class MMG_02_sand_F								{ quality = 5; price = 450; };
+	//class MMG_01_hex_F								{ quality = 6; price = 800; };
+	//class MMG_01_tan_F								{ quality = 6; price = 800; };
+	//class MMG_02_black_F							{ quality = 6; price = 450; };
+	//class MMG_02_camo_F								{ quality = 5; price = 450; };
+	//class MMG_02_sand_F								{ quality = 5; price = 450; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Assault Rifles
@@ -2004,21 +2004,21 @@ class CfgExileArsenal
 	class arifle_MXM_Black_F 						{ quality = 2; price = 550; };
 	class arifle_MXM_F 								{ quality = 2; price = 550; };
 	class srifle_DMR_01_F 							{ quality = 3; price = 600; };
-	class srifle_DMR_02_camo_F 						{ quality = 3; price = 800; };
-	class srifle_DMR_02_F 							{ quality = 3; price = 800; };
-	class srifle_DMR_02_sniper_F 					{ quality = 3; price = 800; };
-	class srifle_DMR_03_F 							{ quality = 3; price = 750; };
-	class srifle_DMR_03_khaki_F 					{ quality = 3; price = 750; };
-	class srifle_DMR_03_multicam_F 					{ quality = 3; price = 750; };
-	class srifle_DMR_03_tan_F 						{ quality = 3; price = 750; };
-	class srifle_DMR_03_woodland_F 					{ quality = 3; price = 750; };
-	class srifle_DMR_04_F 							{ quality = 4; price = 700; };
-	class srifle_DMR_04_Tan_F 						{ quality = 4; price = 700; };
-	class srifle_DMR_05_blk_F 						{ quality = 4; price = 850; };
-	class srifle_DMR_05_hex_F 						{ quality = 4; price = 850; };
-	class srifle_DMR_05_tan_f 						{ quality = 4; price = 850; };
-	class srifle_DMR_06_camo_F 						{ quality = 5; price = 800; };
-	class srifle_DMR_06_olive_F 					{ quality = 5; price = 800; };
+	//class srifle_DMR_02_camo_F 						{ quality = 3; price = 800; };
+	//class srifle_DMR_02_F 							{ quality = 3; price = 800; };
+	//class srifle_DMR_02_sniper_F 					{ quality = 3; price = 800; };
+	//class srifle_DMR_03_F 							{ quality = 3; price = 750; };
+	//class srifle_DMR_03_khaki_F 					{ quality = 3; price = 750; };
+	//class srifle_DMR_03_multicam_F 					{ quality = 3; price = 750; };
+	//class srifle_DMR_03_tan_F 						{ quality = 3; price = 750; };
+	//class srifle_DMR_03_woodland_F 					{ quality = 3; price = 750; };
+	//class srifle_DMR_04_F 							{ quality = 4; price = 700; };
+	//class srifle_DMR_04_Tan_F 						{ quality = 4; price = 700; };
+	//class srifle_DMR_05_blk_F 						{ quality = 4; price = 850; };
+	//class srifle_DMR_05_hex_F 						{ quality = 4; price = 850; };
+	//class srifle_DMR_05_tan_f 						{ quality = 4; price = 850; };
+	//class srifle_DMR_06_camo_F 						{ quality = 5; price = 800; };
+	//class srifle_DMR_06_olive_F 					{ quality = 5; price = 800; };
 	class srifle_EBR_F 								{ quality = 3; price = 700; };
 	class srifle_GM6_camo_F 						{ quality = 6; price = 900; };
 	class srifle_GM6_F 								{ quality = 6; price = 900; };
@@ -4177,17 +4177,17 @@ class CfgTraderCategories
 			"V_PlateCarrier1_rgr",
 			"V_PlateCarrier2_rgr",
 			"V_PlateCarrier3_rgr",
-			"V_PlateCarrierGL_blk",
-			"V_PlateCarrierGL_mtp",
+			//"V_PlateCarrierGL_blk",
+			//"V_PlateCarrierGL_mtp",
 			"V_PlateCarrierGL_rgr",
 			"V_PlateCarrierH_CTRG",
 			"V_PlateCarrierIA1_dgtl",
 			"V_PlateCarrierIA2_dgtl",
 			"V_PlateCarrierIAGL_dgtl",
-			"V_PlateCarrierIAGL_oli",
+			//"V_PlateCarrierIAGL_oli",
 			"V_PlateCarrierL_CTRG",
-			"V_PlateCarrierSpec_blk",
-			"V_PlateCarrierSpec_mtp",
+			//"V_PlateCarrierSpec_blk",
+			//"V_PlateCarrierSpec_mtp",
 			"V_PlateCarrierSpec_rgr",
 			//Apex
 			"V_TacChestrig_grn_F",
@@ -4768,10 +4768,10 @@ class Glasses
 		{
 			"100Rnd_65x39_caseless_mag",
 			"100Rnd_65x39_caseless_mag_Tracer",
-			"10Rnd_127x54_Mag",
-			"10Rnd_338_Mag",
+			//"10Rnd_127x54_Mag",
+			//"10Rnd_338_Mag",
 			"10Rnd_762x54_Mag",
-			"10Rnd_93x64_DMR_05_Mag",
+			//"10Rnd_93x64_DMR_05_Mag",
 			"11Rnd_45ACP_Mag",
 			//"130Rnd_338_Mag", SPMG
 			"150Rnd_762x54_Box",
@@ -5083,21 +5083,21 @@ class Glasses
 			"arifle_MXM_Black_F",
 			"arifle_MXM_F",
 			"srifle_DMR_01_F",
-			"srifle_DMR_02_camo_F",
-			"srifle_DMR_02_F",
-			"srifle_DMR_02_sniper_F",
-			"srifle_DMR_03_F",
-			"srifle_DMR_03_khaki_F",
-			"srifle_DMR_03_multicam_F",
-			"srifle_DMR_03_tan_F",
-			"srifle_DMR_03_woodland_F",
-			"srifle_DMR_04_F",
-			"srifle_DMR_04_Tan_F",
-			"srifle_DMR_05_blk_F",
-			"srifle_DMR_05_hex_F",
-			"srifle_DMR_05_tan_f",
-			"srifle_DMR_06_camo_F",
-			"srifle_DMR_06_olive_F",
+			//"srifle_DMR_02_camo_F",
+			//"srifle_DMR_02_F",
+			//"srifle_DMR_02_sniper_F",
+			//"srifle_DMR_03_F",
+			//"srifle_DMR_03_khaki_F",
+			//"srifle_DMR_03_multicam_F",
+			//"srifle_DMR_03_tan_F",
+			//"srifle_DMR_03_woodland_F",
+			//"srifle_DMR_04_F",
+			//"srifle_DMR_04_Tan_F",
+			//"srifle_DMR_05_blk_F",
+			//"srifle_DMR_05_hex_F",
+			//"srifle_DMR_05_tan_f",
+			//"srifle_DMR_06_camo_F",
+			//"srifle_DMR_06_olive_F",
 			"srifle_EBR_F",
 			"srifle_GM6_camo_F",
 			"srifle_GM6_F",

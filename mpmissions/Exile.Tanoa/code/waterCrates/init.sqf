@@ -6,11 +6,10 @@
 
 if (isServer) then {
     _numberofcrates = 5;  //  Number of crates around the map
-    _spawnCenter = [15199.1,14300.6,0];
-    //_spawnCenter = getmarkerpos "center"; // Use this if you want the global center of the map, it's declared in mission.sqm, island specific
+    _spawnCenter = mapCenter;
 
-    _min = 7000; // minimum distance from the center position (Number) in meters
-    _max = 12000; // maximum distance from the center position (Number) in meters
+    _min = 2000; // minimum distance from the center position (Number) in meters
+    _max = 7000; // maximum distance from the center position (Number) in meters
 
     _mindist = 1; // minimum distance from the nearest object (Number) in meters, ie. spawn at least this distance away from anything within x meters..
     _water = 2; // water mode (Number)    0: cannot be in water , 1: can either be in water or not , 2: must be in water

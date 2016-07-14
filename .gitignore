@@ -15,17 +15,16 @@ steamapps/**
 battleye/beserver.dll
 !mpmissions/**
 !Config/**
-!userconfig/**
 Config/log/**
 Config/log/Users/Exile/**
-!@Exile/**
+!userconfig/**
 !@ExileServer/**
-!@infiSTAR_Exile/**
-!@bloodlust/**
+!@CBA_A3/**
+!@Exile/**
 !@JSRS4APEX/**
+!@bloodlust/**
+!@infiSTAR_Exile/**
 !MySQL/**
-A3Wasteland_config/Users
-A3Wasteland_config/BattlEye
 !steamcmd/steamcmd.exe
 !loottables/**
 !tbb.dll
@@ -37,11 +36,6 @@ A3Wasteland_config/BattlEye
 *.pbo
 .DS_Store
 a3_steamcmd.cmd
-
-# Folders we need, pbo and all
-!@CBA_A3/**
-!@ace/**
-!@aceServer/**
 
 # Windows image file caches
 Thumbs.db

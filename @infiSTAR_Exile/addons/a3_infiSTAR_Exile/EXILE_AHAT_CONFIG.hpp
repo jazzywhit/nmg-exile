@@ -255,8 +255,8 @@ ENABLE_PRIVATE_CHAT_MENU = true;		/* players can open it by typing !chat in chat
 PRIVATE_CHAT_MENU_8GNETWORK = false;	/* if this is true - players will only be able to use private chat if they enable 8GNetwork in their xm8 */
 
 /* shows RESTART IN X MINS */
-USE_RESTART_TIMER = true;			/* show time left to next restart */
-RESTART_TIME_IN_M = 180;			/* restart time in minutes (default: 180min == 3 hours) */
+USE_RESTART_TIMER = false;			/* show time left to next restart */
+RESTART_TIME_IN_M = 240;			/* restart time in minutes (default: 180min == 3 hours) */
 SHOW_TIMER_IN_MIN[] = {1,2,3,5,10};	/* minutes before restart, when message is shown */
 USE_RESTART_TIMER_SHUTDOWN = true;	/* #shutdown the server after RESTART_TIME_IN_M minutes */
 
@@ -269,9 +269,9 @@ VCT = 300;	/* if "DayNightVote = true;" - Time (in seconds) to wait until nex vo
 
 
 /* The following 4 options can be disabled by putting the value to -1. For example "TGV = -1;" */
-/* Terrain Grid Value   */ TGV = 40;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
-/* ViewDistance Value   */ VDV = 1000;
-/* ObjectViewDistance   */ VOV = 800;
+/* Terrain Grid Value   */ TGV = 25;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 ~35 is good performance and grass :) */
+/* ViewDistance Value   */ VDV = 1500;
+/* ObjectViewDistance   */ VOV = 1500;
 /* ShadowViewDistance   */ SVD = 50;
 
 
@@ -305,7 +305,7 @@ stopSafeGlitchAndCorpseDupe = true;
 /*            many checks should be set to true instead of false.                    */
 /* ********************************************************************************* */
 LVC = true;			/* Local Vehicle Check - ALWAYS HAVE THIS TRUE! */
-URC = false;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
+URC = true;		/* Check unitRecoilCoefficient and reset default unitRecoilCoefficient */
 CAP = false;		/* Check Actions Plr - "Actions: xxx/xxx possible scroll menu hack (or you added custom actions..)" */
 
 

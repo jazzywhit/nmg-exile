@@ -8,7 +8,7 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
- 
+
 private["_heightLimit","_message","_elevation","_itemClassName","_minimumDistanceToTraderZones","_minimumDistanceToSpawnZones","_maximumNumberOfTerritoriesPerPlayer","_numberOfTerritories"];
 
 
@@ -16,7 +16,7 @@ private["_heightLimit","_message","_elevation","_itemClassName","_minimumDistanc
 //Config
 //////////////
 
-_heightLimit = 30;                                            // Height limitation in meters. Default: 30 Plenty IMO
+_heightLimit = 10;                                            // Height limitation in meters. Default: 30 Plenty IMO
 _message = format ["The build height limit of %1 meters has been reached!", _heightLimit];                // Message players are given when maximum height is reached
 
 //////////////
