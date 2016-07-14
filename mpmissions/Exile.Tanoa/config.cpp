@@ -2788,7 +2788,7 @@ class CfgExileCustomCode
 	*/
 	ExileClient_object_item_construct = "CfgExileCustomCode\ExileClient_object_item_construct.sqf";
 	ExileClient_gui_selectSpawnLocation_show = "CfgExileCustomCode\ExileClient_gui_selectSpawnLocation_show.sqf";
-	ExileClient_gui_hud_renderStatsPanel = "CfgExileCustomCode\ExileClient_gui_hud_renderStatsPanel.sqf";
+	ExileClient_gui_hud_event_OnDraw3d = "CfgExileCustomCode\ExileClient_gui_hud_event_OnDraw3d.sqf";
 };
 class CfgExileEnvironment
 {
