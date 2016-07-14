@@ -19,6 +19,11 @@ Config/log/**
 Config/log/Users/Exile/**
 !userconfig/**
 !@ExileServer/**
+!@CBA_A3/**
+!@Exile/**
+!@JSRS4APEX/**
+!@bloodlust/**
+!@infiSTAR_Exile/**
 !MySQL/**
 !steamcmd/steamcmd.exe
 !loottables/**
@@ -31,13 +36,6 @@ Config/log/Users/Exile/**
 *.pbo
 .DS_Store
 a3_steamcmd.cmd
-
-# Folders we need, pbo and all
-!@CBA_A3/**
-!@Exile/**
-!@JSRS4APEX/**
-!@bloodlust/**
-!@infiSTAR_Exile/**
 
 # Windows image file caches
 Thumbs.db
