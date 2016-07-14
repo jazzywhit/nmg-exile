@@ -33,7 +33,6 @@ Config/log/Users/Exile/**
 *.acf
 *.log
 *.bak
-*.pbo
 .DS_Store
 a3_steamcmd.cmd
 
