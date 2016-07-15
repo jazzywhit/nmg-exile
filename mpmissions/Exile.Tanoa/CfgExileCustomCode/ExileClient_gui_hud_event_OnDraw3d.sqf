@@ -13,7 +13,7 @@ private["_icon"];
 if (ExileHudIsVisible) then
 {
 	call ExileClient_gui_hud_renderPartyESP;
-	//call ExileClient_gui_hud_renderStatsPanel;
+	call ExileClient_gui_hud_renderStatsPanel;
 	call ExileClient_gui_hud_renderWeaponPanel;
 	call ExileClient_gui_hud_renderGroupPanel;
 	call ExileClient_gui_hud_renderVehiclePanel;

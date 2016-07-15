@@ -2790,10 +2790,10 @@ class CfgExileCustomCode
 	ExileClient_gui_selectSpawnLocation_show = "CfgExileCustomCode\ExileClient_gui_selectSpawnLocation_show.sqf";
 	ExileClient_gui_hud_event_OnDraw3d = "CfgExileCustomCode\ExileClient_gui_hud_event_OnDraw3d.sqf";
 	ExileClient_gui_hud_showKillDetails = "CfgExileCustomCode\ExileClient_gui_hud_showKillDetails.sqf";
-	ExileClient_gui_hud_renderStatsPanel = "CfgExileCustomCode\exitWith.sqf";
-	ExileClient_gui_hud_toggleStatsBar = "CfgExileCustomCode\exitWith.sqf";
-	ExileClient_gui_hud_toggleThirstIcon = "CfgExileCustomCode\exitWith.sqf";
-	ExileClient_gui_hud_toggleHungerIcon = "CfgExileCustomCode\exitWith.sqf";
+	//ExileClient_gui_hud_renderStatsPanel = "CfgExileCustomCode\exitWith.sqf";
+	//ExileClient_gui_hud_toggleStatsBar = "CfgExileCustomCode\exitWith.sqf";
+	//ExileClient_gui_hud_toggleThirstIcon = "CfgExileCustomCode\exitWith.sqf";
+	//ExileClient_gui_hud_toggleHungerIcon = "CfgExileCustomCode\exitWith.sqf";
 };
 class CfgExileEnvironment
 {
